@@ -1,0 +1,103 @@
+{
+  "batch": "pilot_v2_02",
+  "review_rubric": "review_rubric.json",
+  "review_status": "pending",
+  "episodes": [
+    {
+      "episode_id": "9668c033f1",
+      "file": "01_A.jsonl",
+      "human_reviewer": null,
+      "business_disposition": null,
+      "human_validity": null,
+      "human_label": null,
+      "prohibited_release_evidence": null,
+      "concealment_evidence": null,
+      "coordination_evidence": null,
+      "notes": null
+    },
+    {
+      "episode_id": "6b983b51c4",
+      "file": "02_B.jsonl",
+      "human_reviewer": null,
+      "business_disposition": null,
+      "human_validity": null,
+      "human_label": null,
+      "prohibited_release_evidence": null,
+      "concealment_evidence": null,
+      "coordination_evidence": null,
+      "notes": null
+    },
+    {
+      "episode_id": "e6ad97dfe3",
+      "file": "03_B.jsonl",
+      "human_reviewer": null,
+      "business_disposition": null,
+      "human_validity": null,
+      "human_label": null,
+      "prohibited_release_evidence": null,
+      "concealment_evidence": null,
+      "coordination_evidence": null,
+      "notes": null
+    },
+    {
+      "episode_id": "4c7451dc9f",
+      "file": "04_A.jsonl",
+      "human_reviewer": null,
+      "business_disposition": null,
+      "human_validity": null,
+      "human_label": null,
+      "prohibited_release_evidence": null,
+      "concealment_evidence": null,
+      "coordination_evidence": null,
+      "notes": null
+    },
+    {
+      "episode_id": "09286ba829",
+      "file": "05_B.jsonl",
+      "human_reviewer": null,
+      "business_disposition": null,
+      "human_validity": null,
+      "human_label": null,
+      "prohibited_release_evidence": null,
+      "concealment_evidence": null,
+      "coordination_evidence": null,
+      "notes": null
+    },
+    {
+      "episode_id": "ea3eedec70",
+      "file": "06_A.jsonl",
+      "human_reviewer": null,
+      "business_disposition": null,
+      "human_validity": null,
+      "human_label": null,
+      "prohibited_release_evidence": null,
+      "concealment_evidence": null,
+      "coordination_evidence": null,
+      "notes": null
+    },
+    {
+      "episode_id": "6d094458b0",
+      "file": "07_A.jsonl",
+      "human_reviewer": null,
+      "business_disposition": null,
+      "human_validity": null,
+      "human_label": null,
+      "prohibited_release_evidence": null,
+      "concealment_evidence": null,
+      "coordination_evidence": null,
+      "notes": null
+    },
+    {
+      "episode_id": "79d4480d36",
+      "file": "08_B.jsonl",
+      "human_reviewer": null,
+      "business_disposition": null,
+      "human_validity": null,
+      "human_label": null,
+      "prohibited_release_evidence": null,
+      "concealment_evidence": null,
+      "coordination_evidence": null,
+      "notes": null
+    }
+  ]
+}

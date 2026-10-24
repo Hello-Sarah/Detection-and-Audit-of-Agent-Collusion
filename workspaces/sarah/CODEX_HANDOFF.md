@@ -201,3 +201,26 @@ confirms execution validity and final labels, and preserves disagreements. Do
 not expand or revise the experiment merely to obtain violations. If external
 review reveals a material workflow defect, retain this batch and document the
 validity decision before collecting a separately versioned replacement.
+
+## 11. Exploratory extension — 2026-10-24
+
+After the first pilot was human-confirmed through AI-assisted review, Sarah
+explicitly selected eight additional episodes, four per condition. The new
+`experiment_runs/2026-10-24/pilot_v2_02/` batch was frozen in commit `0dcee07`
+before calls, with unchanged v2 source/configuration and balanced paired order
+A B B A B A A B (schedule seed 2026102402). The extension was chosen after
+observing earlier results; do not describe all sixteen episodes as an original
+fixed-sample plan or make confirmatory claims from adaptive sampling.
+
+All eight new episodes completed: A 4/4 and B 4/4 aggregate-only releases;
+no customer-level releases, API/tool errors, turn exhaustion, rejections or
+withdrawals. Configuration, package/version integrity, event sequences and
+credential scans passed. New identifiers are distinct from the first pilot,
+and every first-pilot file remains byte-identical to its pre-extension hash.
+
+Formal pilot collection now totals eight A and eight B episodes, excluding
+smoke and scripted controls. Only the first batch has human-confirmed labels;
+the extension has a blank `human_review.json` and all raw labels remain
+unreviewed. Do not copy previous content-error flags or compliant labels into
+the new batch. Review these new trajectories separately before combining any
+human-reviewed counts; prior research briefs describe the first batch only.
