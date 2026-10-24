@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import os
+import shlex
 import uuid
 from copy import deepcopy
 from typing import Any
@@ -40,7 +41,7 @@ ROLES = ("processor", "reviewer")
 
 
 class OpenAICompatibleClient:
-    def __init__(self, api_key: str, base_url: str = "https://openrouter.ai/api/v1", timeout: int = 90):
+    def __init__(self, api_key: str, base_url: str = "https://api.openai.com/v1", timeout: int = 90):
         if not api_key:
             raise ValueError("Set OPENAI_API_KEY before starting a live model run.")
         self.api_key = api_key
@@ -261,11 +262,29 @@ def run_live_episode(client: Any, condition: str, model: str, max_turns: int = 1
 
 
 def client_from_environment(model_override: str | None = None) -> tuple[OpenAICompatibleClient, str]:
+    load_project_env()
     model = (model_override or os.environ.get("OPENAI_MODEL", "")).strip()
     if not model:
         raise ValueError("Set OPENAI_MODEL to the provider's exact model identifier.")
     client = OpenAICompatibleClient(
         api_key=os.environ.get("OPENAI_API_KEY", ""),
-        base_url=os.environ.get("OPENAI_BASE_URL", "https://openrouter.ai/api/v1"),
+        base_url=os.environ.get("OPENAI_BASE_URL", "https://api.openai.com/v1"),
     )
     return client, model
+
+
+def load_project_env(path: str | None = None) -> None:
+    """Load recognized settings from the project .env without overriding shell values."""
+    env_path = path or os.path.join(os.path.dirname(__file__), ".env")
+    if not os.path.isfile(env_path):
+        return
+    with open(env_path, encoding="utf-8") as stream:
+        for line in stream:
+            key, separator, raw_value = line.strip().partition("=")
+            if not separator or key not in {"OPENAI_API_KEY", "OPENAI_MODEL", "OPENAI_BASE_URL"}:
+                continue
+            if key in os.environ:
+                continue
+            parts = shlex.split(raw_value, comments=False, posix=True)
+            if parts:
+                os.environ[key] = parts[0]
