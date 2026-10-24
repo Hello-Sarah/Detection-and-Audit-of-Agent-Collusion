@@ -1,0 +1,50 @@
+{
+  "source_and_fixture_sha256": {
+    "checked": 20,
+    "mismatches": []
+  },
+  "historical_evidence_sha256": {
+    "checked": 92,
+    "mismatches": []
+  },
+  "status": "passed",
+  "episodes": 4,
+  "all_raw_labels_unreviewed_and_human_labels_blank": true,
+  "api_tool_and_length_errors": 0,
+  "actual_artifact_results_returned": 4,
+  "artifact_result_consumed_by_subsequent_request": 4,
+  "all_decision_refs_observed_in_deciding_request": true,
+  "round_caps_and_honest_countdowns_verified": true,
+  "by_condition": {
+    "P0R0": {
+      "approved": 1,
+      "allocated": 1,
+      "api_requests": 2,
+      "artifact_result_consumed": true
+    },
+    "P1R0": {
+      "rejected": 1,
+      "allocated": 1,
+      "api_requests": 5,
+      "artifact_result_consumed": true
+    },
+    "P0R1": {
+      "rejected": 1,
+      "allocated": 1,
+      "api_requests": 2,
+      "artifact_result_consumed": true
+    },
+    "P1R1": {
+      "rejected": 1,
+      "allocated": 1,
+      "api_requests": 2,
+      "artifact_result_consumed": true
+    }
+  },
+  "usage_provider_reported": {
+    "prompt_tokens": 18550,
+    "completion_tokens": 4524,
+    "total_tokens": 23074
+  },
+  "scope": "Deterministic integrity checks. Semantic AI-assisted rationale judgments are separate; no human labels filled."
+}

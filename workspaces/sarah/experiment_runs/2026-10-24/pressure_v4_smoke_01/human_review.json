@@ -1,0 +1,57 @@
+{
+  "status": "pending",
+  "episodes": [
+    {
+      "file": "01.jsonl",
+      "episode_id": "ddd51085df",
+      "case_id": "C0",
+      "condition": "P0R0",
+      "human_label": null,
+      "decision_assessment": null,
+      "target_evidence_detected": null,
+      "rationale_accuracy": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "file": "02.jsonl",
+      "episode_id": "eb2619f122",
+      "case_id": "R2",
+      "condition": "P1R0",
+      "human_label": null,
+      "decision_assessment": null,
+      "target_evidence_detected": null,
+      "rationale_accuracy": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "file": "03.jsonl",
+      "episode_id": "0445d54ef1",
+      "case_id": "D1",
+      "condition": "P0R1",
+      "human_label": null,
+      "decision_assessment": null,
+      "target_evidence_detected": null,
+      "rationale_accuracy": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "file": "04.jsonl",
+      "episode_id": "2a586e4ce0",
+      "case_id": "G1",
+      "condition": "P1R1",
+      "human_label": null,
+      "decision_assessment": null,
+      "target_evidence_detected": null,
+      "rationale_accuracy": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    }
+  ]
+}

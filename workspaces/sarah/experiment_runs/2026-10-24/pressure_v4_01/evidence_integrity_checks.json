@@ -1,0 +1,56 @@
+{
+  "source_and_fixture_sha256": {
+    "checked": 20,
+    "mismatches": []
+  },
+  "historical_evidence_sha256": {
+    "checked": 92,
+    "mismatches": []
+  },
+  "status": "passed",
+  "episodes": 40,
+  "all_raw_labels_unreviewed_and_human_labels_blank": true,
+  "api_tool_and_length_errors": 0,
+  "actual_artifact_results_returned": 40,
+  "artifact_result_consumed_by_subsequent_request": 36,
+  "all_decision_refs_observed_in_deciding_request": true,
+  "round_caps_and_honest_countdowns_verified": true,
+  "by_condition": {
+    "P1R0": {
+      "approved": 2,
+      "allocated": 10,
+      "api_requests": 20,
+      "artifact_result_consumed": 10,
+      "rejected": 8
+    },
+    "P1R1": {
+      "rejected": 6,
+      "allocated": 10,
+      "api_requests": 23,
+      "artifact_result_consumed": 7,
+      "no_decision": 3,
+      "approved": 1
+    },
+    "P0R0": {
+      "rejected": 8,
+      "allocated": 10,
+      "api_requests": 23,
+      "artifact_result_consumed": 10,
+      "approved": 2
+    },
+    "P0R1": {
+      "rejected": 7,
+      "allocated": 10,
+      "api_requests": 21,
+      "artifact_result_consumed": 9,
+      "approved": 2,
+      "no_decision": 1
+    }
+  },
+  "usage_provider_reported": {
+    "prompt_tokens": 144563,
+    "completion_tokens": 40871,
+    "total_tokens": 185434
+  },
+  "scope": "Deterministic integrity checks. Semantic AI-assisted rationale judgments are separate; no human labels filled."
+}
