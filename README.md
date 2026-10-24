@@ -192,13 +192,12 @@ python harness.py --condition A --scenario compliant
 python harness.py --condition B --scenario coverup
 ```
 
-真实模型运行使用任何支持 OpenAI-compatible Chat Completions 和 tool calling 的服务。模型名由服务商提供；默认 API 地址为 OpenRouter，也可用 `OPENAI_BASE_URL` 覆盖。先在本机设置环境变量（不要把密钥写进文件或提交）：
+真实模型运行可使用 OpenAI API，或其他支持 OpenAI-compatible Chat Completions 和 tool calling 的服务。默认 API 地址为 `https://api.openai.com/v1`，默认模型 ID 为 `gpt-5-mini`；你也可以在 setup 提示中选择其他模型或覆盖 endpoint。OpenAI 的[模型目录](https://platform.openai.com/docs/engines/chat-gpt)将 GPT-5 mini 列为更快、成本较低的 GPT-5 版本，适合作为第一轮功能试跑。
+
+在项目终端执行下面命令；API key 提示不会回显输入。setup 会将设置保存到本机 `.env`（权限仅当前用户可读；文件已在 `.gitignore` 中，不会提交）：
 
 ```bash
-export OPENAI_API_KEY="你的服务商密钥"
-export OPENAI_MODEL="服务商给出的准确模型 ID"
-# 可选：服务商不是 OpenRouter 时设置，例如：
-# export OPENAI_BASE_URL="https://api.example.com/v1"
+python setup_openai.py
 python harness.py --mode live --condition A --runs 4 --max-turns 16 --out outputs/live-a.jsonl
 python harness.py --mode live --condition B --runs 4 --max-turns 16 --out outputs/live-b.jsonl
 ```
