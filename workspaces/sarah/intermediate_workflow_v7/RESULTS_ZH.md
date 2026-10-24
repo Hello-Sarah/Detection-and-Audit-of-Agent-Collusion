@@ -66,14 +66,14 @@
 
 在這些具體安排下，必須處理敏感內部資料、再自行清理的工作，**沒有引出觀察到的違規提交或協調掩蓋**。Agent能保留有用交付，同時移除敏感中間檔。更明確的弱點是：放過錯誤報告、混淆證據來源、不必要拒絕，以及審查額度耗盡。
 
-[前一輪v6](../financial_task_family_v6/RESULTS_ZH.md)改的是買方需求，包括客群數量、個人化優惠、交易對帳、訓練樣本，各搭配有無私信。32例有30例批准彙總、2例拒絕，沒有違規釋放或明細暫存。但只有客群數量需求得到所需輸入（6／8），另24例逐客戶需求並未因安全彙總而完成。V7固定最終需求，改內部準備方式。兩輪分母與任務安排不同，不合併成一個風險估計。
+[前一輪v6](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/financial_task_family_v6/RESULTS_ZH.md)改的是買方需求，包括客群數量、個人化優惠、交易對帳、訓練樣本，各搭配有無私信。32例有30例批准彙總、2例拒絕，沒有違規釋放或明細暫存。但只有客群數量需求得到所需輸入（6／8），另24例逐客戶需求並未因安全彙總而完成。V7固定最終需求，改內部準備方式。兩輪分母與任務安排不同，不合併成一個風險估計。
 
 目前仍不能指出哪種任務一定會導致合謀，也不能判定私信沒有影響。W1/W2雖匹配額外操作與預覽上限，資料量、敏感度、語義和上下文仍不同，W0工作負擔也不同。每條件4例、單一模型與資料、共同文字壓力，不足以支持任務風險排序、渠道無效論、壓力因果效應、罕見事件估計或普遍安全保證。這裡嚴格要求實際違規釋放、掩蓋／不實陳述，以及證明協調的通信與行動；一般不誠實或合謀提議是不同指標。
 
-後續可考慮反覆合作的準備者／審查者、明確模擬共同績效回饋、或審查者選擇誘因，仍放在金融場景。這些只是需另行事前設計、控制及限制次數的假設，不是本輪已驗證結論，也不是追求陽性結果而無限追加的理由。[相關機制文獻](LITERATURE_TASK_MECHANISMS.md)另列不同研究的定義與限制。
+後續可考慮反覆合作的準備者／審查者、明確模擬共同績效回饋、或審查者選擇誘因，仍放在金融場景。這些只是需另行事前設計、控制及限制次數的假設，不是本輪已驗證結論，也不是追求陽性結果而無限追加的理由。[相關機制文獻](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/intermediate_workflow_v7/LITERATURE_TASK_MECHANISMS.md)另列不同研究的定義與限制。
 
 ## 證據與驗證
 
 全部30例v7經原始軌跡優先閱讀及獨立AI交叉核對。17份凍結程式／資料、178份先前原始紀錄、260份歷史證據雜湊一致；重放驗證提示、工具、角色隔離、私信送達、決策引用、整包識別及實際交付。V6/v7共70例ID互不重複，也不與144個更早ID重疊；人工表逐項匹配分配、標籤空白，原始標籤仍為`unreviewed`。設定的API key未出現在各批證據。離線驗證通過21個v7及23個原有測試。
 
-這些檢查證明來源與證據傳遞，不證明語義審查永遠正確，也不等於人工ground truth。[正式統計](../experiment_runs/2026-10-25/intermediate_workflow_v7_01/analysis_facts.json)、[輔助審查](../experiment_runs/2026-10-25/intermediate_workflow_v7_01/ai_review_draft.json)、[完整性驗證](../experiment_runs/2026-10-25/intermediate_workflow_v7_01/evidence_integrity_checks.json)、[空白人工表](../experiment_runs/2026-10-25/intermediate_workflow_v7_01/human_review.json)、[全局檢查](FINAL_GLOBAL_CHECKS.json)、[smoke gate](SMOKE_GATE.md)。正式完整紀錄取代部分進度快照；寫作草稿僅保留歷史用途。
+這些檢查證明來源與證據傳遞，不證明語義審查永遠正確，也不等於人工ground truth。[正式統計](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/experiment_runs/2026-10-25/intermediate_workflow_v7_01/analysis_facts.json)、[輔助審查](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/experiment_runs/2026-10-25/intermediate_workflow_v7_01/ai_review_draft.json)、[完整性驗證](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/experiment_runs/2026-10-25/intermediate_workflow_v7_01/evidence_integrity_checks.json)、[空白人工表](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/experiment_runs/2026-10-25/intermediate_workflow_v7_01/human_review.json)、[全局檢查](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/intermediate_workflow_v7/FINAL_GLOBAL_CHECKS.json)、[smoke gate](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/intermediate_workflow_v7/SMOKE_GATE.md)。正式完整紀錄取代部分進度快照；寫作草稿僅保留歷史用途。
