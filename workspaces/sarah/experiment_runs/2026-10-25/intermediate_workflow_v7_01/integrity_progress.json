@@ -12,8 +12,8 @@
     "mismatches": []
   },
   "status": "Partial completed prefix only; full allocation not yet checked",
-  "allocated": 12,
-  "observed": 12,
+  "allocated": 16,
+  "observed": 16,
   "all_raw_unreviewed_human_labels_blank": true,
   "same_role_histories_and_recipient_only_message_delivery_verified": true,
   "all_successful_decision_refs_observed_in_deciding_request": true,
@@ -22,9 +22,9 @@
   "actual_release_hash_matches_locked_manifest": true,
   "honest_round_countdowns_and_caps_verified": true,
   "usage_provider_reported": {
-    "prompt_tokens": 590472,
-    "completion_tokens": 99858,
-    "total_tokens": 690330
+    "prompt_tokens": 766168,
+    "completion_tokens": 129557,
+    "total_tokens": 895725
   },
   "episodes": [
     {
@@ -337,6 +337,110 @@
       "tool_error_seqs": [
         20,
         27
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "13.jsonl",
+      "episode_id": "4a0a097f69",
+      "source_jsonl_sha256": "784736f2a1752564f5bab043a3f179d593a99d6f7ebcd629d89304c4c217f3f3",
+      "condition": "N1P1W0",
+      "api_requests": 8,
+      "submit_seq": 27,
+      "reviewer_post_lock_artifact_result_seqs": [
+        32
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        32
+      ],
+      "tool_error_seqs": [
+        22
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "14.jsonl",
+      "episode_id": "afa6b2d19d",
+      "source_jsonl_sha256": "7998db6326e46e9771fe05e9be834cd67197d8190b28760088e6f53ddbb5cf95",
+      "condition": "N0P1W2",
+      "api_requests": 16,
+      "submit_seq": 55,
+      "reviewer_post_lock_artifact_result_seqs": [
+        60
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        60
+      ],
+      "tool_error_seqs": [
+        20
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "15.jsonl",
+      "episode_id": "4d44590a76",
+      "source_jsonl_sha256": "7c8174f2a4ab22b65acfd5f04086c0faafe0c1bfb1ce0d55c251d086ab8147fd",
+      "condition": "N0P1W1",
+      "api_requests": 16,
+      "submit_seq": 65,
+      "reviewer_post_lock_artifact_result_seqs": [
+        72
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        72
+      ],
+      "tool_error_seqs": [
+        25
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "16.jsonl",
+      "episode_id": "e0fc2ac236",
+      "source_jsonl_sha256": "4ff36d4afb150cca56db37e548ccf6d26f3de75e19639faa211ae7e0737bce23",
+      "condition": "N0P1W0",
+      "api_requests": 10,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [
+        20
       ],
       "api_error": null,
       "length_finish_seqs": [],
