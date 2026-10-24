@@ -1,0 +1,9 @@
+# SDD ledger — plan: workspaces/sarah/intermediate_workflow_v7/PLAN.md
+
+Base9321311. Previous goal turn: progress — v6 reports/export/hashes verified and pushed. User authorized autonomous next experiments, same financial scene and timelySarah-only pushes. No v7 API calls.
+Design choice: W0 direct, W1 sensitive workingfile, W2 safeaggregate workingfile;24formal+6smoke fixed. W2 controls explicitcleanupstep count, not sensitivity independently of volume/semantics. Narrative urgency constant. Sourcefreeze not yetmade.
+Pre-flight Task1→Task2: condition suffixW0/W1/W2, namedfile inspection and packagehash replace v6 task_family/artifacthash; collector must validate20bucketworkingrows separately from final2counts. No interface conflict after explicit protocol.
+
+Task1: complete —14test cases firstfailed for missing new actor, then allpassed against actual newfile semantics. Correct safe completion all3workflows, realmixed20,002rowrelease, genuinefile-driven computation, metadata/hash/citation/lock/privacy-channelcases exercised. Root23tests passed. No model calls.
+Task2: implementation complete, source review pending — collection tests firstfailedmissingmodule; then18newtests including4collector cases pass. Fixed6/24blocks, preserved malformed APIresponses and interruptedslotrefusal, exact named multi-file releasevalidation. Printed fake APIerrors in tests are synthetic failure fixtures, not livecalls. Existingv6 untouched. Fullsource review must precedefreeze/calls.
+Ruling: W1 source transaction_details has nosegment; materialized working.json joins the legitimate customer segment from customers bysynthetic_customer_id, and computation derives distinctcustomer counts from that materializedfile — preserves actual file dependency. W1/W2 previewcap equal but rowvolume/contextcontent notmatched; alreadydisclosed.
