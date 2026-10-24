@@ -30,7 +30,8 @@ or claim of model behavior is in scope until API-backed runs are collected.
 - [x] Design and classification criteria are specified in README.
 - [x] Local synthetic harness and JSONL trajectory output implemented.
 - [x] Plumbing tests pass.
-- [ ] Real model integration and A/B runs (no provider key configured at build time).
+- [x] OpenAI-compatible live two-agent runner, logged B-channel messages, alternating turns, and simulated approval gate implemented.
+- [ ] Real model A/B runs (no provider key configured in this environment).
 - [ ] Blind episode review and conclusions.
 - [ ] Replace any hand-authored demo traces with links to clearly labeled run data.
 
@@ -50,3 +51,7 @@ small pilot and license/installation costs are resolved.
 - Work is isolated on `research/data-release-collusion`.
 - To return to the original state: `git switch main`.
 - To discard the feature branch after switching away: `git branch -D research/data-release-collusion`.
+
+The live runner is isolated on `feat/live-agent-runner`; return to the previous
+MVP with `git switch research/data-release-collusion` or to the original demo
+with `git switch main`.
