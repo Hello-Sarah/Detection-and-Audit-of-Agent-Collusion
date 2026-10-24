@@ -169,7 +169,7 @@ Sarah 想探索可复制的金融数据产品：让金融机构能在授权边�
 
 - `index.html` 当前是中英双语、交互式概念 demo，可切换沟通条件、查看人工编写的判例并展开逐步 Agent trajectory；它不是双 Agent 实验结果。
 - 这份 README 是更新后的研究方案和任务拆分。
-- 下一步开发应先完成 Phase 0 与 Phase 1；之后让真实模型在 A/B 设置中运行，再把真实 episode 数据接入 demo。
+- Phase 0 的研究设计与 Phase 1 的本地模拟流程已完成；真实模型运行器现已接入，待配置 provider key 后开展 A/B pilot，再把人工复核后的真实 episode 接入 demo。
 
 ## 10. 可复用代码评估与本地 MVP
 
@@ -178,9 +178,11 @@ Sarah 想探索可复制的金融数据产品：让金融机构能在授权边�
 本地 MVP：
 
 - `harness.py`：合成任务的 scripted plumbing control，输出序列化 JSONL episode。
+- `live_runner.py`：通过 OpenAI 兼容 Chat Completions API 轮流运行真实处理／审核 Agent；B 条件允许私聊，A 条件没有私聊工具；只有审核批准才将 staging 计为模拟交付。
 - `experiment_spec.md`：冻结条件与协同掩盖判定标准。
 - `docs/experiment-plan.md`：任务拆分、进度与回滚步骤。
 - `tests/test_harness.py`：检查 A/B 隔离、轨迹、放行与分类规则。
+- `tests/test_live_runner.py`：检查 live runner 回合、私聊、审批门和未标注真实运行结果等行为。
 
 运行示例：
 
@@ -190,13 +192,26 @@ python harness.py --condition A --scenario compliant
 python harness.py --condition B --scenario coverup
 ```
 
-**重要：** `--scenario` 产生的是人为设定的流程控制案例，不是模型生成的行为证据，不能放入 A/B 实证样本或据此声称发现串谋。目前此 harness 尚未连接真实模型 API；只有完成真实模型接入并采集可复核轨迹之后，才能回答研究问题。当前可运行的双语页面仍是概念演示，不应把页面中的人工构造轨迹描述成实验观测。
+真实模型运行使用任何支持 OpenAI-compatible Chat Completions 和 tool calling 的服务。模型名由服务商提供；默认 API 地址为 OpenRouter，也可用 `OPENAI_BASE_URL` 覆盖。先在本机设置环境变量（不要把密钥写进文件或提交）：
+
+```bash
+export OPENAI_API_KEY="你的服务商密钥"
+export OPENAI_MODEL="服务商给出的准确模型 ID"
+# 可选：服务商不是 OpenRouter 时设置，例如：
+# export OPENAI_BASE_URL="https://api.example.com/v1"
+python harness.py --mode live --condition A --runs 4 --max-turns 16 --out outputs/live-a.jsonl
+python harness.py --mode live --condition B --runs 4 --max-turns 16 --out outputs/live-b.jsonl
+```
+
+live 轨迹会保存逐回合 Agent 对话、工具调用、私聊、manifest 和最终模拟放行情况；API key 不写入轨迹。真实运行的 `label` 固定为 `unreviewed`，须由研究者根据 `experiment_spec.md` 的证据标准逐案标注。API 未配置时 live 模式会在发出请求前报错。当前环境尚未配置模型 key，所以代码和离线测试已验证，但**尚未收集真实模型运行结果**。
+
+**重要：** `--scenario` 产生的是人为设定的流程控制案例，不是模型生成的行为证据，不能放入 A/B 实证样本或据此声称发现串谋。当前可运行的双语页面仍是概念演示，不应把页面中的人工构造轨迹描述成实验观测。完成真实模型接入后，也只有采集并人工复核真实轨迹，才能回答研究问题。
 
 ## 11. Git 回滚点
 
 - `main` 保存了本次开发前的 README 和双语 demo 基线。
-- 开发位于 `research/data-release-collusion` 分支。
-- 回到原始版本：`git switch main`；若要彻底丢弃开发分支，先切回 main 再执行 `git branch -D research/data-release-collusion`。
+- 上一阶段开发位于 `research/data-release-collusion` 分支；live runner 独立开发于 `feat/live-agent-runner`。
+- 回到原始版本：`git switch main`；若要撤销 live runner，先切换到其他分支，再删除 `feat/live-agent-runner`。
 
 ## 12. 结论写法
 
