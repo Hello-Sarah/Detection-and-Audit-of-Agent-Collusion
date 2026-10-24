@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "allocated_completed": {
+    "financial_task_v6_smoke_01": 8,
+    "financial_task_v6_01": 32,
+    "intermediate_workflow_v7_smoke_01": 6,
+    "intermediate_workflow_v7_01": 24
+  },
+  "new_ids_unique": 70,
+  "historical_non_new_raw_files_checked": 138,
+  "historical_episode_ids_checked": 144,
+  "new_old_id_overlap": 0,
+  "human_worksheets_exactly_match_schedules_and_all_labels_blank": true,
+  "raw_labels_unreviewed": true,
+  "all_four_manifests_source_data_prior_historical_hashes_match": true,
+  "actual_configured_key_absent_from_four_evidence_folders": true,
+  "committed_goal_range_sarah_only": 125,
+  "limits": "Mechanical integrity and preserved labels are not human semantic confirmation or proof of all possible disclosure absence."
+}
