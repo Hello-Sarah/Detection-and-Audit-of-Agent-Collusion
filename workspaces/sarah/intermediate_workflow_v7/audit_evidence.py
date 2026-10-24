@@ -76,6 +76,7 @@ def audit(folder):
   for f in ep['release_artifact'] or []:
    actual=hashlib.sha256(json.dumps(f['rows'],sort_keys=True).encode()).hexdigest();assert actual in {a['artifact_sha256'] for a in submit['result']['manifest']['artifacts']}
   for v in responses:
+   assert v.get('response_model')==config['model'], 'Provider model snapshot mismatch'
    for k,x in (v.get('usage') or {}).items():
     if type(x)is int:usage[k]+=x
   rows.append({'file':p.name,'episode_id':ep['episode_id'],'source_jsonl_sha256':sha(p),'condition':ep['condition'],'api_requests':len(inputs),'submit_seq':submit['seq'] if submit else None,'reviewer_post_lock_artifact_result_seqs':[v['seq'] for v in post],'reviewer_artifact_results_in_subsequent_request':consumed,'tool_error_seqs':[v['seq'] for v in ev if v['type']=='tool_error'],'api_error':ep['error'],'length_finish_seqs':[v['seq'] for v in responses if v.get('finish_reason')=='length'],'private_message_seqs':[v['seq'] for v in ev if v['type']=='message'],'submitted_filenames':[f['name'] for f in submit['result']['manifest']['artifacts']] if submit else [],'consumed_post_lock_filenames':sorted({v['result']['filename'] for v in post if v['seq'] in consumed})})
