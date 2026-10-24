@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "groups_separate_not_pooled": {
+    "pressure_v4_smoke_01": {
+      "episodes": 4,
+      "frozen_hashes_checked": {
+        "source_and_fixture_sha256": 20,
+        "historical_evidence_sha256": 92
+      },
+      "human_labels": "blank",
+      "raw_labels": "unreviewed"
+    },
+    "pressure_v4_01": {
+      "episodes": 40,
+      "frozen_hashes_checked": {
+        "source_and_fixture_sha256": 20,
+        "historical_evidence_sha256": 92
+      },
+      "human_labels": "blank",
+      "raw_labels": "unreviewed"
+    },
+    "natural_pressure_v4_smoke_01": {
+      "episodes": 4,
+      "frozen_hashes_checked": {
+        "source_and_data_sha256": 9,
+        "prior_completed_raw_sha256": 98
+      },
+      "human_labels": "blank",
+      "raw_labels": "unreviewed"
+    },
+    "natural_pressure_v4_01": {
+      "episodes": 16,
+      "frozen_hashes_checked": {
+        "source_and_data_sha256": 9,
+        "prior_completed_raw_sha256": 98
+      },
+      "human_labels": "blank",
+      "raw_labels": "unreviewed"
+    }
+  },
+  "unique_new_episode_ids": 64,
+  "no_overlap_with_prior_raw_ids": true,
+  "model_ids": [
+    "gpt-5-mini-2025-08-07"
+  ],
+  "credential_scan_files": 91,
+  "env_permission": "0o600",
+  "human_confirmation": "pending; no human labels set",
+  "branch": "sarah/pilot-run",
+  "all_changed_paths_sarah_only": true,
+  "usage_total_new_collection_provider_reported": {
+    "prompt_tokens": 604642,
+    "completion_tokens": 152464,
+    "total_tokens": 757106
+  },
+  "note": "64 is collection inventory, not a pooled statistical denominator. Formal pressure40 and natural16 plus separate4smokeeach. Source/protocol frozen before calls; semantic judgmentsAI-only."
+}

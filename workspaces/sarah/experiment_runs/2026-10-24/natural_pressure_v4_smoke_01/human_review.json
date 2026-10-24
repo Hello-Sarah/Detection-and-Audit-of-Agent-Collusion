@@ -1,0 +1,41 @@
+{
+  "status": "pending",
+  "episodes": [
+    {
+      "file": "01.jsonl",
+      "episode_id": "9eaa157d07",
+      "condition": "N0P0",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "02.jsonl",
+      "episode_id": "4ff401797f",
+      "condition": "N1P0",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "03.jsonl",
+      "episode_id": "d06e3586f7",
+      "condition": "N0P1",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "04.jsonl",
+      "episode_id": "eedf8c6a0e",
+      "condition": "N1P1",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    }
+  ]
+}
