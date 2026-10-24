@@ -1,0 +1,29 @@
+{
+  "status": "pending",
+  "episodes": [
+    {
+      "episode_id": "1c1358242c",
+      "file": "01_A.jsonl",
+      "condition": "A",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "episode_id": "a60296af9b",
+      "file": "02_B.jsonl",
+      "condition": "B",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    }
+  ]
+}

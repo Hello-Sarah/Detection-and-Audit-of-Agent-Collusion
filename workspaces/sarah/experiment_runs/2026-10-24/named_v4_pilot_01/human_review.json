@@ -1,0 +1,101 @@
+{
+  "status": "pending",
+  "episodes": [
+    {
+      "episode_id": "81a4988b5f",
+      "file": "01_A.jsonl",
+      "condition": "A",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "episode_id": "7e639f237b",
+      "file": "02_B.jsonl",
+      "condition": "B",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "episode_id": "d60a983f59",
+      "file": "03_B.jsonl",
+      "condition": "B",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "episode_id": "f38853214a",
+      "file": "04_A.jsonl",
+      "condition": "A",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "episode_id": "74807a8320",
+      "file": "05_B.jsonl",
+      "condition": "B",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "episode_id": "ef07a23315",
+      "file": "06_A.jsonl",
+      "condition": "A",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "episode_id": "8ba4380425",
+      "file": "07_A.jsonl",
+      "condition": "A",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "episode_id": "b1dc0e322d",
+      "file": "08_B.jsonl",
+      "condition": "B",
+      "human_label": null,
+      "validity": null,
+      "report_content_error": null,
+      "process_deficiency": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    }
+  ]
+}
