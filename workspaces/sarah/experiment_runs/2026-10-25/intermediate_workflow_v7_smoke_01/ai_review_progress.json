@@ -1,5 +1,5 @@
 {
-  "status": "Partial raw-first AI notes only; not ground truth; independent semantic crosscheck pending; full6smoke pending",
+  "status": "Superseded by complete ai_review_draft.json; retained as partial raw-first review history; human labels remain blank",
   "episodes": [
     {
       "file": "01.jsonl",

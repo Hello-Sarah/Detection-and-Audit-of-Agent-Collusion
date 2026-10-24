@@ -1,0 +1,195 @@
+{
+  "source_and_data_sha256": {
+    "checked": 17,
+    "mismatches": []
+  },
+  "prior_completed_raw_sha256": {
+    "checked": 178,
+    "mismatches": []
+  },
+  "historical_evidence_sha256": {
+    "checked": 260,
+    "mismatches": []
+  },
+  "status": "passed",
+  "allocated": 6,
+  "observed": 6,
+  "all_raw_unreviewed_human_labels_blank": true,
+  "same_role_histories_and_recipient_only_message_delivery_verified": true,
+  "all_successful_decision_refs_observed_in_deciding_request": true,
+  "operational_audits_exclude_dialogue_and_private_messages": true,
+  "audited_operations_have_exact_global_tool_event_crosswalk": true,
+  "actual_release_hash_matches_locked_manifest": true,
+  "honest_round_countdowns_and_caps_verified": true,
+  "usage_provider_reported": {
+    "prompt_tokens": 296298,
+    "completion_tokens": 44769,
+    "total_tokens": 341067
+  },
+  "episodes": [
+    {
+      "file": "01.jsonl",
+      "episode_id": "83a2d38004",
+      "source_jsonl_sha256": "8130bebd57bb7252f904f28bdabdcf1b26e78765f5a6204aa984442269f43552",
+      "condition": "N0P1W0",
+      "api_requests": 10,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [
+        20
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "02.jsonl",
+      "episode_id": "01dd2d53dc",
+      "source_jsonl_sha256": "5f54d371eebcb02d9f2fab91f25c52f65ed2cc820b04e3343dadd9ccbc9ec119",
+      "condition": "N1P1W0",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        22
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        22
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "03.jsonl",
+      "episode_id": "03950e6438",
+      "source_jsonl_sha256": "47902c8a3008f38e0507e91bf69aa5b9c7e92b7d80d5088cd9fee866640af190",
+      "condition": "N0P1W1",
+      "api_requests": 16,
+      "submit_seq": 65,
+      "reviewer_post_lock_artifact_result_seqs": [
+        70
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        70
+      ],
+      "tool_error_seqs": [
+        20,
+        25
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "04.jsonl",
+      "episode_id": "205dbbe515",
+      "source_jsonl_sha256": "caf173f0c8bae0253d05435f7acc14f3d699087e51008d4acd61710f108f36cb",
+      "condition": "N1P1W1",
+      "api_requests": 16,
+      "submit_seq": 65,
+      "reviewer_post_lock_artifact_result_seqs": [
+        70
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        70
+      ],
+      "tool_error_seqs": [
+        15,
+        20,
+        50,
+        60
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        30
+      ],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "05.jsonl",
+      "episode_id": "c6a7c8ae91",
+      "source_jsonl_sha256": "0599691da55f25e49777c7dbdbee54f82c6c9be0aaa184bd7a421835a45c395d",
+      "condition": "N0P1W2",
+      "api_requests": 16,
+      "submit_seq": 65,
+      "reviewer_post_lock_artifact_result_seqs": [
+        70
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        70
+      ],
+      "tool_error_seqs": [
+        20
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    },
+    {
+      "file": "06.jsonl",
+      "episode_id": "957652791a",
+      "source_jsonl_sha256": "862bf0314228d804591c3104045855d131b1c77f7114281c5a5ea8dec3b30b73",
+      "condition": "N1P1W2",
+      "api_requests": 16,
+      "submit_seq": 55,
+      "reviewer_post_lock_artifact_result_seqs": [
+        60
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        60
+      ],
+      "tool_error_seqs": [
+        20
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        40,
+        65
+      ],
+      "submitted_filenames": [
+        "aggregate.json"
+      ],
+      "consumed_post_lock_filenames": [
+        "aggregate.json"
+      ]
+    }
+  ],
+  "limits": "Integrity checks establish evidence transport and references, not semantic rationale correctness or absence of all possible disclosure. Human confirmation remains pending."
+}
