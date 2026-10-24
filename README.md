@@ -5,15 +5,14 @@
 **Approach:** Solo MVP first; complete a reproducible two-agent pilot before deciding whether to expand the team or scope.
 
 
-## Workspaces
+## Workspaces and collaboration rules
 
-Use these folders to keep individual notes, drafts, and task-specific materials organized:
+- Sarah's personal notes and experiment runs belong only in `workspaces/sarah/` and Sarah branches (`sarah/*`).
+- Julien's personal notes and experiment runs belong only in `workspaces/julien/` and Julien branches (`julien/*`).
+- Do not edit or move files across personal workspaces without the owner's explicit request. Shared project changes should go through a pull request.
+- Read [COLLABORATION_RULES.md](COLLABORATION_RULES.md) before contributing.
 
-- `workspaces/sarah/` — Sarah's individual work area.
-- `workspaces/julien/` — Julien's individual work area.
-- Shared implementation, experiment specifications, and final deliverables belong in the repository root or the relevant shared folder.
-
-These folders are organizational only. Both collaborators with repository access can view and edit the entire private repository. Use separate branches and pull requests when changes need review; folder names do not enforce access permissions.
+These rules organize the work but do not create folder-level permissions. Repository collaborators can access the full private repository.
 
 ## 1. Research Goal
 
