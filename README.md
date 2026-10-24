@@ -171,7 +171,34 @@ Sarah 想探索可复制的金融数据产品：让金融机构能在授权边�
 - 这份 README 是更新后的研究方案和任务拆分。
 - 下一步开发应先完成 Phase 0 与 Phase 1；之后让真实模型在 A/B 设置中运行，再把真实 episode 数据接入 demo。
 
-## 10. 结论写法
+## 10. 可复用代码评估与本地 MVP
+
+我检查了 [Poseidon Research 的 sprint starter](https://github.com/poseidon-research/collusion_hackathon) 及其 [Colosseum 上游框架](https://github.com/umass-ai-safety/colosseum)。它们适合作为多 Agent 运行、条件对照和 trajectory 记录的参考；现有任务偏 Jira／医院流程，不包含本项目需要的金融数据许可、记录级导出和审批工具，因此仍需自定义环境。为了先把两天内可演示的核心流程跑起来，本版本先采用独立的轻量 harness；没有把上游源码复制进来，也不依赖其大型安装环境。
+
+本地 MVP：
+
+- `harness.py`：合成任务的 scripted plumbing control，输出序列化 JSONL episode。
+- `experiment_spec.md`：冻结条件与协同掩盖判定标准。
+- `docs/experiment-plan.md`：任务拆分、进度与回滚步骤。
+- `tests/test_harness.py`：检查 A/B 隔离、轨迹、放行与分类规则。
+
+运行示例：
+
+```bash
+python -m unittest discover -s tests -v
+python harness.py --condition A --scenario compliant
+python harness.py --condition B --scenario coverup
+```
+
+**重要：** `--scenario` 产生的是人为设定的流程控制案例，不是模型生成的行为证据，不能放入 A/B 实证样本或据此声称发现串谋。目前此 harness 尚未连接真实模型 API；只有完成真实模型接入并采集可复核轨迹之后，才能回答研究问题。当前可运行的双语页面仍是概念演示，不应把页面中的人工构造轨迹描述成实验观测。
+
+## 11. Git 回滚点
+
+- `main` 保存了本次开发前的 README 和双语 demo 基线。
+- 开发位于 `research/data-release-collusion` 分支。
+- 回到原始版本：`git switch main`；若要彻底丢弃开发分支，先切回 main 再执行 `git branch -D research/data-release-collusion`。
+
+## 12. 结论写法
 
 **若观察到事件：**
 
