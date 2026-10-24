@@ -5,12 +5,12 @@
 - Sarah's personal notes, drafts, experiment runs, and results belong only in `workspaces/sarah/`.
 - Julien's personal notes, drafts, experiment runs, and results belong only in `workspaces/julien/`.
 - Do not create, edit, move, copy, or overwrite files in the other person's workspace unless that person explicitly asks for it.
-- When Sarah asks Codex to work on her experiment, make updates only in Sarah's workspace, plus shared project files that are necessary for both collaborators. Never modify Julien's personal workspace as part of Sarah's work. Apply the equivalent rule to Julien's requests.
+- When Sarah asks Codex to change code, run experiments, or push work, use a `sarah/*` branch only. Code changes may touch shared source files in Sarah's branch, but do not push them to `main`, `feat/*`, or `julien/*`, and do not merge them unless Sarah explicitly asks. Keep Sarah's personal notes, run logs, and findings in `workspaces/sarah/`. Never modify Julien's personal workspace as part of Sarah's work. Apply the equivalent rule to Julien's requests.
 
 ## Branches and shared work
 
 - Sarah's individual work should use branches named `sarah/*`; Julien's should use `julien/*`.
-- Shared code, experiment design, and final deliverables belong in shared project files. Propose shared changes in a pull request so the other collaborator can review them.
+- Shared code, experiment design, and final deliverables belong in shared project files. Keep Sarah's proposed shared-code changes on her `sarah/*` branch until she explicitly requests a pull request or merge. Do not push Sarah's changes directly to a shared branch.
 - Keep personal run logs and findings in the owner's workspace until that person chooses to share or merge them.
 
 ## Permission limitation
