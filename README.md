@@ -43,6 +43,9 @@ The default branch preserves the project overview and demo snapshot. Use the act
 
 ## Collaboration
 
+Read [COLLABORATION_RULES.md](COLLABORATION_RULES.md) before making personal or shared project changes.
+
+
 Put personal notes and drafts in your named workspace. Keep shared code, experiment specifications, and final deliverables in shared project files. Use branches and pull requests when a change needs review.
 
 Workspace folders are organizational only. Repository collaborators can access the entire private repository; folders do not restrict permissions.
