@@ -6,6 +6,7 @@ The central question is now: **When delivery is urgent or review resources are s
 
 | Study role | Evidence or design | Status / separate denominator |
 |---|---|---|
+| **Latest: clarified evidence v5** | [16 natural episodes, revised evidence interface](natural_evidence_v5/README.md) | Completed:14aggregate approvals,1false rejection,1withdrawal;0prohibited releases;1inaccurate report approved;4smoke excluded; humanpending |
 | **Pressure/resource diagnostic** | [40 seeded reviewer attempts](pressure_review_v4/README.md) | Completed:36 correct terminal decisions,4 no decision;0 unsafe approvals observed; separate4smoke; human confirmation pending |
 | **Natural urgency × private channel** | [16 natural two-agent episodes](natural_pressure_channel_v4/README.md) | Completed:13aggregate approvals,2rejections,1hold;0prohibited releases; report/reason errors separate;4smoke excluded |
 | v4 natural workflow baseline | [named_v4_pilot_01](experiment_runs/2026-10-24/named_v4_pilot_01/summary.json): eight episodes, four A/four B | Completed; human review pending; no randomized pressure comparison |
@@ -13,7 +14,7 @@ The central question is now: **When delivery is urgent or review resources are s
 | Technical smoke | [Natural v4 smoke](experiment_runs/2026-10-24/named_v4_smoke_01/summary.json) and [capability smoke](experiment_runs/2026-10-24/capability_v4_smoke_01/summary.json) | Two each; excluded from formal counts |
 | Historical exploration | [Historical evidence index](history/README.md): earlier inputs, diagnostics and pilots | Separate historical versions; never pool with v4 |
 
-All current v4 studies use the [v4 SQLite dataset](datasets/synthetic_financial_v4_english/README.md): 2,000 fictional customers and 20,000 transactions. `synthetic_transaction_details_v4_english.csv` is the downloadable joined transaction export, not a different experiment source. The natural runner can stage all transaction rows; the capability diagnostic uses fixed packages of at most twenty customer rows. Eight natural episodes approved only aggregate counts; report and workflow errors are recorded separately in an AI-assisted draft, awaiting human confirmation.
+All current studies use the [v4 SQLite dataset](datasets/synthetic_financial_v4_english/README.md): 2,000 fictional customers and 20,000 transactions. `synthetic_transaction_details_v4_english.csv` is the downloadable joined transaction export, not a different experiment source. The natural runner can stage all transaction rows; the capability diagnostic uses fixed packages of at most twenty customer rows. Eight natural episodes approved only aggregate counts; report and workflow errors are recorded separately in an AI-assisted draft, awaiting human confirmation.
 
 The new natural study found two definite authored report errors (one approved, one rejected for an unrelated wrong reason), an additional false rejection and a safe incomplete hold. All sixteen reviewers inspected actual locked contents; four did not refresh post-submission audit. No sensitive package was submitted, so zero disclosure does not demonstrate interception or a private-channel risk effect. AI semantic review remains pending human confirmation. See [English results](natural_pressure_channel_v4/RESULTS_EN.md) and the [next interface-revision proposal](natural_pressure_channel_v4/NEXT_PROTOCOL_FIXES.md); no further live calls have been launched.
 
@@ -30,3 +31,5 @@ Shared code, experiment specifications, and joint deliverables belong in shared 
 See the repository [collaboration rules](../../COLLABORATION_RULES.md). Folder boundaries are organizational only; repository access is not restricted by folder.
 
 For a full project recap and instructions for continuing in Codex, see [CODEX_HANDOFF.md](CODEX_HANDOFF.md).
+
+The latest v5 label refers to the workflow/evidence interface, not a new dataset. It retains the same v4 source. Two episodes internally staged raw rows, replaced them with aggregates before submission, and never submitted sensitive packages. Do not infer interception from those paths. See [latest English report](natural_evidence_v5/RESULTS_EN.md) for the false column-name policy rejection, approved staging-location report error, unsupported withdrawal reason and source-attribution qualifications. Older versions and smoke remain separate.

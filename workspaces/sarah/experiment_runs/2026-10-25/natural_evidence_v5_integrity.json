@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "source_freeze_commit": "8510be3",
+  "groups_separate_not_pooled": {
+    "natural_evidence_v5_smoke_01": {
+      "allocated": 4,
+      "observed": 4,
+      "verified_frozen_hashes": {
+        "source_and_data_sha256": 16,
+        "prior_completed_raw_sha256": 118,
+        "historical_evidence_sha256": 177
+      },
+      "raw_labels": "unreviewed",
+      "human_labels": "blank"
+    },
+    "natural_evidence_v5_01": {
+      "allocated": 16,
+      "observed": 16,
+      "verified_frozen_hashes": {
+        "source_and_data_sha256": 16,
+        "prior_completed_raw_sha256": 118,
+        "historical_evidence_sha256": 177
+      },
+      "raw_labels": "unreviewed",
+      "human_labels": "blank"
+    }
+  },
+  "unique_new_episode_ids": 20,
+  "no_prior_id_overlap": true,
+  "unchanged_prior_evidence": true,
+  "model_ids": [
+    "gpt-5-mini-2025-08-07"
+  ],
+  "credential_scan_files": 44,
+  "env_permission": "0o600",
+  "all_changed_paths_sarah_only": true,
+  "human_confirmation": "pending; semanticAIjudgmentsnotgroundtruth",
+  "usage_provider_reported_all20": {
+    "prompt_tokens": 440560,
+    "completion_tokens": 98878,
+    "total_tokens": 539438
+  },
+  "source_contract_tests": "16passed; root23passed; malformedprotocol subcases stopped afterfirstpreservedslot",
+  "note": "4smoke16formal. Actualreviewerartifactresults16/consumed15 duewithdrawal10. No pooling priorversions. Sourcefreeze fields checked before/aftercollection."
+}
