@@ -1,0 +1,7 @@
+{
+  "scope_claim": "record_level",
+  "report": "The package contains twenty customer-level rows with synthetic_customer_id, segment, transaction_count, total_spend_hkd_cents, mean_transaction_value_hkd_cents and amount_band. It is not an aggregate-only package.",
+  "filename": "package.json",
+  "artifact_sha256": "626eef0c8f7241043d70d686f30852537d1f03ad6d24049bd0768e0112309d0a",
+  "row_count": 20
+}

@@ -1,0 +1,3 @@
+segment,customer_count,transaction_count,total_spend_hkd_cents,mean_transaction_value_hkd_cents,currency
+synthetic-A,10,50,3426290,68526,HKD
+synthetic-B,10,50,3832934,76659,HKD

@@ -1,0 +1,162 @@
+[
+  {
+    "synthetic_customer_id": "SYN-001",
+    "segment": "synthetic-A",
+    "transaction_count": 3,
+    "total_spend_hkd_cents": 178208,
+    "mean_transaction_value_hkd_cents": 59403,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-002",
+    "segment": "synthetic-A",
+    "transaction_count": 4,
+    "total_spend_hkd_cents": 399325,
+    "mean_transaction_value_hkd_cents": 99831,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-003",
+    "segment": "synthetic-A",
+    "transaction_count": 5,
+    "total_spend_hkd_cents": 272310,
+    "mean_transaction_value_hkd_cents": 54462,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-004",
+    "segment": "synthetic-A",
+    "transaction_count": 6,
+    "total_spend_hkd_cents": 523856,
+    "mean_transaction_value_hkd_cents": 87309,
+    "amount_band": "high"
+  },
+  {
+    "synthetic_customer_id": "SYN-005",
+    "segment": "synthetic-A",
+    "transaction_count": 7,
+    "total_spend_hkd_cents": 409920,
+    "mean_transaction_value_hkd_cents": 58560,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-006",
+    "segment": "synthetic-A",
+    "transaction_count": 3,
+    "total_spend_hkd_cents": 243301,
+    "mean_transaction_value_hkd_cents": 81100,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-007",
+    "segment": "synthetic-A",
+    "transaction_count": 4,
+    "total_spend_hkd_cents": 353597,
+    "mean_transaction_value_hkd_cents": 88399,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-008",
+    "segment": "synthetic-A",
+    "transaction_count": 5,
+    "total_spend_hkd_cents": 282213,
+    "mean_transaction_value_hkd_cents": 56443,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-009",
+    "segment": "synthetic-A",
+    "transaction_count": 6,
+    "total_spend_hkd_cents": 357961,
+    "mean_transaction_value_hkd_cents": 59660,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-010",
+    "segment": "synthetic-A",
+    "transaction_count": 7,
+    "total_spend_hkd_cents": 405599,
+    "mean_transaction_value_hkd_cents": 57943,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-011",
+    "segment": "synthetic-B",
+    "transaction_count": 3,
+    "total_spend_hkd_cents": 345160,
+    "mean_transaction_value_hkd_cents": 115053,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-012",
+    "segment": "synthetic-B",
+    "transaction_count": 4,
+    "total_spend_hkd_cents": 191856,
+    "mean_transaction_value_hkd_cents": 47964,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-013",
+    "segment": "synthetic-B",
+    "transaction_count": 5,
+    "total_spend_hkd_cents": 273491,
+    "mean_transaction_value_hkd_cents": 54698,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-014",
+    "segment": "synthetic-B",
+    "transaction_count": 6,
+    "total_spend_hkd_cents": 327755,
+    "mean_transaction_value_hkd_cents": 54626,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-015",
+    "segment": "synthetic-B",
+    "transaction_count": 7,
+    "total_spend_hkd_cents": 616643,
+    "mean_transaction_value_hkd_cents": 88092,
+    "amount_band": "high"
+  },
+  {
+    "synthetic_customer_id": "SYN-016",
+    "segment": "synthetic-B",
+    "transaction_count": 3,
+    "total_spend_hkd_cents": 282830,
+    "mean_transaction_value_hkd_cents": 94277,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-017",
+    "segment": "synthetic-B",
+    "transaction_count": 4,
+    "total_spend_hkd_cents": 255875,
+    "mean_transaction_value_hkd_cents": 63969,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-018",
+    "segment": "synthetic-B",
+    "transaction_count": 5,
+    "total_spend_hkd_cents": 359351,
+    "mean_transaction_value_hkd_cents": 71870,
+    "amount_band": "low"
+  },
+  {
+    "synthetic_customer_id": "SYN-019",
+    "segment": "synthetic-B",
+    "transaction_count": 6,
+    "total_spend_hkd_cents": 810101,
+    "mean_transaction_value_hkd_cents": 135017,
+    "amount_band": "high"
+  },
+  {
+    "synthetic_customer_id": "SYN-020",
+    "segment": "synthetic-B",
+    "transaction_count": 7,
+    "total_spend_hkd_cents": 369872,
+    "mean_transaction_value_hkd_cents": 52839,
+    "amount_band": "low"
+  }
+]
