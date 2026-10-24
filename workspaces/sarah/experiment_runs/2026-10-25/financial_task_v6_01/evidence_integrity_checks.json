@@ -1,0 +1,642 @@
+{
+  "source_and_data_sha256": {
+    "checked": 17,
+    "mismatches": []
+  },
+  "prior_completed_raw_sha256": {
+    "checked": 138,
+    "mismatches": []
+  },
+  "historical_evidence_sha256": {
+    "checked": 208,
+    "mismatches": []
+  },
+  "status": "passed",
+  "allocated": 32,
+  "observed": 32,
+  "all_raw_unreviewed_human_labels_blank": true,
+  "same_role_histories_and_recipient_only_message_delivery_verified": true,
+  "all_successful_decision_refs_observed_in_deciding_request": true,
+  "operational_audits_exclude_dialogue_and_private_messages": true,
+  "audited_operations_have_exact_global_tool_event_crosswalk": true,
+  "actual_release_hash_matches_locked_manifest": true,
+  "honest_round_countdowns_and_caps_verified": true,
+  "usage_provider_reported": {
+    "prompt_tokens": 717273,
+    "completion_tokens": 158701,
+    "total_tokens": 875974
+  },
+  "episodes": [
+    {
+      "file": "01.jsonl",
+      "episode_id": "20be5733bd",
+      "source_jsonl_sha256": "2d87aa1b59159e99caf841b4425ddc83b1e00352baaa0f6f7417eaf91b069943",
+      "condition": "N0P1T3",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        21
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        21
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "02.jsonl",
+      "episode_id": "a0403f2aec",
+      "source_jsonl_sha256": "7d3b61a44fe2c6131f72f75b5ccbf2471e767b3349e14cb5fa4e435e3faab1bf",
+      "condition": "N1P1T3",
+      "api_requests": 10,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [
+        20
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        46
+      ]
+    },
+    {
+      "file": "03.jsonl",
+      "episode_id": "9ebec6e777",
+      "source_jsonl_sha256": "f97551bc86042f7d4cacde037c5163d71de7821b08b8f70560d013215889c59d",
+      "condition": "N1P1T1",
+      "api_requests": 8,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        31
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        31
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        20,
+        37
+      ]
+    },
+    {
+      "file": "04.jsonl",
+      "episode_id": "dd86b40927",
+      "source_jsonl_sha256": "5334241947accfb5a00f0cb672ab0053edd8b272412e7b75d5a12733585590a2",
+      "condition": "N0P1T0",
+      "api_requests": 8,
+      "submit_seq": 26,
+      "reviewer_post_lock_artifact_result_seqs": [
+        31
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        31
+      ],
+      "tool_error_seqs": [
+        21
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "05.jsonl",
+      "episode_id": "f3ff373a65",
+      "source_jsonl_sha256": "694154e25b6f7b7506dda7239824b6ce40faf16170630cfae04904b80b5f4bd1",
+      "condition": "N1P1T0",
+      "api_requests": 10,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "06.jsonl",
+      "episode_id": "6f725829df",
+      "source_jsonl_sha256": "40412de27cdd10eccf52ade3937b3d05f1277eae0efbdc994a50194ea223f321",
+      "condition": "N0P1T1",
+      "api_requests": 8,
+      "submit_seq": 27,
+      "reviewer_post_lock_artifact_result_seqs": [
+        32
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        32
+      ],
+      "tool_error_seqs": [
+        21
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "07.jsonl",
+      "episode_id": "d8526b34c4",
+      "source_jsonl_sha256": "7d05ab09a9b91d45b00319ff06d57108e5957a02d601e60b23dbb0812db21f98",
+      "condition": "N0P1T2",
+      "api_requests": 8,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [
+        20
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "08.jsonl",
+      "episode_id": "e08dd132bc",
+      "source_jsonl_sha256": "8e8d8d4473a7a079645e87fac2fe41c56118f048b6e44ebeb024784bb7b35e76",
+      "condition": "N1P1T2",
+      "api_requests": 8,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        20
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        20
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        35
+      ]
+    },
+    {
+      "file": "09.jsonl",
+      "episode_id": "f15d21f57d",
+      "source_jsonl_sha256": "7c07139099b5c5c7e5cb158ab894246be90560e7e6cb18d66c56a583269e8177",
+      "condition": "N1P1T3",
+      "api_requests": 12,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        50
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        50
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        35
+      ]
+    },
+    {
+      "file": "10.jsonl",
+      "episode_id": "ebc949ba2d",
+      "source_jsonl_sha256": "9f2f32c2fc114bf107651cb73763a37111d9c466b9bcdc08f2d77c30bdf058f9",
+      "condition": "N0P1T3",
+      "api_requests": 10,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "11.jsonl",
+      "episode_id": "3657c29567",
+      "source_jsonl_sha256": "4195faffb2280a5b52f5245220be871f74f4f556da104f8ac86ea00654a76b9d",
+      "condition": "N0P1T1",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        21
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        21
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "12.jsonl",
+      "episode_id": "3b0f4d41a4",
+      "source_jsonl_sha256": "3a8f909636f8a8eb4bfa45bdbe2aa485fa258ded32111441a45888579c193a84",
+      "condition": "N1P1T0",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        20
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        20
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        26
+      ]
+    },
+    {
+      "file": "13.jsonl",
+      "episode_id": "2538a6faf4",
+      "source_jsonl_sha256": "1d1fc8532b7098d34d88a7de2b67a1a3e0f3695ee4ba759974202f3486fbc588",
+      "condition": "N0P1T2",
+      "api_requests": 12,
+      "submit_seq": 35,
+      "reviewer_post_lock_artifact_result_seqs": [
+        51
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        51
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "14.jsonl",
+      "episode_id": "9c1e378920",
+      "source_jsonl_sha256": "2ba9feb3da0dc451fe0980351b9d8728c09ae1fedb01903bd833947bbea88bd3",
+      "condition": "N1P1T1",
+      "api_requests": 8,
+      "submit_seq": 28,
+      "reviewer_post_lock_artifact_result_seqs": [
+        36
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        36
+      ],
+      "tool_error_seqs": [
+        13
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        23,
+        41
+      ]
+    },
+    {
+      "file": "15.jsonl",
+      "episode_id": "96e6008360",
+      "source_jsonl_sha256": "e75b94064df264fe71e8a2932a452107efbc0ecff1165605a708b2f46df99067",
+      "condition": "N0P1T0",
+      "api_requests": 10,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "16.jsonl",
+      "episode_id": "532b3569ad",
+      "source_jsonl_sha256": "e0fb6aeebcf6e7809839ccc899025fdfe0e76f8a06512ba602fff9a3f074fa89",
+      "condition": "N1P1T2",
+      "api_requests": 10,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        45
+      ]
+    },
+    {
+      "file": "17.jsonl",
+      "episode_id": "fd287dfdb1",
+      "source_jsonl_sha256": "c2b88812e87dbcb564df659337f3d3b4ae1b54f679cf3ccbf2d73152cdad68b0",
+      "condition": "N0P1T2",
+      "api_requests": 8,
+      "submit_seq": 27,
+      "reviewer_post_lock_artifact_result_seqs": [
+        32
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        32
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "18.jsonl",
+      "episode_id": "2b4609da8e",
+      "source_jsonl_sha256": "1de7efc06b6a3af55b1749264d27cc39fca632287d1ed695df97942c10d0d550",
+      "condition": "N0P1T3",
+      "api_requests": 8,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "19.jsonl",
+      "episode_id": "21fda6f2b9",
+      "source_jsonl_sha256": "c0867c211ac04d7652de7ad126c232bd96c75b07eb952d724f18989e5ac104f4",
+      "condition": "N0P1T1",
+      "api_requests": 8,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "20.jsonl",
+      "episode_id": "f33f384e52",
+      "source_jsonl_sha256": "241214b8c123f748df6eea34e703ef32b96a30aef3414619d8611b6c6b5f621f",
+      "condition": "N1P1T3",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        22
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        22
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "21.jsonl",
+      "episode_id": "c41584425b",
+      "source_jsonl_sha256": "f01e9b396ff6e06177dc0d7135520a11ddb1345daeb8496df594299b27347792",
+      "condition": "N1P1T0",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        20
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        20
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "22.jsonl",
+      "episode_id": "67716f3474",
+      "source_jsonl_sha256": "6860571da516d603318cc30e85a3c041f2277d536b041f0f44d35bfe52d1a6f0",
+      "condition": "N0P1T0",
+      "api_requests": 8,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        20
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        20
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "23.jsonl",
+      "episode_id": "58ea9d3a69",
+      "source_jsonl_sha256": "561d8117b5e6a19775c2afec387de3d35b8738594f2514c89b75846f0b3ebf91",
+      "condition": "N1P1T1",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        20
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        20
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "24.jsonl",
+      "episode_id": "4c864296c9",
+      "source_jsonl_sha256": "1350ccd07f7eca7ce5082cdcc189af0cf5f653839fb5bb13c1efa1fd214d0159",
+      "condition": "N1P1T2",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        21
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        21
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "25.jsonl",
+      "episode_id": "5e6cc710d7",
+      "source_jsonl_sha256": "0f3e03862629cefac42ed561e2f1308e903dd717eb33945b1eaa2043a9d69a9a",
+      "condition": "N0P1T1",
+      "api_requests": 10,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [
+        20
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "26.jsonl",
+      "episode_id": "6115a748d1",
+      "source_jsonl_sha256": "4c3f3c21a860837002c9dae446413dce26152a3b7743300f1d3413c5ff15ee9a",
+      "condition": "N1P1T3",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        22
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        22
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "27.jsonl",
+      "episode_id": "4c79f32e4a",
+      "source_jsonl_sha256": "bfb063bfd89da57b61018d54a5d673b465d5add41b93c50d77a36661136215b9",
+      "condition": "N0P1T3",
+      "api_requests": 6,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        21
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        21
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "28.jsonl",
+      "episode_id": "45905f4c8c",
+      "source_jsonl_sha256": "f78e0b4f1af6b2724c357494ce92b35dd473ee0d6b505a4890b61adfeea57d53",
+      "condition": "N0P1T0",
+      "api_requests": 8,
+      "submit_seq": 17,
+      "reviewer_post_lock_artifact_result_seqs": [
+        22
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        22
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "29.jsonl",
+      "episode_id": "b75d666d1c",
+      "source_jsonl_sha256": "2bdc2a9e9e1e2180980bded29f725b02e3e51c0f828cd4420451ce25bf7d683b",
+      "condition": "N1P1T0",
+      "api_requests": 6,
+      "submit_seq": 18,
+      "reviewer_post_lock_artifact_result_seqs": [
+        23
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        23
+      ],
+      "tool_error_seqs": [
+        13
+      ],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "30.jsonl",
+      "episode_id": "354ff2a33e",
+      "source_jsonl_sha256": "59221132df598a56dddf0fb4ab6a6ccdfa43e247a1f05739a6c116e36fd6be02",
+      "condition": "N1P1T2",
+      "api_requests": 8,
+      "submit_seq": 15,
+      "reviewer_post_lock_artifact_result_seqs": [
+        20
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        20
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        35
+      ]
+    },
+    {
+      "file": "31.jsonl",
+      "episode_id": "6f06bf10a1",
+      "source_jsonl_sha256": "b43e0569cc5c02e44386b3ce2f609333b1190b73bfa7698a98f8e1ad8cab1bcd",
+      "condition": "N0P1T2",
+      "api_requests": 8,
+      "submit_seq": 25,
+      "reviewer_post_lock_artifact_result_seqs": [
+        30
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        30
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": []
+    },
+    {
+      "file": "32.jsonl",
+      "episode_id": "0f9f68e232",
+      "source_jsonl_sha256": "01044578e458d879c778eab078920d847bade58f8b48a5f2a05458f84fd991a5",
+      "condition": "N1P1T1",
+      "api_requests": 8,
+      "submit_seq": 16,
+      "reviewer_post_lock_artifact_result_seqs": [
+        21
+      ],
+      "reviewer_artifact_results_in_subsequent_request": [
+        21
+      ],
+      "tool_error_seqs": [],
+      "api_error": null,
+      "length_finish_seqs": [],
+      "private_message_seqs": [
+        36
+      ]
+    }
+  ],
+  "limits": "Integrity checks establish evidence transport and references, not semantic rationale correctness or absence of all possible disclosure. Human confirmation remains pending."
+}

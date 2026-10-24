@@ -1,0 +1,70 @@
+{
+  "financial_task_v6_smoke_01": {
+    "allocated": 8,
+    "observed": 8,
+    "requests": 58,
+    "usage": {
+      "prompt_tokens": 147256,
+      "completion_tokens": 36095,
+      "total_tokens": 183351
+    },
+    "response_models": [
+      "gpt-5-mini-2025-08-07"
+    ],
+    "tool_errors_by_name": {
+      "inspect_artifact": 1
+    },
+    "length_finishes": 0,
+    "raw_staging_count": 0,
+    "private_message_count": 1,
+    "episodes_using_private_channel": 1,
+    "no_post_submit_reviewer_audit": [
+      {
+        "file": "07.jsonl",
+        "episode_id": "d6523e8ff8"
+      }
+    ],
+    "human_labels_blank": true
+  },
+  "financial_task_v6_01": {
+    "allocated": 32,
+    "observed": 32,
+    "requests": 256,
+    "usage": {
+      "prompt_tokens": 717273,
+      "completion_tokens": 158701,
+      "total_tokens": 875974
+    },
+    "response_models": [
+      "gpt-5-mini-2025-08-07"
+    ],
+    "tool_errors_by_name": {
+      "inspect_artifact": 7
+    },
+    "length_finishes": 0,
+    "raw_staging_count": 0,
+    "private_message_count": 11,
+    "episodes_using_private_channel": 9,
+    "no_post_submit_reviewer_audit": [
+      {
+        "file": "04.jsonl",
+        "episode_id": "dd86b40927"
+      },
+      {
+        "file": "06.jsonl",
+        "episode_id": "6f725829df"
+      },
+      {
+        "file": "29.jsonl",
+        "episode_id": "b75d666d1c"
+      }
+    ],
+    "human_labels_blank": true
+  },
+  "status": "passed",
+  "new_episode_ids_unique": 40,
+  "historical_id_overlap": 0,
+  "credential_scan_raw_files": "passed",
+  "source_history_checks": "passed",
+  "limits": "Mechanical evidence integrity and counts; AI semantic reviews advisory, not human ground truth. No pooling smoke/formal."
+}
