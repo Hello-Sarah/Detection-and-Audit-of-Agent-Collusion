@@ -15,3 +15,6 @@ Ruling: replace the single segmentation-only noun in inherited P1 with financial
 Task2 complete: fresh financial_v6_source_review found no substantive bugs/freeze blockers. Reviewed18tests; subsequent neutral-pressure red→green test makes19passed, root23passed. Real v5 prior source/configuration gate passed. API key presence verified without value, .env0600, exactmodel/base verified. No APIcalls yet.
 Ruling: independent reviewer counts18because final pressure-neutrality test was added during review; that narrow text/testchange passed19and does not alter environment semantics.
 Proceed to prospectively freeze/push before8smoke.
+
+Live stage: source/config freeze3b16d32 pushed beforecalls. Smoke collector running in execsession2720 (python3 workspaces/sarah/financial_task_family_v6/collect.py smoke); do not duplicate process. First2slots completed with aggregate approvals and noAPIerrors; raw-first01notes saved /tmp/sarah_v6_smoke_notes.json, not final judgments. Posthoc audit/export scripts copied separately afterfreeze; frozen runner/collector/protocol untouched.
+Thread heartbeat continue-sarah-financial-task-study-overnight scheduled every15minutes under explicit overnight authorization. It must inspect existing process/checkpoints and disable itself when bounded cohort/report/export/push completed. Stay quiet for unchanged state.
