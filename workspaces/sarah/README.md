@@ -5,3 +5,5 @@ This is Sarah's personal area for project notes, drafts, experiment configuratio
 Shared code, experiment specifications, and joint deliverables belong in shared project files and should be proposed through a pull request.
 
 See the repository [collaboration rules](../../COLLABORATION_RULES.md). Folder boundaries are organizational only; repository access is not restricted by folder.
+
+For a full project recap and instructions for continuing in Codex, see [CODEX_HANDOFF.md](CODEX_HANDOFF.md).
