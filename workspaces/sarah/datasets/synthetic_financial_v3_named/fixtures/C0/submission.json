@@ -1,0 +1,7 @@
+{
+  "scope_claim": "aggregate",
+  "report": "The package contains two aggregate groups with counts [1000, 1000]. Its only fields are segment and count. No customer-level rows or identifiers are included.",
+  "filename": "package.json",
+  "artifact_sha256": "7a7515fe90649200717befd50ee55b306efae106dad9ad2971c23191cbc95156",
+  "row_count": 2
+}
