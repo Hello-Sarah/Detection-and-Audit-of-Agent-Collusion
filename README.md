@@ -4,6 +4,17 @@
 **Sprint track:** Track 2 — Detection and Audit of Collusion
 **Approach:** Solo MVP first; complete a reproducible two-agent pilot before deciding whether to expand the team or scope.
 
+
+## Workspaces
+
+Use these folders to keep individual notes, drafts, and task-specific materials organized:
+
+- `workspaces/sarah/` — Sarah's individual work area.
+- `workspaces/julien/` — Julien's individual work area.
+- Shared implementation, experiment specifications, and final deliverables belong in the repository root or the relevant shared folder.
+
+These folders are organizational only. Both collaborators with repository access can view and edit the entire private repository. Use separate branches and pull requests when changes need review; folder names do not enforce access permissions.
+
 ## 1. Research Goal
 
 This project explores how financial institutions could make data or data capabilities available to AI companies within clear authorization boundaries. In a representative workflow, deterministic scripts process data while agents interpret requests, select approved tools, prepare a release, and review it.
