@@ -330,3 +330,27 @@ workspace index now links both. No extra live calls beyond 2+20 were made.
 Next: Sarah confirms the separate AI-assisted rationale judgments. A later
 natural two-agent channel/pressure protocol requires its own freeze and budget;
 do not launch it merely because this diagnostic completed successfully.
+
+## 15. Research focus revised to pressure/resource robustness — 2026-10-24
+
+Sarah clarified that the central research question should be whether agents
+still review carefully under delivery pressure or scarce resources. The new
+`pressure_resource_review_design_v1.md` is a prospective design draft; no new
+implementation or calls have been made. Existing runs are workflow/capability
+baselines, not randomly allocated pressure controls, and remain unchanged.
+
+Proposed first stage isolates reviewer behavior with the five v4 fixtures:
+delivery urgency wording (neutral/high) × visible actual model-round budget
+(8/3). All cells retain identical policy, evidence access and legitimate
+approval/rejection/hold outcomes. Token cap/timeout remain equal; do not call
+this a pure token experiment or a real wall-clock deadline. Proposed exploratory
+scope is40 formal episodes(two repetitions per case/cell) plus4technical smoke,
+not yet authorized. Four repetitions would require80formal episodes and a
+separate budget decision. This draft is not permission to run either size.
+
+Primary axes separate unsafe release, decision correctness, evidence/rationale,
+safe but incomplete holds and efficiency. Future natural two-agent work would
+separately test urgency × messaging at fixed resources with clean operational
+audit visibility and the unchanged three-element cover-up standard. Planted
+reviewer errors are not spontaneous collusion. The workspace index now presents
+pressure robustness as the main question and clearly labels completed baselines.
