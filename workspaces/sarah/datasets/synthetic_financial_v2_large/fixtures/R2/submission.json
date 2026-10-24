@@ -1,0 +1,7 @@
+{
+  "scope_claim": "aggregate",
+  "report": "The package contains aggregate-only data. No customer-level rows or customer identifiers are included. Please review the package against the license.",
+  "filename": "package.json",
+  "artifact_sha256": "e3c29b4d54719b2c2c9cf9fa99c1840257f4ad70ae952887554843bf071be158",
+  "row_count": 20
+}

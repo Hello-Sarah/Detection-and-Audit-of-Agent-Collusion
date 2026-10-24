@@ -1,0 +1,51 @@
+{
+  "dataset_version": "synthetic_financial_v2_large",
+  "created_date": "2026-10-24",
+  "based_on_dataset_commit": "ff62479",
+  "fully_synthetic": true,
+  "historical_v2_used_this_dataset": false,
+  "integrated_into_live_runner": false,
+  "frozen_live_protocol": false,
+  "seed": 2026102402,
+  "currency": "HKD",
+  "monetary_unit": "integer HKD cents",
+  "customers": 2000,
+  "transactions": 20000,
+  "canonical_group_counts": [
+    1000,
+    1000
+  ],
+  "boundary_group_counts": [
+    9,
+    1991
+  ],
+  "record_level_fixture_rows": 20,
+  "record_level_fixture_sampling": "first 10 sorted IDs in each canonical group; deterministic, not random",
+  "rebuild_identical_files": 20,
+  "files_sha256": {
+    "README.md": "1fad687549bba99c93c9967074e41a4cade8e143cceb3e8e326a508c183a4dbc",
+    "build_csv.mjs": "57d3dc0f7fe24e44e0b3a48b59ac0d92cf3e81ba38ec2923ea609d15333e3fd6",
+    "csv/aggregate_metrics.csv": "1f289a51eaae2594043f7666e4ad7407702db92623abb146ace645bcb28da077",
+    "csv/aggregates.csv": "1e36f5eeae8ef1b8ba8b80201a89432074a3293bd57ce91cb8afe30d07ea7600",
+    "csv/aggregates_boundary.csv": "e4f3370a474e1c5527d2be7ffee9c0a9a31bc3551640432f5459a387084afa00",
+    "csv/customer_records.csv": "0beaef0fc3e6575adf40d5ea48786808bcea78c91a91929061f7921141fea997",
+    "csv/customers.csv": "61b305f28359670c3b4bc075e95525d7f89e8c6af157d120ec125f63c05d36c3",
+    "csv/transactions.csv": "8f933cafcebbe0e2dee2bf61d379895a5eb8457a5d471c31935bdf4c40c583d9",
+    "fixtures/C0/package.json": "7a7515fe90649200717befd50ee55b306efae106dad9ad2971c23191cbc95156",
+    "fixtures/C0/submission.json": "079ffa3ee92312e2919b371d49e5234a202c535f5a90a228ec6b8ba989a17c73",
+    "fixtures/D1/package.json": "7a7515fe90649200717befd50ee55b306efae106dad9ad2971c23191cbc95156",
+    "fixtures/D1/submission.json": "475f4fdff8fff9b5eda95d8f1a3be64252066e64d1bed82df8321e2ba312d469",
+    "fixtures/G1/package.json": "f8ec3c362f74779d514254bb26a9f5b8946e7483b00c1ca146d833a3b05d928a",
+    "fixtures/G1/submission.json": "52c15a2f45d4a1e080372c977fca9da99bbfaa2e1631c587c75e89eb00dfd41c",
+    "fixtures/R1/package.json": "e3c29b4d54719b2c2c9cf9fa99c1840257f4ad70ae952887554843bf071be158",
+    "fixtures/R1/submission.json": "7ef392e23e367023915e3d5615ea48e3071a9de52548beefd780daab5a3f2459",
+    "fixtures/R2/package.json": "e3c29b4d54719b2c2c9cf9fa99c1840257f4ad70ae952887554843bf071be158",
+    "fixtures/R2/submission.json": "29202ddc45af63d66eade8e0f71ff11095d0650ab3b433d8356be2d3863b8bd8",
+    "generate_dataset.py": "43f00a2f3f200de2a650889b2860c142e6e9f828916df505ccb2271d31972f93",
+    "policy.json": "4e63566a51d3490c356c56c4382ccfbd3a2e39ba9a11593548af39c2cf63be36",
+    "research.sqlite": "d31631cbec08a68a383fc701ed15ef8b288d1fd25bf8414a5a518d19b3a0c6c6",
+    "researcher/case_key.json": "592b90d978b868550c87e5b74d574967ffb10ba20fadfcf699f767939f4803da",
+    "schema.sql": "d7182f20601f416874441ac6937ed1cc73e0eda6dfe42f1bb3108bcdc1166538",
+    "verify_dataset.py": "57b2085ba902bf79b0cce19f119461aed205cd4193d1040857b1073b91094369"
+  }
+}

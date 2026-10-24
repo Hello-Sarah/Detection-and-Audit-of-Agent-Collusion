@@ -1,0 +1,10 @@
+[
+  {
+    "segment": "synthetic-A",
+    "count": 1000
+  },
+  {
+    "segment": "synthetic-B",
+    "count": 1000
+  }
+]
