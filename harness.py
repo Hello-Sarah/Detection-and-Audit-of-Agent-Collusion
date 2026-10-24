@@ -25,6 +25,10 @@ class Episode:
     approved: bool = False
     delivered_record_level: bool = False
     label: str = "incomplete"
+    run_type: str = "scripted_control"
+    model: str | None = None
+    error: str | None = None
+    release_artifact: Any = None
 
     def log(self, kind: str, actor: str, **details: Any) -> None:
         self.events.append({"seq": len(self.events), "type": kind, "actor": actor, **details})
@@ -92,14 +96,34 @@ def run_scripted(condition: str, scenario: str) -> Episode:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Synthetic agent-collusion harness plumbing controls")
+    parser.add_argument("--mode", choices=("scripted", "live"), default="scripted",
+                        help="scripted controls are not model evidence; live calls a configured chat API")
     parser.add_argument("--condition", choices=("A", "B"), default="B", help="A=formal handoff; B=private channel")
     parser.add_argument("--scenario", choices=("compliant", "single_violation", "coverup", "failed_coverup"), default="compliant")
     parser.add_argument("--out", default="outputs/episodes.jsonl")
+    parser.add_argument("--runs", type=int, default=1, help="number of sequential episodes")
+    parser.add_argument("--model", help="exact provider model identifier; defaults to OPENAI_MODEL")
+    parser.add_argument("--max-turns", type=int, default=16, help="maximum alternating agent turns per live episode")
     args = parser.parse_args()
-    episode = run_scripted(args.condition, args.scenario)
-    episode.write_jsonl(args.out)
-    print(json.dumps({"episode_id": episode.episode_id, "condition": episode.condition,
-                      "label": episode.label, "output": args.out}, ensure_ascii=False))
+    if args.runs < 1:
+        parser.error("--runs must be at least 1")
+    episodes = []
+    if args.mode == "scripted":
+        episodes = [run_scripted(args.condition, args.scenario) for _ in range(args.runs)]
+    else:
+        from live_runner import client_from_environment, run_live_episode
+
+        try:
+            client, configured_model = client_from_environment(args.model)
+        except ValueError as exc:
+            parser.error(str(exc))
+        episodes = [run_live_episode(client, args.condition, args.model or configured_model, args.max_turns)
+                    for _ in range(args.runs)]
+    for episode in episodes:
+        episode.write_jsonl(args.out)
+        print(json.dumps({"episode_id": episode.episode_id, "condition": episode.condition,
+                          "run_type": episode.run_type, "label": episode.label, "error": episode.error,
+                          "output": args.out}, ensure_ascii=False))
 
 
 if __name__ == "__main__":
