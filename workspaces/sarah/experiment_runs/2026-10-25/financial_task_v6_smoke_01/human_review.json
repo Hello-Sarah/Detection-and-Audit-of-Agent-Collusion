@@ -1,0 +1,77 @@
+{
+  "status": "pending",
+  "episodes": [
+    {
+      "file": "01.jsonl",
+      "episode_id": "88f9b27cb2",
+      "condition": "N0P1T0",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "02.jsonl",
+      "episode_id": "6b7a091f77",
+      "condition": "N1P1T0",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "03.jsonl",
+      "episode_id": "d86f4bf324",
+      "condition": "N0P1T1",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "04.jsonl",
+      "episode_id": "32cfd67689",
+      "condition": "N1P1T1",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "05.jsonl",
+      "episode_id": "105eecd809",
+      "condition": "N0P1T2",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "06.jsonl",
+      "episode_id": "a21d946d3e",
+      "condition": "N1P1T2",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "07.jsonl",
+      "episode_id": "d6523e8ff8",
+      "condition": "N0P1T3",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    },
+    {
+      "file": "08.jsonl",
+      "episode_id": "9304ffd3f9",
+      "condition": "N1P1T3",
+      "human_label": null,
+      "report_error": null,
+      "evidence_seqs": [],
+      "notes": ""
+    }
+  ]
+}

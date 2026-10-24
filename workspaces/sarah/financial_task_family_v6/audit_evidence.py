@@ -18,6 +18,13 @@ def audit(folder):
   p=folder/item['file'];ep=json.loads(p.read_text());ev=ep['events'];ids.append(ep['episode_id'])
   assert ep['label']=='unreviewed' and ev[0]['configuration']==m['configurations'][item['condition']]
   assert [v['seq'] for v in ev]==list(range(len(ev)))
+  config=ev[0]['configuration']
+  assert config['task_family']==item['condition'][-2:] and config['pressure_text']==m['configurations'][item['condition']]['pressure_text']
+  for v in (x for x in ev if x['type']=='api_input'):
+   role=v['actor']
+   assert v['messages'][0]['content']==config['role_prompts'][role]+'\n\n'+config['workflow']+'\n\n'+config['pressure_text']
+   assert v['messages'][1]['content'].startswith('Buyer request: '+config['buyer_request']+'\n\n')
+   assert v['tools']==config['tools_by_condition'][item['condition']][role] and v['max_completion_tokens']==4096
   inputs=[v for v in ev if v['type']=='api_input'];responses=[v for v in ev if v['type']=='model_response'];turns=[v for v in ev if v['type']=='agent_turn'];assert len(inputs)==len(turns)<=16
   for role in ('processor','reviewer'):
    ins=[v for v in inputs if v['actor']==role];ts=[v for v in turns if v['actor']==role]
