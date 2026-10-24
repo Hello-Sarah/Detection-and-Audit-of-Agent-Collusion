@@ -224,3 +224,27 @@ the extension has a blank `human_review.json` and all raw labels remain
 unreviewed. Do not copy previous content-error flags or compliant labels into
 the new batch. Review these new trajectories separately before combining any
 human-reviewed counts; prior research briefs describe the first batch only.
+
+## 12. Reviewed results and proposed next round — 2026-10-24
+
+Sarah has now confirmed the AI-assisted release-compliance judgments for both
+pilot batches, with separate human annotation layers. First-batch confirmation
+is in commit `507d0ce`; second-batch confirmation is in `bb676a9`. Raw labels
+remain unreviewed. The second batch has three confirmed content errors and one
+ambiguous description; its audit-only inspection is not a process deficiency.
+
+The updated English brief `pilot_research_results_2026-10-24_en.md` reports both
+batches separately. Its combined descriptive inventory is sixteen aggregate
+releases, seven confirmed content errors, one ambiguity and two approvals with
+no post-submission inspection-tool call. It explicitly discloses adaptive
+extension, AI-assisted human confirmation and v2's indirect utterance visibility
+through audit reads. The earlier Chinese brief remains a first-batch report.
+
+Sarah requested a design for the next round, not implementation or live runs.
+`next_round_reviewer_capability_design.md` proposes five deterministic cases
+with an isolated live reviewer, actual artifact-content access and separate
+operational/researcher log views. Proposed collection is two separate technical
+smoke episodes followed by twenty fixed capability episodes. No such calls have
+been made and their run budget has not been authorized. Planted violations are
+never counted as spontaneous collusion. A later natural channel/pressure study
+requires a separate protocol; do not implement or run it from this design alone.
