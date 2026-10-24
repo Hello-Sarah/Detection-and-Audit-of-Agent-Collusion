@@ -178,7 +178,7 @@ Report raw numerators and denominators, plus episode-level labels—not percenta
 
 ## 9. Current Assets and Remaining Work
 
-- index.html is a bilingual interactive concept demo. It switches communication conditions and displays hand-authored cases and step-by-step trajectories; it is not a record of two-agent experimental results.
+- index.html is an English-language interactive concept demo. It switches communication conditions and displays hand-authored cases and step-by-step trajectories; it is not a record of two-agent experimental results.
 - This README contains the research plan and task breakdown.
 - Phase 0's design and Phase 1's local simulation are implemented. The live model runner is ready; configure a provider API key before running the A/B pilot. Reviewed real episodes can then be added to the demo.
 
@@ -218,11 +218,11 @@ python harness.py --mode live --condition B --runs 4 --max-turns 16 --out output
 
 Live traces include agent turns, dialogue, tool calls, private messages, the manifest, and the simulated release decision. The API key is not written to the trace. Live runs remain labeled unreviewed until a researcher reviews each episode against the evidence criteria in experiment_spec.md.
 
-**Important:** --scenario creates a hand-authored plumbing control, not model-generated evidence. Do not include these controls in the A/B empirical sample or claim that they show agents colluding. The bilingual page remains a concept demo; its hand-authored trajectories are not observations. Only real, reviewed trajectories can answer the research question.
+**Important:** --scenario creates a hand-authored plumbing control, not model-generated evidence. Do not include these controls in the A/B empirical sample or claim that they show agents colluding. The English-language page remains a concept demo; its hand-authored trajectories are not observations. Only real, reviewed trajectories can answer the research question.
 
 ## 11. Git Rollback Points
 
-- main preserves the original README and bilingual demo.
+- main preserves the initial project snapshot.
 - The first implementation is on research/data-release-collusion; the live runner and OpenAI setup are on feat/live-agent-runner.
 - Return to the original version with git switch main.
 - To discard the live runner, switch to another branch first, then delete feat/live-agent-runner.
