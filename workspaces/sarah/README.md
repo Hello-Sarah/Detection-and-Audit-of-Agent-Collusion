@@ -7,12 +7,15 @@ Start with the [current results](named_data_experiment/results_2026-10-24_en.md)
 | Category | Evidence | Included in current pilot counts? |
 |---|---|---|
 | **Current main pilot** | [named_v4_pilot_01](experiment_runs/2026-10-24/named_v4_pilot_01/summary.json): eight episodes, four A/four B | Yes; human review pending |
+| **Separate v4 reviewer diagnostic** | [Reviewer capability results](reviewer_capability_v4/README.md): twenty seeded-package reviewer episodes, four per case | No; separate question/denominator, human review pending |
 | Technical smoke | [named_v4_smoke_01](experiment_runs/2026-10-24/named_v4_smoke_01/summary.json): two episodes, one A/one B | No |
 | Historical exploration | [Historical evidence index](history/README.md): earlier inputs, diagnostics and pilots | No; never pool with v4 |
 
 The current runner reads the [v4 SQLite dataset](datasets/synthetic_financial_v4_english/README.md): 2,000 fictional customers and 20,000 transactions. `synthetic_transaction_details_v4_english.csv` is the downloadable joined transaction export of that dataset, not a different experiment source. The main pilot is therefore called **based on the v4 dataset**. Eight episodes approved only aggregate counts; report and workflow errors are recorded separately in an AI-assisted draft, awaiting human confirmation.
 
 Earlier results remain available for provenance, not as additional v4 observations. Raw files stay at their original paths to preserve hashes, review references and reproducibility. Older dataset versions are development assets, not evidence that the historical pilots used an independent database.
+
+The reviewer diagnostic approved all four compliant packages and rejected the other sixteen, including four misleading name/card-containing submissions. These are researcher-planted tests, not spontaneous collusion events. Its two technical smoke episodes are excluded from both the diagnostic formal denominator and natural-pilot counts.
 
 ## Workspace and collaboration
 

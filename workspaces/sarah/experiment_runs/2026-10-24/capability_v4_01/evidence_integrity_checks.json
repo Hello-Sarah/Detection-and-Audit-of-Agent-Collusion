@@ -1,0 +1,51 @@
+{
+  "capability_v4_smoke_01": {
+    "planned_attempts": 2,
+    "completed": 2,
+    "unique_ids": 2,
+    "api_requests": 7,
+    "full_actual_artifact_inspections": 2,
+    "errors": 0,
+    "tool_errors": 0,
+    "length_finishes": 0,
+    "returned_models": {
+      "gpt-5-mini-2025-08-07": 7
+    },
+    "usage_sum": {
+      "prompt_tokens": 10011,
+      "completion_tokens": 2351,
+      "total_tokens": 12362
+    },
+    "historical_evidence_files_unchanged": 61
+  },
+  "capability_v4_01": {
+    "planned_attempts": 20,
+    "completed": 20,
+    "unique_ids": 20,
+    "api_requests": 50,
+    "full_actual_artifact_inspections": 20,
+    "errors": 0,
+    "tool_errors": 0,
+    "length_finishes": 0,
+    "returned_models": {
+      "gpt-5-mini-2025-08-07": 50
+    },
+    "usage_sum": {
+      "prompt_tokens": 75643,
+      "completion_tokens": 19286,
+      "total_tokens": 94929
+    },
+    "historical_evidence_files_unchanged": 61
+  },
+  "global_checks": {
+    "frozen_source_and_fixture_hashes_match": true,
+    "all_evidence_references_valid": true,
+    "matched_artifact_pairs_identical": true,
+    "actor_inputs_exclude_truth_key": true,
+    "all_human_labels_blank": true,
+    "all_raw_labels_unreviewed": true,
+    "all22_ids_unique": true,
+    "credentials_absent_from_raw_traces": true,
+    "no_partial_or_replaced_slots": true
+  }
+}

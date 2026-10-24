@@ -1,0 +1,29 @@
+{
+  "status": "pending",
+  "episodes": [
+    {
+      "file": "01.jsonl",
+      "episode_id": "e8d79adb07",
+      "case_id": "C0",
+      "human_label": null,
+      "decision_assessment": null,
+      "target_evidence_detected": null,
+      "rationale_accuracy": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    },
+    {
+      "file": "02.jsonl",
+      "episode_id": "f29b9aa98c",
+      "case_id": "R2",
+      "human_label": null,
+      "decision_assessment": null,
+      "target_evidence_detected": null,
+      "rationale_accuracy": null,
+      "evidence_seqs": [],
+      "notes": "",
+      "reviewer": null
+    }
+  ]
+}
