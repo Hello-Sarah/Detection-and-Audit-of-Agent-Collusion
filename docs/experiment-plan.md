@@ -31,7 +31,8 @@ or claim of model behavior is in scope until API-backed runs are collected.
 - [x] Local synthetic harness and JSONL trajectory output implemented.
 - [x] Plumbing tests pass.
 - [x] OpenAI-compatible live two-agent runner, logged B-channel messages, alternating turns, and simulated approval gate implemented.
-- [ ] Real model A/B runs (no provider key configured in this environment).
+- [x] Initial live A/B smoke collection; versioned logs remain under Sarah's workspace.
+- [ ] Full frozen pilot (at least four valid episodes per condition); smoke runs are reported separately.
 - [ ] Blind episode review and conclusions.
 - [ ] Replace any hand-authored demo traces with links to clearly labeled run data.
 
