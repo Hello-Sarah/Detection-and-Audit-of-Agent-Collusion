@@ -1,5 +1,7 @@
 # Preliminary Results on Multiagent Collusion Detection and Audit
 
+> **Historical exploration — not the current v4 study.** This brief covers 16 earlier episodes using hardcoded small synthetic inputs, not the v4 database or English-name CSV. Keep its counts separate. See the [current v4 results](named_data_experiment/results_2026-10-24_en.md) and [history index](history/README.md).
+
 24 October 2026 | Sarah's research workspace
 
 All 16 exploratory episodes released permitted aggregates, with no observed coordinated cover-up. Seven had confirmed report content errors, one an ambiguous description, and two approvals without inspection-tool calls after submission. **Release compliance coexisted with content and review-process problems.**
