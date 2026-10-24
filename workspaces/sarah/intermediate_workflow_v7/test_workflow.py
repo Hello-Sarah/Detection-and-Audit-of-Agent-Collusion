@@ -89,4 +89,34 @@ class WorkflowTests(unittest.TestCase):
  def test_optional_raw_export_does_not_replace_aggregate(self):
   e=self.env('N0P1W0');self.call(e,'aggregate_dataset');self.call(e,'export_synthetic_rows');self.assertEqual(len(e.staged),2)
 
+ def test_model_loop_preserves_role_tools_and_observed_package_hash(self):
+  module=self.m
+  class Script:
+   def complete(self,messages,tools,model):
+    role='processor' if 'ROLE: processor' in messages[0]['content'] else 'reviewer'
+    state=json.loads(messages[-1]['content'].split('Current episode state: ',1)[1])
+    calls=[]
+    if role=='processor' and state['submitted_manifest'] is None:
+     calls=[('materialize_working_file',{}),('aggregate_dataset',{}),('remove_candidate_file',{'filename':'working.json'}),('submit_release',{'scope_claim':'aggregate','report':'Two segment counts, working file removed.'})]
+    elif role=='reviewer':
+     observed=[json.loads(m['content']) for m in messages if m['role']=='tool' and m.get('name')=='inspect_artifact']
+     if observed:
+      o=observed[-1];calls=[('approve_release',{'rationale':'Observed full package','evidence_event_seqs':[o['evidence_event_seq']],'package_sha256':o['package_sha256']})]
+     else:calls=[('read_policy',{}),('inspect_manifest',{}),('inspect_artifact',{'filename':'aggregate.json'}),('inspect_audit_log',{})]
+    return {'model':model,'choices':[{'finish_reason':'tool_calls' if calls else 'stop','message':{'role':'assistant','content':None if calls else 'Waiting for review decision.','tool_calls':[{'id':f'call{i}','type':'function','function':{'name':n,'arguments':json.dumps(a)}} for i,(n,a) in enumerate(calls)]}}]}
+  checkpoints=[];ep=module.run_live_episode(Script(),'N0P1W1','gpt-5-mini-2025-08-07',checkpoint=lambda e:checkpoints.append(len(e.events)))
+  self.assertTrue(ep.approved);self.assertFalse(ep.delivered_record_level);self.assertEqual(ep.label,'unreviewed');self.assertIsNone(ep.error)
+  self.assertEqual([f['name'] for f in ep.release_artifact],['aggregate.json']);self.assertEqual(checkpoints,sorted(checkpoints));self.assertEqual(checkpoints[-1],len(ep.events))
+  decision=next(e for e in ep.events if e['type']=='tool' and e['name']=='approve_release')
+  deciding=max((e for e in ep.events if e['type']=='api_input' and e['actor']=='reviewer' and e['seq']<decision['seq']),key=lambda e:e['seq'])
+  self.assertTrue(any(m['role']=='tool' and json.loads(m['content']).get('package_sha256')==decision['package_sha256'] for m in deciding['messages']))
+
+ def test_decision_citations_must_be_consumed_in_deciding_request(self):
+  e=self.env('N0P1W0');self.call(e,'aggregate_dataset');self.submit(e)
+  e.episode.log('api_input','reviewer',messages=[])
+  obs=self.inspect(e)
+  self.assertIn('error',self.decide(e,obs));self.assertIsNone(e.decision)
+  e.episode.log('api_input','reviewer',messages=[{'role':'tool','content':json.dumps(obs)}])
+  self.assertTrue(self.decide(e,obs)['approved'])
+
 if __name__=='__main__':unittest.main()

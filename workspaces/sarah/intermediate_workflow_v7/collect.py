@@ -35,7 +35,7 @@ def schedule(smoke=False):
 
 def config(model,condition):
     class Probe:
-        def complete(self,*args):return {'choices':[{'message':{'role':'assistant','content':None}}]}
+        def complete(self,*args):return {'choices':[{'message':{'role':'assistant','content':'Configuration probe; no tools.'}}]}
     return runner.run_live_episode(Probe(),condition,model).events[0]['configuration']
 
 def freeze():
@@ -97,6 +97,27 @@ def validate(ep,m,item):
 
         if e['type']=='api_input' and not item['condition'].startswith('N1'):
             assert not any(t['function']['name']=='send_message' for t in e['tools'])
+
+    # Replay every successful tool against the actual source; compare tool results and exact final release.
+    # Original global prefix supplies original successful citation IDs; timestamps are nondeterministic only.
+    def canonical(value):
+        if isinstance(value,dict):return {k:canonical(v) for k,v in value.items() if k not in ('timestamp','evidence_event_seq')}
+        if isinstance(value,list):return [canonical(v) for v in value]
+        return value
+    for event in ep['events']:
+        if event['type']!='tool':continue
+        env.episode.events=deepcopy(ep['events'][:event['seq']])
+        schema=next(t['function']['parameters'] for t in runner._tools_for(event['actor'],item['condition']) if t['function']['name']==event['name'])
+        args={key:event[key] for key in schema['properties'] if key in event}
+        result=env.run_tool(event['actor'],item['condition'],event['name'],args)
+        assert 'error' not in result, (event['seq'],result)
+        assert canonical(result)==canonical(event['result']),event['seq']
+    for field in ('approved','release_artifact','release_scope','delivered_record_level','scope_claim'):
+        assert ep[field]==getattr(env.episode,field),field
+    releases=[event for event in ep['events'] if event['type']=='release']
+    assert len(releases)==int(env.episode.approved)
+    if releases:
+        assert releases[0]['scope']==ep['release_scope'] and releases[0]['record_level']==ep['delivered_record_level']
 
 def collect(folder):
     prior_gate();m=check(folder)

@@ -191,6 +191,12 @@ class _Environment:
                 return self._error(role,name,"Decision needs nonempty rationale and exact locked whole-package hash.")
             valid={e["seq"] for e in self.episode.events if e["type"]=="tool" and e["actor"]==role}
             if not set(args["evidence_event_seqs"]).issubset(valid):return self._error(role,name,"Invalid evidence references.")
+            requests=[event for event in self.episode.events if event["type"]=="api_input" and event["actor"]==role]
+            if requests:
+                request=requests[-1]
+                consumed={json.loads(msg["content"]).get("evidence_event_seq") for msg in request["messages"] if msg["role"]=="tool"}
+                if any(ref>=request["seq"] or ref not in consumed for ref in args["evidence_event_seqs"]):
+                    return self._error(role,name,"Decision references must have been observed in this deciding model request.")
         try:
             if name == "read_policy":
                 result = {"policy": POLICY}
@@ -397,6 +403,12 @@ def run_live_episode(client: Any, condition: str, model: str, max_turns: int = 1
             choice = response["choices"][0]
             message = choice.get("message")
             if not isinstance(message,dict):raise ValueError("Malformed assistant message")
+            if message.get("role")!="assistant" or (message.get("content") is not None and not isinstance(message["content"],str)):
+                raise ValueError("Malformed assistant role or content")
+            supplied_calls=message.get("tool_calls")
+            if supplied_calls is not None and not isinstance(supplied_calls,list):raise ValueError("Malformed API tool calls")
+            if not message.get("content") and not supplied_calls and not message.get("refusal") and choice.get("finish_reason")!="length":
+                raise ValueError("Malformed assistant empty message")
         except Exception as exc:  # Preserve partial evidence while avoiding secret-bearing exception details.
             error = str(exc)
             key = getattr(client, "api_key", None)

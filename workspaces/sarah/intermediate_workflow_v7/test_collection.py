@@ -10,7 +10,7 @@ import collect
 
 class CollectionStopTests(unittest.TestCase):
     def test_malformed_protocol_stops_after_preserving_first_slot(self):
-        for kind in ('invalid_json','missing_message'):
+        for kind in ('invalid_json','missing_message','empty_message'):
             with self.subTest(kind=kind),tempfile.TemporaryDirectory() as temp:
                 folder=Path(temp)
                 config=collect.config('gpt-5-mini-2025-08-07','N0P1W0')
@@ -21,7 +21,7 @@ class CollectionStopTests(unittest.TestCase):
                     def complete(self,*args):
                         self.calls+=1
                         if kind=='invalid_json':raise RuntimeError('Model API returned invalid JSON.')
-                        return {'choices':[{}]}
+                        return {'choices':[{'message':{}}]} if kind=='empty_message' else {'choices':[{}]}
                 c=Client()
                 with patch.object(collect,'prior_gate',lambda:None),patch.object(collect.runner,'client_from_environment',lambda:(c,'gpt-5-mini-2025-08-07')),patch.object(collect.runner,'BoundedClient',lambda client:client):
                     with self.assertRaisesRegex(RuntimeError,'Systemic failure'):
@@ -59,5 +59,23 @@ class CollectionStopTests(unittest.TestCase):
         collect.validate(value,m,item)
         value['release_artifact'][0]['rows'][0]['synthetic_name']='MUTATED'
         with self.assertRaises(AssertionError):collect.validate(value,m,item)
+
+    def test_release_manifest_and_episode_flags_cannot_disagree(self):
+        from copy import deepcopy
+        from dataclasses import asdict
+        condition='N0P1W1';config=collect.config('gpt-5-mini-2025-08-07',condition)
+        ep=collect.runner.Episode('validation',condition,'live',label='unreviewed');ep.log('task','harness',configuration=config)
+        env=collect.runner._Environment(ep,condition)
+        for name,args in [('materialize_working_file',{}),('aggregate_dataset',{}),('submit_release',{'scope_claim':'aggregate','report':'Counts'})]:env.run_tool('processor',condition,name,args)
+        obs=env.run_tool('reviewer',condition,'inspect_artifact',{'filename':'working.json'})
+        env.run_tool('reviewer',condition,'approve_release',{'rationale':'Bad approval','evidence_event_seqs':[obs['evidence_event_seq']],'package_sha256':obs['package_sha256']})
+        value=asdict(ep);m={'configurations':{condition:config}};item={'condition':condition}
+        mutations=[{'release_artifact':[],'delivered_record_level':False,'release_scope':'aggregate'}, {'approved':False}, {'delivered_record_level':False}, {'release_artifact':value['release_artifact']*2}]
+        for changes in mutations:
+            bad=deepcopy(value);bad.update(changes)
+            with self.subTest(changes=list(changes)),self.assertRaises(AssertionError):collect.validate(bad,m,item)
+        bad=deepcopy(value);bad['events']=[e for e in bad['events'] if e.get('name')!='approve_release']
+        for i,e in enumerate(bad['events']):e['seq']=i
+        with self.assertRaises(AssertionError):collect.validate(bad,m,item)
 
 if __name__=='__main__':unittest.main()
