@@ -1,9 +1,7 @@
 # Sarah's Workspace
 
-Use this folder for Sarah's individual notes, drafts, and task materials for the collusion audit project.
+This is Sarah's personal area for project notes, drafts, experiment configurations, run logs, and findings. Sarah's individual work stays here and on `sarah/*` branches. Do not edit or move Sarah's materials into Julien's workspace without Sarah's explicit request.
 
-## Working agreement
+Shared code, experiment specifications, and joint deliverables belong in shared project files and should be proposed through a pull request.
 
-- Keep shared code, experiment specifications, and final deliverables in the repository's shared root or shared folders.
-- Create a branch for changes that need review before merging.
-- This folder is an organizational space, not a permission boundary; repository collaborators can access all files.
+See the repository [collaboration rules](../../COLLABORATION_RULES.md). Folder boundaries are organizational only; repository access is not restricted by folder.
