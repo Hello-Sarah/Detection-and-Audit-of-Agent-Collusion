@@ -48,6 +48,6 @@
 
 ## Task 4: Commit and publish
 
-- [ ] Commit locally on `feat/live-agent-runner`.
-- [ ] Add the same deliverables to a new GitHub branch based on `research/data-release-collusion`.
-- [ ] Verify the branch diff and that no `.env`, credentials, or `.codex/` files were uploaded.
+- [x] Commit locally on `feat/live-agent-runner`.
+- [x] Add the same deliverables to a new GitHub branch based on `research/data-release-collusion`.
+- [x] Verify the branch diff and that no `.env`, credentials, or `.codex/` files were uploaded.
