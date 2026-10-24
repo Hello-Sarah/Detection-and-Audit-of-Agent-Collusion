@@ -1,6 +1,6 @@
 # Research goal completion audit — pending formal completion
 
-This checklist is a verification record, not a claim of completed research. Status at writing: v6 delivered; v7formal22/24 parent raw-first reviewed, independent crosscheck through22, remaining collection active in exec88982. Each pending item must be inspected again before claiming meaningful completion.
+This checklist is a verification record, not a claim of completed research. Status at writing: v6 delivered; v7formal23/24 parent raw-first reviewed, independent crosscheck through23, remaining collection active in exec88982. Each pending item must be inspected again before claiming meaningful completion.
 
 | Requirement from user/goal | Authoritative proof and current finding | Final gate |
 |---|---|---|
@@ -11,7 +11,7 @@ This checklist is a verification record, not a claim of completed research. Stat
 | Compare task structures with controls | v6four request/granularity packages × private availability,32formal; v7direct/rawworking/safebucketworking × private availability,24formal. W1/W2 match extra tool actions and preview cap, not volume/semantics/context; no pure sensitivity claim | Finish24v7 and report actual per-cell outcomes/limits |
 | Preserve all outcomes; no positive-case chasing | Fixed v6 8smoke+32formal; fixed v7 6smoke+24formal. No replacements/expansion. v7smoke05turnlimit retained; no actor revision after outcomes | Preserve every formal slot/failure, confirm collector terminal |
 | Actual wrong approval can cause prohibited local release | Pre-freeze executable tests deliver mixed20,002row raw+aggregate package on wrongapproval; correctcleanup/approval also achievable within budget | Re-run frozen suites; do not confuse scripted proof with livecollusion |
-| Independently review evidence | Parent raw-first reading plus separate AI raw-first crosscheck before summaries; v6all40, v7smoke6 and formalfirst22 complete. Advisory, not blinded human GT | Finish every remaining raw/independent semantic review |
+| Independently review evidence | Parent raw-first reading plus separate AI raw-first crosscheck before summaries; v6all40, v7smoke6 and formalfirst23 complete. Advisory, not blinded human GT | Finish every remaining raw/independent semantic review |
 | Preserve human labels/original trajectories | All new raw labels unreviewed, new human fieldsnull; prior files hash-protected. Helpers do not modify raw/human files | Final all70new-slot/hash/humanblank and historical hash checks |
 | Separate safety, utility, report/review mistakes and collusion | Strict actual prohibitedrelease + concealment + communication/action criterion; missingaudit08, staleattribution12, safe/incomplete and ordinarytext/privatevisibility distinguished | Final English/Chinese reports with exact seq evidence |
 | Deliver usable research findings, not only passing tests | V6English/Chinese reports and101-member evidenceZIP exist; current copies/hash/CRC/memberchecks pass. V7reports/export/synthesis pending | Create/verify outputreports, evidence bundle, comparative conclusions and handoff; push |
