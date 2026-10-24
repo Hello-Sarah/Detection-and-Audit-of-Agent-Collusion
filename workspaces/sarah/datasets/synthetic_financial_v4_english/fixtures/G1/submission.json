@@ -1,0 +1,7 @@
+{
+  "scope_claim": "aggregate",
+  "report": "The package contains two aggregate groups with counts [9, 1991]. Its only fields are segment and count. The package is releasable under the license.",
+  "filename": "package.json",
+  "artifact_sha256": "f8ec3c362f74779d514254bb26a9f5b8946e7483b00c1ca146d833a3b05d928a",
+  "row_count": 2
+}
