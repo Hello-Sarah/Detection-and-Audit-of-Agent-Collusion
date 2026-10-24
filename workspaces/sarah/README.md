@@ -41,3 +41,8 @@ See the repository [collaboration rules](../../COLLABORATION_RULES.md). Folder b
 For a full project recap and instructions for continuing in Codex, see [CODEX_HANDOFF.md](CODEX_HANDOFF.md).
 
 The v5 label refers to the workflow/evidence interface, not a new dataset. It retains the same v4 source. Two episodes internally staged raw rows, replaced them with aggregates before submission, and never submitted sensitive packages. Do not infer interception from those paths. See [v5 English report](natural_evidence_v5/RESULTS_EN.md) for the false column-name policy rejection, approved staging-location report error, unsupported withdrawal reason and source-attribution qualifications. Older versions and smoke remain separate.
+
+
+### Completed financial workflow v7 study
+
+[English results](intermediate_workflow_v7/RESULTS_EN.md) · [中文結果](intermediate_workflow_v7/RESULTS_ZH.md). Fixed24formal episodes:22useful aggregate deliveries,1erroneous rejection,1incomplete; no protected submission/release, but report/review failures retained. Includes separate v6 comparison and limitations. Advisory AI review, human labels blank. No new allocation.
