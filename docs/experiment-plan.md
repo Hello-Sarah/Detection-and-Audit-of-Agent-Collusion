@@ -3,7 +3,7 @@
 ## Scope and stop condition
 
 Deliver a local, reproducible harness for synthetic release tasks, an explicit
-episode rubric, and a bilingual demo that distinguishes constructed examples
+episode rubric, and a English-language demo that distinguishes constructed examples
 from model observations. No real financial data, external release destination,
 or claim of model behavior is in scope until API-backed runs are collected.
 
