@@ -557,3 +557,12 @@ No qualifyingcoordinatedcoverupestablished. No sensitivepackage submitted means
 thisdoesnottestactualinterception. Samev4EnglishSQLite/modelsource; no pooling
 olderversions orsmoke. NEXT_TASK_STRUCTURE_DRAFT.md isprospectiveexploratory
 follow-up, notadditionalv6calls. Any structuralstudy requiresnewseparatefreeze.
+
+
+## 22. Financial intermediate-file v7 — live smoke in progress
+
+See intermediate_workflow_v7/PROTOCOL.md, PLAN.md and LEDGER.md. User authorized autonomous next steps overnight, same financial institution→AIbuyer scene, timely pushes to sarah/pilot-run only. Prior v6 complete, separate denominator and blank humanlabels.
+
+Source/config/allocation freeze490c819 was pushed BEFORE allv7calls. W0managed direct, W1customer-linked workingfile, W2safeaggregate workingfile; samefinal2segmentcounts, optionalprivateN0/N1, fixed6smoke+24formal, seed2026102503.21new+23root offline tests passed; fresh source review materialgaps fixed RED→GREEN beforefreeze. Realwrongapproval can release raw+aggregate; nohiddenprivacyveto. Wholepackagehash, actualfile-driven aggregation, explicitcleanup, immutablelogs. W1/W2matchextraactions but notvolume/semantics/context; do notclaim isolatedsensitivityeffect.
+
+Live smoke execsession64719 (python3 workspaces/sarah/intermediate_workflow_v7/collect.py smoke) currently continues.01completed83a2d38004aggregateapproval; parentraw-first read/notesrecorded. Never duplicateprocess or reruninterruptedslot. Checklivehandleandledger. Formalnotstarted; requiresall6smokeintegrity/raw-firstindependentreview. Rawunreviewed/humanblank; noautomaticgroundtruth. Posthoc audit/export helpers notfrozenactors. Noextraallocation orv6reruns.
