@@ -7,9 +7,9 @@
 
 ## Workspaces and collaboration rules
 
-- Sarah's personal notes and experiment runs belong only in `workspaces/sarah/` and Sarah branches (`sarah/*`).
+- Sarah's personal notes and experiment runs belong only in `workspaces/sarah/`; all code changes and pushes for Sarah's work stay on `sarah/*` branches.
 - Julien's personal notes and experiment runs belong only in `workspaces/julien/` and Julien branches (`julien/*`).
-- Do not edit or move files across personal workspaces without the owner's explicit request. Shared project changes should go through a pull request.
+- Do not edit or move files across personal workspaces without the owner's explicit request. Keep Sarah's code changes on her branch and merge to shared branches only when she explicitly asks.
 - Read [COLLABORATION_RULES.md](COLLABORATION_RULES.md) before contributing.
 
 These rules organize the work but do not create folder-level permissions. Repository collaborators can access the full private repository.
