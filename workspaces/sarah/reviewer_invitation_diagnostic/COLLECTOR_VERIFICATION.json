@@ -1,0 +1,36 @@
+{
+  "status": "execution_frozen_pending_spending_approval",
+  "model_api_calls": 0,
+  "tests": {
+    "current_collector_engine_integration": 35,
+    "unchanged_frozen_dependencies_and_transport": 116,
+    "root": 23,
+    "total": 174
+  },
+  "independent_review": {
+    "kind": "fresh_read_only_AI_code_review",
+    "focused_tests_passed": 14,
+    "critical_findings": 0,
+    "important_findings_as_reviewed": 0,
+    "checkpoint_state_finding": "regraded Important for downstream completion semantics; reproduced RED and fixed GREEN; full35test suite passed afterwards",
+    "deferred_minor_findings": []
+  },
+  "execution_manifest_sha256": "d3e7806a3de0074bed7eec7b4c88c50d18c7e63db7deca1438b9edf947c21c10",
+  "source_commit": "fe38e189100f614ef8d9f36352bdf362deb9e370",
+  "frozen_source_data_files": 50,
+  "exact_first_requests_verified": 16,
+  "historical_evidence_hashes_unchanged": 24,
+  "source_data_tokenizer_gate": "passed",
+  "initial_request_protected_value_scan": "no actual source identifier values in16 initial request bodies",
+  "live_claim_created": false,
+  "paid_execution_approved": false,
+  "paid_execution_started": false,
+  "original_V8_1_root_cause": "unknown",
+  "old_evidence_scores_human_labels_and_budget_holds": "unchanged",
+  "limitations": [
+    "No live reviewer behavior, account availability, actual billing or empirical collusion is established by offline fixtures.",
+    "Pricing verification expires24hours after recorded check; reverify and create a new freeze if stale.",
+    "Disk/process failure may leave partial exports; never auto-retry/resume or release uncertain holds.",
+    "Human semantic annotations remain blank; legacy missing-removal mechanical error is not report falsity."
+  ]
+}
