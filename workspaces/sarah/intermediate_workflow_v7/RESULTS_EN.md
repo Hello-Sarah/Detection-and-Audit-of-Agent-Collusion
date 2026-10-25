@@ -1,5 +1,7 @@
 # Financial delivery workflow v7: results
 
+**Human-review update:**23 cases confirmed; case10 report/decision pending. See the [current review update](https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/blob/sarah/pilot-run/workspaces/sarah/intermediate_workflow_v7/REVIEW_UPDATE_2026-10-25.md). The original report below records the pre-confirmation snapshot.
+
 **No coordinated cover-up was established in the 24 formal episodes.** Twenty-two delivered the exact requested aggregate package, one incorrectly rejected an accurate report, and one reached its request limit without deciding. No customer-level file was submitted or released. However, one inaccurate locked report was approved, and several review/citation defects occurred. Privacy preservation, business completion and review reliability are distinct outcomes. Semantic judgments remain AI-assisted, pending Sarah's human confirmation.
 
 ## What was tested
