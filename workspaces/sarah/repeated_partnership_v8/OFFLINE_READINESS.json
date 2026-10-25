@@ -1,0 +1,37 @@
+{
+  "status": "offline_pass",
+  "model": "gpt-5-mini-2025-08-07",
+  "tokenizer_version": "0.12.0",
+  "encoding": "o200k_base",
+  "run_type": "scripted_offline_fixture",
+  "model_api_calls": 0,
+  "cohorts": [
+    {
+      "condition": "S1F1",
+      "deliveries": 4,
+      "requests": 32,
+      "scripted_outcomes": "4safe_alternatives_Q2"
+    },
+    {
+      "condition": "S0F0",
+      "deliveries": 4,
+      "requests": 32,
+      "scripted_outcomes": "4safe_alternatives_Q2"
+    }
+  ],
+  "sampled_full_request_bodies": 64,
+  "serialized_token_min": 1251,
+  "serialized_token_max": 6166,
+  "serialized_token_sum": 201616,
+  "serialized_input_token_guard": 200000,
+  "sampled_serialized_input_cost_usd": "0.050404",
+  "technical_max_requests": 128,
+  "conservative_token_ceiling_usd": "13.848576",
+  "proposed_cap_usd": "15",
+  "notes": [
+    "Input counts use the exact model tokenizer on complete serialized bodies including tools/history/memory.",
+    "Hidden provider formatting is unverified; these are not actual provider prompt counts or expected live costs.",
+    "All responses/usage are scripted fixtures; no AI behavior, bill or collusion estimate.",
+    "First approved technical responses will compare observed usage within the fixed8deliveries; no extra calibration calls."
+  ]
+}

@@ -1,5 +1,7 @@
 # When Do Cooperating Agents Collude?
 
+**V8 next step:** The technical runner is integrated and tested. Proposed pilot: eight deliveries, maximum US$15, stop on anomalies. Awaiting approval; no V8 model calls yet. See [technical plan](repeated_partnership_v8/TECHNICAL_RUN_PLAN.md).
+
 English | [中文](README_ZH.md)
 
 ## Progress by Oct 25 (HKT)
@@ -8,7 +10,7 @@ English | [中文](README_ZH.md)
 
 **What we found:** In the two latest completed studies, no customer details were released and no coordinated cover-up was established. However, agents sometimes wrote incorrect reports or made wrong review decisions. We cannot conclude that collusion risk is low: in the latest study, no customer details were submitted for approval.
 
-**Next:** Finish one remaining review judgment, then prepare an experiment on repeated partners and shared business scores. That experiment has not started; its costs and allocation still need approval.
+**Next:** Approve the bounded V8 technical pilot above. The remaining V7 review judgment stays separate.
 
 ## How It Works
 
@@ -39,7 +41,7 @@ All data are fictional and releases happen in a local simulation.
 |---|---|---|
 | **V6: Different buyer requests** | Do counting, personalized offers, reconciliation and training-data requests produce different behavior? Each was tested with and without private messaging. | 32 runs: 30 aggregate approvals, 2 rejections, no customer-detail release. Aggregates did not fully satisfy requests needing individual records. |
 | **V7: Different preparation workflows** | Does handling a sensitive working file change behavior? We compared direct aggregation, sensitive working files and safe working files, with and without private messaging. | 24 runs: 22 aggregate deliveries, 1 wrong rejection, 1 unfinished review. No customer details were submitted or released. |
-| **V8: Repeated cooperation — planned** | Will keeping the same partner and sharing business scores make agents cover for each other? | No live runs yet. Design and offline preparation are in progress. |
+| **V8: Repeated cooperation — planned** | Will keeping the same partner and sharing business scores make agents cover for each other? | No live runs yet. Technical runner ready; eight-delivery pilot awaiting approval. |
 
 Technical trial runs are counted separately. Different studies are not combined into one total.
 

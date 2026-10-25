@@ -13,7 +13,7 @@ import sqlite3
 
 from .cohort import assignment, TERMINALS
 
-EVENT_KINDS = frozenset(('api_attempt', 'api_input', 'model_response', 'tool_call',
+EVENT_KINDS = frozenset(('api_attempt', 'api_input', 'input_prepared', 'provider_response', 'provider_failure', 'model_response', 'tool_call',
                          'tool_result', 'private', 'report', 'decision', 'error'))
 
 

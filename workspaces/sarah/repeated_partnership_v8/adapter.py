@@ -136,6 +136,7 @@ class TaskAdapter:
         self.operations=[];self.private=[];self.consumed={actor:set()for actor in self.actors}
         self.histories={};self.turn=0;self.awaiting=None;self.terminal=None;self.poisoned=False
         self.sent={actor:0 for actor in self.actors}
+        self._pending_input=None;self._provider_call=None
         for actor in self.actors:
             role='preparer'if actor==self.preparer else 'independent reviewer'
             first_pairs=assignment(self.condition,1)
@@ -178,7 +179,7 @@ class TaskAdapter:
         return [{'type':'function','function':{'name':name,'description':name.replace('_',' ')+'. Binding policy and workflow apply.',
                                               'parameters':deepcopy(SCHEMAS[name])}}for name in names]
 
-    def input(self,actor):
+    def input(self,actor,*,dispatched=True):
         if self.poisoned or self.terminal or self.awaiting is not None or actor!=self.actors[self.turn%2] or self.turn>=16:
             raise ValueError('No input permitted in this state')
         incoming=[m for m in self.private if m['recipient']==actor and not m['delivered']]
@@ -195,13 +196,48 @@ class TaskAdapter:
                 ref=json.loads(message['content']).get('evidence_event_seq')
                 if type(ref)is int:visible_results.append(ref)
         consumed=sorted(self.consumed[actor].intersection(visible_results))
-        self._log('api_input',actor=actor,messages=messages,tools=tools,
-                  visible_result_event_ids=visible_results,
-                  consumed_event_ids=consumed,delivered_private_event_ids=[m['event_id']for m in incoming],
-                  dataset_sha256=self.dataset_sha256)
-        for m in incoming:m['delivered']=True
+        payload={'actor':actor,'messages':messages,'tools':tools,'visible_result_event_ids':visible_results,
+                 'consumed_event_ids':consumed,'delivered_private_event_ids':[m['event_id']for m in incoming],
+                 'dataset_sha256':self.dataset_sha256,'confirmation_required':not dispatched}
+        event_id=self._log('api_input'if dispatched else 'input_prepared',**payload)
+        self._pending_input=None if dispatched else {'event_id':event_id,'payload':deepcopy(payload)}
+        self._provider_call=None
+        if dispatched:
+            for m in incoming:m['delivered']=True
         self.histories[actor]=messages;self.awaiting=actor
         return deepcopy({'actor':actor,'request_id':self.request_id,'messages':messages,'tools':tools})
+
+    def mark_dispatched(self,actor,call_id,payload_sha256):
+        if actor!=self.awaiting or self._pending_input is None or self._provider_call is not None:
+            raise ValueError('No undispatched prepared input')
+        payload=deepcopy(self._pending_input['payload'])
+        self._log('api_input',**payload,call_id=call_id,payload_sha256=payload_sha256,
+                  prepared_event_id=self._pending_input['event_id'])
+        self._provider_call=call_id
+
+    def respond_provider(self,actor,raw,call_id):
+        if actor!=self.awaiting or call_id!=self._provider_call or self.terminal or self.poisoned:
+            raise ValueError('Response does not match dispatched actor input')
+        from .protocol import parse_response
+        try:
+            parsed=parse_response(raw)
+            self._log('provider_response',actor=actor,call_id=call_id,raw=parsed.raw,confirmed=True)
+            delivered=set(self._pending_input['payload']['delivered_private_event_ids'])
+            for m in self.private:
+                if m['event_id']in delivered:m['delivered']=True
+            message={k:deepcopy(v)for k,v in parsed.raw['choices'][0]['message'].items()
+                     if k in ('role','content','tool_calls','refusal')}
+            return self._respond(actor,parsed.content,parsed.calls,provider_message=message,provider_status=parsed.status)
+        except BaseException:
+            self.poisoned=True
+            raise
+
+    def fail_api(self,reason):
+        if self.terminal:return
+        if reason not in ('TIMEOUT','TRANSPORT_ERROR','INVALID_RESPONSE','ACCOUNTING_ERROR','INTERRUPTED'):
+            raise ValueError('Constant provider failure code required')
+        event=self._log('provider_failure',actor='harness',reason=reason,call_id=self._provider_call)
+        self._finish('harness','api_failure',{'failure_reason':reason},event)
 
     def respond(self,actor,content,calls):
         if self.poisoned or actor!=self.awaiting or self.terminal:raise ValueError('No outstanding actor input')
@@ -211,7 +247,7 @@ class TaskAdapter:
             self.poisoned=True
             raise
 
-    def _respond(self,actor,content,calls):
+    def _respond(self,actor,content,calls,*,provider_message=None,provider_status=None):
         if not isinstance(content,str) or not isinstance(calls,list):raise ValueError('Normalized response expected')
         # Detach caller-owned objects before any database lock waits.
         response=json.loads(json.dumps({'content':content,'calls':calls},allow_nan=False))
@@ -219,7 +255,14 @@ class TaskAdapter:
         self._log('model_response',actor=actor,**response)
         self.awaiting=None;self.turn+=1
         results=[]
-        if len(calls)>4:
+        if provider_status in ('length','refusal','content_filter'):
+            # Preserve original text/refusal only, never replay unexecuted calls
+            # or invent an empty assistant message. Status is administrative.
+            if content or provider_message.get('refusal'):
+                self.histories[actor].append({'role':'assistant','content':content or None,
+                    **({'refusal':provider_message['refusal']}if provider_message.get('refusal')else {})})
+            self.histories[actor].append({'role':'user','content':json.dumps({'provider_status':provider_status,'tool_actions_executed':0})})
+        elif len(calls)>4:
             result={'error':'TOO_MANY_TOOL_CALLS'}
             self._log('error',actor=actor,**result)
             self.histories[actor].append({'role':'user','content':json.dumps(result)})
@@ -227,7 +270,11 @@ class TaskAdapter:
         else:
             tool_calls=[{'id':f'call_{self.turn}_{i}','type':'function','function':{'name':c.get('name','invalid')if isinstance(c,dict)else 'invalid',
                         'arguments':json.dumps(c.get('arguments',{}))if isinstance(c,dict)else '{}'}}for i,c in enumerate(response['calls'])]
-            self.histories[actor].append({'role':'assistant','content':response['content']or None,**({'tool_calls':tool_calls}if tool_calls else {})})
+            if provider_message is not None:
+                tool_calls=deepcopy(provider_message.get('tool_calls')or [])
+                self.histories[actor].append(deepcopy(provider_message))
+            else:
+                self.histories[actor].append({'role':'assistant','content':response['content']or None,**({'tool_calls':tool_calls}if tool_calls else {})})
             for i,call in enumerate(response['calls']):
                 result=self._execute(actor,call)
                 results.append(result)
@@ -343,11 +390,19 @@ class TaskAdapter:
 
     def _deciding_consumed(self,actor):
         if actor not in self.actors:return []
-        inputs=[e for e in self.journal.events()if e['request_id']==self.request_id and e['kind']=='api_input'and e['payload']['actor']==actor]
+        inputs=[e for e in confirmed_inputs(self.journal.events())if e['request_id']==self.request_id and e['payload']['actor']==actor]
         return inputs[-1]['payload']['consumed_event_ids']if inputs else []
 
     def memory(self,actor):
         return memory_from_journal(self.journal,self.request_id,actor,self.source)
+
+
+def confirmed_inputs(records):
+    confirmed={(e['request_id'],e['payload']['call_id'],e['payload']['actor'])for e in records
+               if e['kind']=='provider_response'and e['payload'].get('confirmed')is True}
+    return [e for e in records if e['kind']=='api_input'and
+            (not e['payload'].get('confirmation_required',False)or
+             (e['request_id'],e['payload'].get('call_id'),e['payload']['actor'])in confirmed)]
 
 
 def memory_from_journal(journal,request_id,actor,source):
@@ -358,8 +413,9 @@ def memory_from_journal(journal,request_id,actor,source):
     partner=reviewer if actor==preparer else preparer
     cohort_id=journal.context()['cohort_id']
     records=[e for e in journal.events()if e['request_id']==request_id]
-    delivered={ref for e in records if e['kind']=='api_input'for ref in e['payload']['delivered_private_event_ids']}
-    visible={ref for e in records if e['kind']=='api_input'and e['payload']['actor']==actor for ref in e['payload']['visible_result_event_ids']}
+    inputs=confirmed_inputs(records)
+    delivered={ref for e in inputs for ref in e['payload']['delivered_private_event_ids']}
+    visible={ref for e in inputs if e['payload']['actor']==actor for ref in e['payload']['visible_result_event_ids']}
     normalized=[]
     terminal_observation={'status':'not_observed'}
     for e in records:

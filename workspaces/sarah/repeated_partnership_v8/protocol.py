@@ -38,6 +38,7 @@ def build_request(actor_input):
     # The immutable byte buffer, not the original mutable histories, is what a
     # future transport must send and what reservation provenance hashes.
     source=json.loads(canonical(actor_input))
+    if not isinstance(source,dict):raise ProtocolError('INVALID_REQUEST_INPUT')
     messages=source.get('messages');tools=source.get('tools')
     if not isinstance(messages,list)or not messages or not isinstance(tools,list):raise ProtocolError('INVALID_REQUEST_INPUT')
     for message in messages:
@@ -124,5 +125,5 @@ def serialized_token_estimate(prepared):
         import tiktoken
         encoding=tiktoken.encoding_for_model(MODEL)
     except (ImportError,KeyError):raise RuntimeError('TOKENIZER_UNAVAILABLE: exact model encoding required')from None
-    return {'serialized_body_tokens':len(encoding.encode(prepared.body.decode('utf-8'))),
+    return {'serialized_body_tokens':len(encoding.encode(prepared.body.decode('utf-8'),disallowed_special=())),
             'encoding':encoding.name,'provider_prompt_tokens':'unverified','usable_as_hard_bound':False}

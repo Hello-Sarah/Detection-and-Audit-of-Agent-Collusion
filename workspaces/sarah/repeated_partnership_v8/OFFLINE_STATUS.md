@@ -1,69 +1,9 @@
-# V8 offline implementation checkpoint — 25 October 2026
+# V8 technical readiness — 25 October 2026
 
-**Two-round scripted workflow implemented; not a live runner, source freeze or API authorization. Latest gate:75V8tests plus44existingtests pass.** No provider/API calls were made. These scripted tests are not experimental observations or collusion results.
+Driver, official-endpoint transport, exact-model tokenizer, persistent budget, exports and technical-only launcher are integrated. No V8 paid model call has been made. Approval proposal: eight technical deliveries, maximum USD15, stop on anomalies; no formal auto-start.
 
-## Completed
+97 V8 tests,23 root tests and21 frozen V7 tests pass. All24 V7 raw hashes remain unchanged. Scripted tests and token measurements are engineering checks, not research observations.
 
-- cohort pairing/partner notice and round barrier; identical cohort-level F1score exposure, F0feedback excludes numeric points;
-- own-visible normalized memory whitelist, row stripping, exact-value filtering, bounded fields, fail-closed context checks and immutable input records;
-- source-derived actual-content Q/Bscore, real20000-row fulfillment, partial/duplicate counterexamples, required report facts and relevant consumed-review observations;
-- fresh independent whole-foundation review:four Important findings fixed with RED→GREEN regressions (submission/reference validity, early-decline actor/state, memory statement whitelist, supported early rejection). No Critical or deferred Minor findings reported;
-- final tests:20V8,23root,21frozenV7allpass. All24V7raw hashes unchanged; prior code/evidence/human records untouched.
+Fresh review found one Important issue: a pre-dispatch integrity failure was incorrectly scored as API failure. A failing regression reproduced it; the fix now preserves running state, blank score and full cost hold. Timeout wording is reconciled prospectively in both designs and TECHNICAL_RUN_PLAN.md. Deferred Minor: environment-only configuration still requires a physical.env file; the current configured environment has one. Read-only recovery inventories state but does not resume it.
 
-## What this does not prove / 尚未完成
-
-The offline adapter now constructs role-local inputs and normalized scoring records from scripted responses; the coordinator integrates both rounds. Actual provider parsing/transport and replay, input/output/time/spend enforcement, explicit recovery, exact tokenizer/input-inclusive pricing and an approved spend ceiling, bounded collector/freeze/audits, and semantic/human labels remain pending. Never treat the scorer as an online oracle or a substitute for human evidence review. Memory filters are field/value filters, not a universal disclosure guarantee.
-
-The proposed2technical+16formal cohorts/72deliveries remain a proposed ceiling, not an executed or approved allocation. No model called, no source freeze, no positive outcome sought. V7case10 remains pending independently.
-
-## Files and offline verification
-
-[Design](DESIGN_DRAFT.md), [中文設計](DESIGN_ZH.md), [implementation plan](IMPLEMENTATION_PLAN.md), [ledger](IMPLEMENTATION_LEDGER.md).
-
-From repository root:
-
-```sh
-python3 -m unittest discover -s workspaces/sarah/repeated_partnership_v8 -q
-python3 -m unittest discover -s tests -q
-python3 -m unittest discover -s workspaces/sarah/intermediate_workflow_v7 -q
-```
-
-No APIkey is needed for these offline commands. The frozenV7suite prints mock malformed-provider fixtures; those are not live calls. All new implementation stays inside Sarah's V8directory and on sarah/pilot-run.
-
-## Durable journal checkpoint
-
-The new `journal.py` adds an offline SQLite persistence layer. It reserves four delivery slots before execution, pins the cohort/configuration, prevents automatic reruns of claimed tasks, gates round2, and commits a local release snapshot with its terminal event in one transaction. Interrupted running slots require explicit recovery rather than a guessed outcome. No provider is imported or called. See [persistence plan](PERSISTENCE_PLAN.md).
-
-The journal is now integrated with the offline round1 scripted tool adapter described below. Its own API accepts trusted runner/scorer records, not model claims; it does not verify semantic scoring or export to a buyer. Explicit interrupted-run recovery remains unimplemented. The full actor adapter, input/visibility construction, cost gate and collector are still pending. No new experiment has started.
-
-Persistence verification:9 journal tests (29 V8 total),23 root tests and21 frozenV7 tests pass. Fresh independent review found and fixed one transaction/input-mutation defect with RED->GREEN regression. All24V7formal raw hashes unchanged. Deferred coverage before collection: simultaneous writer stress, event-cap exhaustion and invalid initialization matrix. No live readiness claimed.
-
-## Round1 tool/input adapter checkpoint
-
-[adapter.py](adapter.py) now creates real role-local message/tool inputs, executes source-derived working/aggregate files, locks uncorrected model-authored reports, and calls the scorer from actual operations and deciding-input evidence. Its `input`/`respond` interface is driven only by scripted fixtures; there is no model client or live entry point. Private receipts are logged when included in the recipient's input. Audit views exclude dialogue/private text. Ordinary utterances remain role-local. Wrong references, schema bounds and phase violations yield recorded errors.
-
-Approval has no hidden privacy/inspection veto: a scripted complete raw package really commits20000released rows and earns mechanicalQ0/B3. This demonstrates the simulator, **not observed AI collusion**. Safe exact aggregates with actual post-lock consumed evidence earnQ2; relevant raw inspection supports early rejectionQ1. Terminal commits stop later tools/inputs. Integrity failures poison the adapter and retain uncertain running state.
-
-Actual carryover extraction excludes tool results never present in the actor's inputs, removes row previews and filters exact protected values. Caller terminal commitment is explicitly distinguished from model consumption and peer non-observation. Round2 construction is blocked until the cohort feedback/new-history coordinator is implemented. No full-cohort exposure validation is claimed.
-
-18adapter tests /47totalV8 tests pass; root23 and frozenV7 21 pass. Fresh independent review findings were fixed with RED->GREEN regressions. Journal package import corrected during integration. Pending: round2 coordinator and barrier memory/feedback exposure, actual provider parser/transport and request limits, token/pricing/approved enforceable spend cap, recovery, collector/source freeze and technical live gate. No V8 API calls.
-
-## Two-round coordinator checkpoint (latest)
-
-[coordinator.py](coordinator.py) integrates allfour S/Fconditions with two dependent deliveries per round. Before any claim, it binds the source SHA256 and counterbalanced execution order. Round2starts only after both round1tasks terminate and the feedback barrier is durably committed. Each actor receives fresh current-task history plus only its own redacted prior experience, new own terminal feedback and the fixed public count block; F1alone adds team totals. Correct prior/current partner notices are explicit. Old evidence IDs in memory never become current-task consumed references.
-
-The journal's version2 coordination table/event records atomically preserve schedules and barriers. No schema1migration, rebinding or automatic interrupted-run resume. Source changes or uncertain running slots block continuation. Final round2feedback is recorded without an extra model request. Scripted mixed unsafe fulfillment3 + refusal1 produces a cohort total4; this is a simulator check, not an observed AI result.
-
-12newcoordinator tests /59V8total,23root,21frozenV7pass. All24V7raw hashes unchanged. Fresh independent review found no Critical/Important issues. Deferred new coverage: each reviewer's four-cell memory/partner assertions, rollback failure after feedback-event insert, and distinct-round cumulative score assertion; earlier journal stress/event-cap/init gaps remain. See [plan](COORDINATOR_PLAN.md) and [ledger](IMPLEMENTATION_LEDGER.md).
-
-This supersedes earlier checkpoint statements that round2is blocked. **No V8 API calls or experimental observations exist.** Next:provider protocol parsing, bounded token/pricing/spend enforcement, explicit recovery, collector/source freeze and approved technical gate. Proposed allocation still requires approval; offline implementation does not grant API authorization.
-
-## Provider protocol and budget reservation checkpoint (latest)
-
-[protocol.py](protocol.py) builds immutable exact request bytes with the original snapshot model, standard service tier, one choice and4096completion cap. It validates response envelopes, original tool IDs, finite object arguments and provider usage. Invalid generated arguments remain errors with original raw evidence; truncated/refusal responses do not become invented tool actions. [budget.py](budget.py) reserves a conservative worst-case token-cost envelope durably before an injected transport, settles known usage with integer nanoUSD arithmetic, and retains the full hold/stops after unknown costs or malformed responses. Structurally invalid finite raw responses are preserved. Exclusive creation, no duplicates/retries, reopen, concurrent reservations and transaction rollback are tested.
-
-This is **not yet wired to TaskAdapter or a real HTTP/model client**. No credentials/client/CLI were added. Optional local serialized-body token measurement fails explicitly without tiktoken; it is never labeled an exact provider prompt count. Exact tokenizer/provider-format calibration remains mandatory before live. Pricing was read from [official pricing](https://developers.openai.com/api/docs/pricing) on2026-10-25 and must be reverified at freeze; standard uncached model-token rates are used. The400000input+4096output reserve is a conservative per-call envelope, not actual expected usage. Proposed full allocation's theoretical$124.637184 ceiling and technical$13.848576 ceiling are not approved budgets or cost estimates.
-
-16new protocol/budget tests /75totalV8, root23/frozenV7 21pass. Fresh reviewer ran16tests and found no Critical/Important defect. Deferred minor: malformed top-level request list returns AttributeError rather than ProtocolError before any reservation/transport. Earlier journal/coordinator gaps remain. All24V7raw hashes unchanged.
-
-Next:raw-provider response/ID/usage integration into the two-round driver, actual transport and tokenizer/billing-format verification, explicit recovery and remaining boundary tests, then reviewable approved cap/allocation and source/collector freeze before technical API calls. **No V8 paid/API experiments have started.**
+See [technical proposal](TECHNICAL_RUN_PLAN.md), [offline measurements](OFFLINE_READINESS.json), and [implementation ledger](IMPLEMENTATION_LEDGER.md). Local token counts do not establish exact provider usage; calibration stays within the approved technical allocation. Human labels remain blank/unreviewed.
