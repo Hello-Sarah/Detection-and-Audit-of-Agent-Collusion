@@ -1,0 +1,223 @@
+{
+  "status": "proposed_offline_only",
+  "live_collection_approved": false,
+  "model_api_calls": 0,
+  "model": "gpt-5-mini-2025-08-07",
+  "seed": 2026102506,
+  "allocation": [
+    {
+      "block": 1,
+      "condition": "C3",
+      "episode_id": "invite2_b1_c3",
+      "initial_request_file": "requests/invite2_b1_c3.json",
+      "initial_request_sha256": "4c4764f2ef01787626a301ff7c8d6c41c42a737a72f4c1c6907c45f8e4322811",
+      "serialized_body_tokens": 1969
+    },
+    {
+      "block": 1,
+      "condition": "C2",
+      "episode_id": "invite2_b1_c2",
+      "initial_request_file": "requests/invite2_b1_c2.json",
+      "initial_request_sha256": "260b359a82cfca2e1352ad2be98530e0fb1018813e08137d2ea889bab0363bbd",
+      "serialized_body_tokens": 2131
+    },
+    {
+      "block": 1,
+      "condition": "C1",
+      "episode_id": "invite2_b1_c1",
+      "initial_request_file": "requests/invite2_b1_c1.json",
+      "initial_request_sha256": "9064ec90302e17f9ab216c8a2c1706eba57a000318eafdcd95281642d0214bb0",
+      "serialized_body_tokens": 2110
+    },
+    {
+      "block": 1,
+      "condition": "C0",
+      "episode_id": "invite2_b1_c0",
+      "initial_request_file": "requests/invite2_b1_c0.json",
+      "initial_request_sha256": "b67332cf4269262e213facdc923808d0ce29564c8211efe0b983cbdf49223861",
+      "serialized_body_tokens": 2091
+    },
+    {
+      "block": 2,
+      "condition": "C3",
+      "episode_id": "invite2_b2_c3",
+      "initial_request_file": "requests/invite2_b2_c3.json",
+      "initial_request_sha256": "88ab27294e6ca4716749d8d1605c7e9247f674590e3ceb8e487fae25a957456e",
+      "serialized_body_tokens": 1969
+    },
+    {
+      "block": 2,
+      "condition": "C1",
+      "episode_id": "invite2_b2_c1",
+      "initial_request_file": "requests/invite2_b2_c1.json",
+      "initial_request_sha256": "c2fa6d6c7d7dc1cc75c4596dee18eb1f32749ef33e7e0329cabc8581ad17426d",
+      "serialized_body_tokens": 2110
+    },
+    {
+      "block": 2,
+      "condition": "C2",
+      "episode_id": "invite2_b2_c2",
+      "initial_request_file": "requests/invite2_b2_c2.json",
+      "initial_request_sha256": "a61cd835cf18fba1e1b1efcb5c75ff7a8176e425852da1eedc3b4b2effda799d",
+      "serialized_body_tokens": 2131
+    },
+    {
+      "block": 2,
+      "condition": "C0",
+      "episode_id": "invite2_b2_c0",
+      "initial_request_file": "requests/invite2_b2_c0.json",
+      "initial_request_sha256": "0f12f55414ddcfe7e939ed87aad7a3c89892451d6b626db4df0847b102f009ca",
+      "serialized_body_tokens": 2091
+    },
+    {
+      "block": 3,
+      "condition": "C1",
+      "episode_id": "invite2_b3_c1",
+      "initial_request_file": "requests/invite2_b3_c1.json",
+      "initial_request_sha256": "4967722d78c5d001c9e06899cb01c12244754ea9fa31d75c59b62a2909a7fddb",
+      "serialized_body_tokens": 2110
+    },
+    {
+      "block": 3,
+      "condition": "C0",
+      "episode_id": "invite2_b3_c0",
+      "initial_request_file": "requests/invite2_b3_c0.json",
+      "initial_request_sha256": "ba65f360485c43f319a19091efc8c99e19daa47848b09b3f711761046ffcf07c",
+      "serialized_body_tokens": 2091
+    },
+    {
+      "block": 3,
+      "condition": "C2",
+      "episode_id": "invite2_b3_c2",
+      "initial_request_file": "requests/invite2_b3_c2.json",
+      "initial_request_sha256": "2860a4ffa478aee773658ab3541f05db4ca57b9e97a5902bcd44e8766ec2c2b7",
+      "serialized_body_tokens": 2131
+    },
+    {
+      "block": 3,
+      "condition": "C3",
+      "episode_id": "invite2_b3_c3",
+      "initial_request_file": "requests/invite2_b3_c3.json",
+      "initial_request_sha256": "9e905d2336a35c80974616a660af3892c6cc6fc58176e047e6b0b2494985e84f",
+      "serialized_body_tokens": 1969
+    },
+    {
+      "block": 4,
+      "condition": "C0",
+      "episode_id": "invite2_b4_c0",
+      "initial_request_file": "requests/invite2_b4_c0.json",
+      "initial_request_sha256": "f77e635f4c9c87c4fa80597eba747417e3c2cae4a736399a37208db9b5f948ce",
+      "serialized_body_tokens": 2091
+    },
+    {
+      "block": 4,
+      "condition": "C2",
+      "episode_id": "invite2_b4_c2",
+      "initial_request_file": "requests/invite2_b4_c2.json",
+      "initial_request_sha256": "e9f853d0aea73c344be569b7b887783d79212a96c8152dd4219284147f57336a",
+      "serialized_body_tokens": 2131
+    },
+    {
+      "block": 4,
+      "condition": "C1",
+      "episode_id": "invite2_b4_c1",
+      "initial_request_file": "requests/invite2_b4_c1.json",
+      "initial_request_sha256": "623354a1dce9f88abf343ae5b517888d045f141b8c73bdc2f5d25d7109646e1f",
+      "serialized_body_tokens": 2110
+    },
+    {
+      "block": 4,
+      "condition": "C3",
+      "episode_id": "invite2_b4_c3",
+      "initial_request_file": "requests/invite2_b4_c3.json",
+      "initial_request_sha256": "b709c7fd78ffa1408d5f7c2bbfd6206054a56b7d730d9c6c5722fbb7bdcd42bd",
+      "serialized_body_tokens": 1969
+    }
+  ],
+  "condition_counts": {
+    "C3": 4,
+    "C2": 4,
+    "C1": 4,
+    "C0": 4
+  },
+  "stimulus_hashes": {
+    "C0": {
+      "report_sha256": "e95e2a0a53458f4a8dce1b1d5e3f1c657abecb9a22e6be3db6516ddc0eacd8e6",
+      "package_sha256": "610db43db64b6f10a0093ebbbf6970f0abf3bc2306853345cdbf65eda97dd799",
+      "message_sha256": "b8127d3abade3b3706700f4345b6a9fa317fce51e0b25d4472ee9dbc109cb9f1"
+    },
+    "C1": {
+      "report_sha256": "e95e2a0a53458f4a8dce1b1d5e3f1c657abecb9a22e6be3db6516ddc0eacd8e6",
+      "package_sha256": "610db43db64b6f10a0093ebbbf6970f0abf3bc2306853345cdbf65eda97dd799",
+      "message_sha256": "512d7526f644e4ba0a55e7bff336889c74bc7cc9c849502b080ed803db2acf5b"
+    },
+    "C2": {
+      "report_sha256": "e95e2a0a53458f4a8dce1b1d5e3f1c657abecb9a22e6be3db6516ddc0eacd8e6",
+      "package_sha256": "610db43db64b6f10a0093ebbbf6970f0abf3bc2306853345cdbf65eda97dd799",
+      "message_sha256": "2f934620fe69b820b71c475c13c92c088411c433522bc45b57bbde49f5b068a0"
+    },
+    "C3": {
+      "report_sha256": "5506f36e420b0daeeeac45bd6a52cb932f15342b19f5f267ced9d2d62c12e575",
+      "package_sha256": "966da713f2a1810b5aecce9df816c77b45c748c49728416d12d862680283a2f5",
+      "message_sha256": "b8127d3abade3b3706700f4345b6a9fa317fce51e0b25d4472ee9dbc109cb9f1"
+    }
+  },
+  "source_and_data_sha256": {
+    "workspaces/sarah/datasets/synthetic_financial_v4_english/research.sqlite": "753308a2d8e0be1fd9454926dce3cc699774853022415fedf3b355cd5bc6e8b0",
+    "workspaces/sarah/repeated_partnership_v8_1/adapter.py": "1e9773a3a0c779a068b74b13cfa56a28c23c69f028e1bd6cf1ee4681ac394b01",
+    "workspaces/sarah/repeated_partnership_v8_1/allocation.py": "71bccd628b72eba7c5a74a4414409e7f60de92488e97ddc439052b787ba270d2",
+    "workspaces/sarah/repeated_partnership_v8_1/budget.py": "88f69462bf8f466a22424530e70c0ce89fe11daed19a65e0d80daac8f3d65ae6",
+    "workspaces/sarah/repeated_partnership_v8_1/cohort.py": "8af00c5262684b9c2456e28b976089c44b9cea15df361d0b415cd8505274eec5",
+    "workspaces/sarah/repeated_partnership_v8_1/contract.py": "1a13cea54b97fc16087b6deb913604109a99d72d3a55300b0f28de7d67b48827",
+    "workspaces/sarah/repeated_partnership_v8_1/coordinator.py": "d166c839c3ef1c415235c91a0409fb7f7ba0e8657e51796f85c5cc5d4a680086",
+    "workspaces/sarah/repeated_partnership_v8_1/driver.py": "ca40899e02f36eeeb1bf7dc166c03f9dd3ef1359735c87dbf3f97de5ce481fd2",
+    "workspaces/sarah/repeated_partnership_v8_1/journal.py": "ec76a2ce3447f012d3daa611ed2e61df2c663d21299cdc1e1d54fe9a1e694480",
+    "workspaces/sarah/repeated_partnership_v8_1/memory.py": "cb6707a53437ae01cd3e4173c93935b5a49f28e8ccbdea0b3062d8e82e907c9d",
+    "workspaces/sarah/repeated_partnership_v8_1/offline.py": "0be068aaccbb0bd54f5764644b3c351783b8ee26c53d68457e9f41c724b1db5e",
+    "workspaces/sarah/repeated_partnership_v8_1/protocol.py": "183814fbe9da9959f64fdf88b21361c5e7062eb3282fd0f4bf721683d618f28a",
+    "workspaces/sarah/repeated_partnership_v8_1/scoring.py": "11737ab699bda71346595a02c22d83c5b9f5006ea3c3a8d4cc322d4ffb914dce",
+    "workspaces/sarah/repeated_partnership_v8_1/technical.py": "8fc5a2caad02c8c3191294817386c1806d48ce67e62f3e07e9adaedacf00f538",
+    "workspaces/sarah/repeated_partnership_v8_1/test_adapter.py": "d690d98c385c974ed2de55bf5d46b9d925883b601afe90f0c5a02d84f555aa1f",
+    "workspaces/sarah/repeated_partnership_v8_1/test_allocation.py": "b08b4f1ac9b3afb53ba982c4d66a3dcd0a0a68b46c7a59528fa5cc07f6d2134b",
+    "workspaces/sarah/repeated_partnership_v8_1/test_budget.py": "707bbda52545c942e642ae6f5ed1e827cdf9eadf39f2023af0825a52299fdbb7",
+    "workspaces/sarah/repeated_partnership_v8_1/test_cohort.py": "22c8a9dc2e70ab134a6b6b48fa3deede298c761ce1a2dfb9045af8323df2b0fb",
+    "workspaces/sarah/repeated_partnership_v8_1/test_coordinator.py": "ca894fa75241910aea33624c2b7b41e6fc127f0fb34e664d4eb2da1659c8a545",
+    "workspaces/sarah/repeated_partnership_v8_1/test_driver.py": "b401e2ae6355209542ad2d7cdc229b673a09e7511d691e8c221287408e48baa4",
+    "workspaces/sarah/repeated_partnership_v8_1/test_journal.py": "c54a4b78a0f95dac5e84ef71ed56f929fbd9bfb0f4f573f19c9cd35aa95cb880",
+    "workspaces/sarah/repeated_partnership_v8_1/test_memory.py": "deccda0f0c6daa11e3d72a643b4a05136910c1b7bf78eafb0db97b6b6ce96e21",
+    "workspaces/sarah/repeated_partnership_v8_1/test_protocol.py": "cc6c0d102054d2287197e4e386633f428571daa05e38ceda4a60bac5c80c7a76",
+    "workspaces/sarah/repeated_partnership_v8_1/test_readiness_boundaries.py": "50a7b1751be02fed1a93a10371b00c597fb5c6e2928140d4fb7c48222e46e8a9",
+    "workspaces/sarah/repeated_partnership_v8_1/test_revision.py": "230c67539212c2c9d37bf5e18dbbe0da6974b60829e324bf0c7fa01aa85ffb92",
+    "workspaces/sarah/repeated_partnership_v8_1/test_scoring.py": "21ee1dcfdfd8fc65ea8bc017ec82b778d62d38e469510d31898caf03d476bd67",
+    "workspaces/sarah/repeated_partnership_v8_1/test_technical.py": "2f09d284e95539a4a23bda0f9bee9fb3807658a2164353093fce89ef90a194f1",
+    "workspaces/sarah/repeated_partnership_v8_1/test_transport.py": "f4d6cd42227a4309c8c9b13b149fe821c711a50dc4ac68c4d48e01b141b5e9ff",
+    "workspaces/sarah/repeated_partnership_v8_1/transport.py": "2d0578f22cddd7fde2a573f71297235593d84fea15d4ee67eb387f77628e00e0",
+    "workspaces/sarah/reviewer_invitation_v2/DESIGN.md": "6ccfb73b74e855242512b055105cffae02add79dbd2cef4c4169688a9850c276",
+    "workspaces/sarah/reviewer_invitation_v2/PLAN.md": "f0943063062a35bac5d3c65dfe661f48467c7596d917e8f3fce8787ff3876d7f",
+    "workspaces/sarah/reviewer_invitation_v2/README.md": "d979e75e3c26a4784f3f16b46c7dd1ef426f6163abddd361c987bc23efe5fa05",
+    "workspaces/sarah/reviewer_invitation_v2/collector.py": "f1b8f66dea1de7a8592fa89bf8d374fdc2325259c0455bc600ad14b8827a6af8",
+    "workspaces/sarah/reviewer_invitation_v2/engine.py": "6515b232bb5dd383607429e1710c10499fec5f258b0d9c5dccf6f6160451ca46",
+    "workspaces/sarah/reviewer_invitation_v2/offline.py": "11b2c4bfa8c5477ed410b9cf8a380027ae994b92dc344062c21d63e5280df60c",
+    "workspaces/sarah/reviewer_invitation_v2/test_claim.py": "fd79c63c00c34c91143b98d329ad7ffd7b3fea2b603190e35302f92200c3d3c1",
+    "workspaces/sarah/reviewer_invitation_v2/test_collector.py": "5fc219e1c65b163db737834f749d6a7a46912ce4943512aeadcecca52009ead2",
+    "workspaces/sarah/reviewer_invitation_v2/test_engine.py": "bba13ea05f7f15dafa1e702018d5b59758676f3ec4b69d7bfc57f75e5bd28f45",
+    "workspaces/sarah/reviewer_invitation_v2/test_progress.py": "0647045ea0281c6bebdc3799bdd75de5f1edd12b8f9ac0f193fed7d4c55107d2"
+  },
+  "stimulus_files_sha256": {
+    "stimulus_C0.json": "262768969dd8680782b21c758400bdf988f18e6e6626b2510551f9a4dc606621",
+    "stimulus_C1.json": "e8b777ff2ca8c57aa955e0466f141beca70e3ca0ba3aaa3a4395978d40e15d65",
+    "stimulus_C2.json": "344b8896fea8989ce6dc372ba487c418d283d11a4bbc2df9ed7eae6f730263f2",
+    "stimulus_C3.json": "afb406ba9fe6a0d2a303a33fd519897ce50e66e987bc3debd648be6363eb8cb9"
+  },
+  "maximum_requests_per_episode": 4,
+  "maximum_total_requests": 64,
+  "proposed_cap_usd": "3",
+  "cap_approved": false,
+  "formal_v8_authorized": false,
+  "notes": [
+    "Prepared template IDs are stimulus, prospective episode IDs differ as listed.",
+    "No model results or human labels. Scripted fixture outcomes are excluded from empirical results.",
+    "No freeze for paid execution: independent review and Sarah approval still required.",
+    "Legacy mechanical scores are not controlled-diagnostic semantic labels; absent cleanup references are intentional for retained working files."
+  ]
+}
