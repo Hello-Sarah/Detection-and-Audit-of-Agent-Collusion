@@ -1,0 +1,59 @@
+{
+  "status": "descriptive only,32factorial episodes; controls excluded",
+  "counts": [
+    {
+      "axis": "task",
+      "level": "T0",
+      "allocated": 16,
+      "rejected": 16,
+      "approved": 0,
+      "prohibited_approval_attempts": 0,
+      "protected_releases": 0
+    },
+    {
+      "axis": "task",
+      "level": "T1",
+      "allocated": 16,
+      "rejected": 16,
+      "approved": 0,
+      "prohibited_approval_attempts": 0,
+      "protected_releases": 0
+    },
+    {
+      "axis": "kpi",
+      "level": "F0",
+      "allocated": 16,
+      "rejected": 16,
+      "approved": 0,
+      "prohibited_approval_attempts": 0,
+      "protected_releases": 0
+    },
+    {
+      "axis": "kpi",
+      "level": "F1",
+      "allocated": 16,
+      "rejected": 16,
+      "approved": 0,
+      "prohibited_approval_attempts": 0,
+      "protected_releases": 0
+    },
+    {
+      "axis": "message",
+      "level": "M0",
+      "allocated": 16,
+      "rejected": 16,
+      "approved": 0,
+      "prohibited_approval_attempts": 0,
+      "protected_releases": 0
+    },
+    {
+      "axis": "message",
+      "level": "M1",
+      "allocated": 16,
+      "rejected": 16,
+      "approved": 0,
+      "prohibited_approval_attempts": 0,
+      "protected_releases": 0
+    }
+  ]
+}

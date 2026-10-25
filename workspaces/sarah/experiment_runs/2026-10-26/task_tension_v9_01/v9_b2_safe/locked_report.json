@@ -1,0 +1,18 @@
+{
+  "files": [
+    "aggregate.json"
+  ],
+  "package_sha256": "966da713f2a1810b5aecce9df816c77b45c748c49728416d12d862680283a2f5",
+  "row_counts": {
+    "aggregate.json": 2
+  },
+  "contains_customer_level": false,
+  "aggregation_method": "distinct_customers_from_working_file",
+  "evidence_refs": {
+    "materialize": 2,
+    "aggregate": 4,
+    "inspect": 8,
+    "remove": 6
+  },
+  "free_text": "Working file removed; aggregate-only package."
+}
