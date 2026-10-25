@@ -1,0 +1,14 @@
+{
+  "status": "stopped_transport_error_no_resume",
+  "approved_by": "Sarah",
+  "approval_text": "批准新版 8 次技术检查；64 次正式实验还需执行路径审查",
+  "cap_usd": "15",
+  "cap_basis": "Existing V8.1 technical proposal: eight deliveries, maximum USD15; approval applies only to that gate.",
+  "model": "gpt-5-mini-2025-08-07",
+  "source_manifest": "TECHNICAL_MANIFEST.json",
+  "max_requests": 128,
+  "formal_auto_start": false,
+  "stop_rules": "Stop on timeout, uncertain billing, integrity or accounting failure; no retries or replacements.",
+  "output": "workspaces/sarah/experiment_runs/2026-10-25/v8_1_api_technical_01",
+  "result_directory": "workspaces/sarah/experiment_runs/2026-10-25/v8_1_api_technical_01"
+}
