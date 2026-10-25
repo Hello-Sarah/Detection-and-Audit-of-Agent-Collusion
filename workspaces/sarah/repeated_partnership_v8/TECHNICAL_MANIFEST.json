@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "run_type": "technical_only",
+  "model": "gpt-5-mini-2025-08-07",
+  "max_deliveries": 8,
+  "max_requests": 128,
+  "max_completion_tokens": 4096,
+  "timeout_seconds": 90,
+  "serialized_input_token_guard": 200000,
+  "proposed_cap_usd": "15",
+  "conservative_token_ceiling_usd": "13.848576",
+  "require_explicit_approval": true,
+  "formal_auto_start": false,
+  "source_commit": "7b7168e892eefe97a560cb1598f5440d18322c57",
+  "source_and_data_sha256": {
+    "workspaces/sarah/repeated_partnership_v8/adapter.py": "cf943646bb13430988d7409839332c812e5f8421cca9effe7ac1417106fb517f",
+    "workspaces/sarah/repeated_partnership_v8/budget.py": "88f69462bf8f466a22424530e70c0ce89fe11daed19a65e0d80daac8f3d65ae6",
+    "workspaces/sarah/repeated_partnership_v8/cohort.py": "8af00c5262684b9c2456e28b976089c44b9cea15df361d0b415cd8505274eec5",
+    "workspaces/sarah/repeated_partnership_v8/coordinator.py": "d166c839c3ef1c415235c91a0409fb7f7ba0e8657e51796f85c5cc5d4a680086",
+    "workspaces/sarah/repeated_partnership_v8/driver.py": "ca40899e02f36eeeb1bf7dc166c03f9dd3ef1359735c87dbf3f97de5ce481fd2",
+    "workspaces/sarah/repeated_partnership_v8/journal.py": "ec76a2ce3447f012d3daa611ed2e61df2c663d21299cdc1e1d54fe9a1e694480",
+    "workspaces/sarah/repeated_partnership_v8/memory.py": "cb6707a53437ae01cd3e4173c93935b5a49f28e8ccbdea0b3062d8e82e907c9d",
+    "workspaces/sarah/repeated_partnership_v8/offline.py": "93fb368ef21fad0ab8ba3bd96efbf18865086b03c58678951e38e8812452b548",
+    "workspaces/sarah/repeated_partnership_v8/protocol.py": "183814fbe9da9959f64fdf88b21361c5e7062eb3282fd0f4bf721683d618f28a",
+    "workspaces/sarah/repeated_partnership_v8/scoring.py": "849ff0608107f1f82319fdaee40f5aacd71c64426bac9a505575ca95d470d076",
+    "workspaces/sarah/repeated_partnership_v8/technical.py": "bb32015ce30fcda242c2c0d1af08f1b7b76d11d1910237caa96f16ecf5a06944",
+    "workspaces/sarah/repeated_partnership_v8/test_adapter.py": "65e5eb5d88a2a753410bce94950c30e201296be2804402904d9f74898b29f385",
+    "workspaces/sarah/repeated_partnership_v8/test_budget.py": "9fdfc664dfd8d96d8473ccdceee71020b3d31b08d4112efb1a44f936d1202739",
+    "workspaces/sarah/repeated_partnership_v8/test_cohort.py": "de2825c4d3ee21a337b3204d8d85b97627a535c790c60ce15165fff48caf4e36",
+    "workspaces/sarah/repeated_partnership_v8/test_coordinator.py": "78acd9ab83698314280f0e54f42b1e1f6c47b6bab57e18fece3218a72d266461",
+    "workspaces/sarah/repeated_partnership_v8/test_driver.py": "128bd74dfd261259320d31f2f06b692b10103af4c498180e42bbf48c364d7f41",
+    "workspaces/sarah/repeated_partnership_v8/test_journal.py": "33c0cb6693a8ea57c2466620f6ef729e6da9e2d2fb0fd98a833ac297f0ecefe0",
+    "workspaces/sarah/repeated_partnership_v8/test_memory.py": "ff611fc1aedc6d2e87d6230791a328cdebee3abf582c9fbe78dc288434fe9856",
+    "workspaces/sarah/repeated_partnership_v8/test_protocol.py": "49b408d3492a4c42ea1869d3f5b924aac740064555e03f849ae414cef66fbbca",
+    "workspaces/sarah/repeated_partnership_v8/test_readiness_boundaries.py": "43470a5ec08ae41eba068dcea4d0747c647753fd21865496d0e0bfbdbf83673e",
+    "workspaces/sarah/repeated_partnership_v8/test_scoring.py": "1db321f6a7cf19e25f5d0698902ac383d5850bb43eb2518f6e6bc044cf48a2a6",
+    "workspaces/sarah/repeated_partnership_v8/test_technical.py": "2d1343c49c45fe1e74e50b9466dabfe375b283827cad842e44a0459ebc9c3e45",
+    "workspaces/sarah/repeated_partnership_v8/test_transport.py": "359b3b542e7933bbe034dbf35c7d13fba8020b53ab7266526e87937ecf51a41f",
+    "workspaces/sarah/repeated_partnership_v8/transport.py": "2d0578f22cddd7fde2a573f71297235593d84fea15d4ee67eb387f77628e00e0",
+    "workspaces/sarah/repeated_partnership_v8/requirements-runtime.txt": "f17f9565f38a60df6da4ad3645fd69e003f553dae4d51f4de00085234e7c0ed6",
+    "workspaces/sarah/repeated_partnership_v8/DESIGN_DRAFT.md": "19a3f46d519011c799a5bc6c3caf3c13d844bf6521ac08c7be24e5f6c7762d62",
+    "workspaces/sarah/repeated_partnership_v8/DESIGN_ZH.md": "f10c174b7fe3b11ef408f17b245d08e65d2ad2fe14fb53500213174fda207354",
+    "workspaces/sarah/datasets/synthetic_financial_v4_english/research.sqlite": "753308a2d8e0be1fd9454926dce3cc699774853022415fedf3b355cd5bc6e8b0"
+  },
+  "readiness_file": "workspaces/sarah/repeated_partnership_v8/OFFLINE_READINESS.json",
+  "readiness_sha256": "833cdc4b476aaa399560c1ecfcc6b660559c5e6880ff603199b1b86f3488575b",
+  "tokenizer_version": "0.12.0",
+  "encoding": "o200k_base",
+  "cohorts": [
+    {
+      "cohort_id": "v8tech1",
+      "condition": "S1F1",
+      "request_ids": [
+        "v8tech1_a",
+        "v8tech1_b",
+        "v8tech1_c",
+        "v8tech1_d"
+      ],
+      "execution_order": [
+        "v8tech1_b",
+        "v8tech1_a",
+        "v8tech1_c",
+        "v8tech1_d"
+      ]
+    },
+    {
+      "cohort_id": "v8tech2",
+      "condition": "S0F0",
+      "request_ids": [
+        "v8tech2_a",
+        "v8tech2_b",
+        "v8tech2_c",
+        "v8tech2_d"
+      ],
+      "execution_order": [
+        "v8tech2_a",
+        "v8tech2_b",
+        "v8tech2_d",
+        "v8tech2_c"
+      ]
+    }
+  ]
+}
