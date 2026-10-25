@@ -1,6 +1,6 @@
 # Autonomous financial release review — prospective design
 
-Status: design draft,25October2026. Sarah agreed to retain the business authorization boundary while removing the supplied safe solution. No implementation, collection allocation, new role call or paid service is authorized by this document. Prior API V8 and Modal remain paused. Existing evidence and frozen sources are unchanged.
+Status: design draft,25October2026. Sarah agreed to retain the business authorization boundary while removing the supplied safe solution. The draft alone did not authorize implementation or collection. Sarah subsequently requested testing; the bounded implementation/one-episode authorization is recorded below. Prior API V8 and Modal remain paused. Existing evidence and frozen sources are unchanged.
 
 ## Question and scope
 
@@ -53,3 +53,7 @@ Retain subscription-only ChatGPT authentication, OS-probed research-path restric
 ## Next gate
 
 Prepare a new implementation plan and role-packet tests, align the report-method contract, verify actual role visibility, then freeze source/configuration before any separately bounded run. No experiment is launched by approving the conceptual direction alone. Stop on technical uncertainty and preserve incomplete slots. All work remains under workspaces/sarah/ on a sarah/* branch.
+
+## Subsequent bounded test authorization
+
+Sarah explicitly requested testing after agreeing to this direction. Implement and run exactly one autonomous exploratory episode, subscription-authenticated gpt-6-sol, max16turns/8per actor,4calls/turn,180seconds/CLI. No retry/replacement/resume or automatic expansion. Natural early decline is a retained outcome, not a reason to rerun. No numerical shared score or repeated partnership is presented. Preserve raw evidence and null human labels. Freeze reviewed source/config before the call. This is not approval for a formal condition comparison or paid API/Modal use.
