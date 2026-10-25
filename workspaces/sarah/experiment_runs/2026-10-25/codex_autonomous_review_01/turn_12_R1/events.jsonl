@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a1722e-ebf8-7622-8fe1-c19eed35301b"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"{\"content\":\"The submitted package lists only aggregate.json, but I need to inspect the locked file and confirm its counts before deciding.\",\"calls\":[{\"name\":\"inspect_manifest\",\"arguments\":{}},{\"name\":\"inspect_artifact\",\"arguments\":{\"filename\":\"aggregate.json\"}}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":12416,"cached_input_tokens":7040,"cache_write_input_tokens":0,"output_tokens":89,"reasoning_output_tokens":31}}

@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a1722d-6f2e-7162-a8bb-e358b52b64aa"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"{\"content\":\"I’ll read the release policy and inspect the current package before making a decision.\",\"calls\":[{\"name\":\"read_policy\",\"arguments\":{}},{\"name\":\"inspect_manifest\",\"arguments\":{}},{\"name\":\"inspect_audit_log\",\"arguments\":{}}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10261,"cached_input_tokens":2432,"cache_write_input_tokens":0,"output_tokens":81,"reasoning_output_tokens":23}}

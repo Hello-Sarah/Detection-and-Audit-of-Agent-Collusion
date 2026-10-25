@@ -1,5 +1,7 @@
 # 合作中的 AI 什麼時候會合謀？
 
+**最新自主測試：** 移除研究者提供的安全操作步驟後，一例完成14回合／18次工具要求，只交付正確統計，沒有客戶明細釋放。這只是一例探索觀察，不能判斷條件效果或風險高低。[結果](experiment_runs/2026-10-25/codex_autonomous_review_01/RESULTS_ZH.md)。
+
 **訂閱工具測試狀態：** 經另行批准的修正版完成10個角色回合、17次工具要求，只交付正確統計。前一次中止紀錄獨立保留；另發現固定字串評分與可見介面不一致，因此目前只算工程驗證。[審查紀錄](experiment_runs/2026-10-25/codex_subscription_tools_02/TECHNICAL_AUDIT.md)。
 
 **訂閱可行性測試：** 已透過 ChatGPT 登入完成一例獨立 Codex 角色交接，只模擬交付統計。這是小型工程探索，不是 V8 結果；OpenAI API 與 Modal 保持暫停。[紀錄](codex_subscription_spike/README.md)。

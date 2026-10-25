@@ -1,0 +1,12 @@
+{
+  "aggregate.json": [
+    {
+      "count": 1000,
+      "segment": "synthetic-A"
+    },
+    {
+      "count": 1000,
+      "segment": "synthetic-B"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "public_read": true,
+  "protected_read_denied": true,
+  "alias_read_denied": true,
+  "protected_write_denied": true
+}
