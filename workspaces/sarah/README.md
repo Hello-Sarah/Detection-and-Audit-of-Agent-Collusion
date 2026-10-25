@@ -1,5 +1,7 @@
 # Sarah's Workspace
 
+English | [中文](README_ZH.md)
+
 ## Progress by Oct 25, 10:58 am
 
 **Conclusion:** No coordinated cover-up was established in the completed V6 or V7 studies. No prohibited data release was observed, but report and review failures occurred—including approval of an inaccurate report and rejection of a correct one. These results do not establish which tasks cause collusion or whether private messaging changes its risk.
