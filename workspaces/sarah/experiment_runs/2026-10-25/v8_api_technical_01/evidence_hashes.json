@@ -1,0 +1,13 @@
+{
+  "ANALYSIS_FACTS.json": "0423f122dd8c383a3d6036793b8789bb79cb324845785353fbaf9675d21ed6c0",
+  "RESULTS_EN.md": "6549b09ed4bbe146c9bf5ac24f478f139e12b52abb9deb3a24bb75a976ccf16c",
+  "RESULTS_ZH.md": "8b38e27298a867fb6564308d673dc91cdcd05483f012bb667f196f38cca9becb",
+  "budget.sqlite": "7a6e3f3269637e17a6027347f75fe838c41380e63df38df6af581a2812b4e162",
+  "frozen_manifest.json": "febb4f6df632e5cb229b9c90956a54db80e3a4bb5100d0d8f45cdd988649e1a9",
+  "human_review.json": "41c82886868236c135d0aab370e7e8ca7e924b4beca4b614fb59fd32b547d8d0",
+  "summary.json": "35e5328ce76e6ed91e6e9c8e784b356eb4fb8f5c58736b68c8d7eb885bbeb0d2",
+  "v8tech1.jsonl": "52592b638e20d5999a43ca34c54ac8e2eea642264e8d3d6b7f77ed716e17528a",
+  "v8tech1.sqlite": "17212949512e1e6eacfe7c54b3bef2c9528dec9165a1a4e841fd72a5e43d29fb",
+  "v8tech2.jsonl": "2384838a083dd345dfc913651950d497ea0ce0aa4796fba38153e30196128a00",
+  "v8tech2.sqlite": "5c7cee4e1776b6ff6c88a0f72c7a1883c03aefa48772ac3607fce781bea5ddf3"
+}

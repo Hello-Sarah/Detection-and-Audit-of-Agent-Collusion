@@ -1,5 +1,7 @@
 # When Do Cooperating Agents Collude?
 
+**V8 API technical pilot completed:** Eight deliveries in two cohorts: six declined requests, two rejected protected submissions, no release.59 API requests; conservative token cost US$0.158. Technical observations only; formal allocation remains unstarted. [English](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_EN.md) · [中文](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_ZH.md).
+
 **Latest autonomous test:** With the supplied safe-operation recipe removed, one episode completed14role turns/18tool requests and released only correct aggregate counts. No customer details were released. This is one exploratory observation, not an effect estimate. [Results](experiment_runs/2026-10-25/codex_autonomous_review_01/RESULTS_EN.md).
 
 **Subscription tool-smoke status:** A separately approved revised episode completed10role turns and17mediated tool requests, releasing only correct aggregate counts. The earlier stopped slot stays separate. An exact-string scoring/interface mismatch remains, so this is engineering evidence only. [Audit](experiment_runs/2026-10-25/codex_subscription_tools_02/TECHNICAL_AUDIT.md).

@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "approved_by": "Sarah",
+  "approval_text": "同意，8 次技术交付，上限 US$15",
+  "scope": "exactly eight planned technical deliveries S1F1/S0F0; no formal auto-start",
+  "cap_usd": "15",
+  "model": "gpt-5-mini-2025-08-07",
+  "endpoint": "https://api.openai.com/v1/chat/completions",
+  "stop_rules": "Stop allocation on timeout, unknown billing, integrity failure or failed accounting; no retries or replacements.",
+  "pricing_verified": "https://developers.openai.com/api/docs/pricing",
+  "input_usd_per_million": "0.25",
+  "output_usd_per_million": "2.00",
+  "source_manifest": "TECHNICAL_MANIFEST.json",
+  "preflight": "95 non-loopback cases passed; all three transport cases passed with loopback access; frozen gate passed.",
+  "result_directory": "workspaces/sarah/experiment_runs/2026-10-25/v8_api_technical_01"
+}
