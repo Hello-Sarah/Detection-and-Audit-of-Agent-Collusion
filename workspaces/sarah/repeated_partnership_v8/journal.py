@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 import sqlite3
 
-from cohort import assignment, TERMINALS
+from .cohort import assignment, TERMINALS
 
 EVENT_KINDS = frozenset(('api_attempt', 'api_input', 'model_response', 'tool_call',
                          'tool_result', 'private', 'report', 'decision', 'error'))
@@ -168,6 +168,9 @@ class Journal:
                             (snapshot['terminal'], snapshot['points'], _json(snapshot['released_files']),
                              _json(snapshot['report']), _json(snapshot['tool_result']), request_id))
             return self._event(request_id, 'terminal', encoded)
+
+    def context(self):
+        return dict(self.db.execute('SELECT * FROM metadata').fetchone())
 
     def snapshot(self, request_id):
         out = dict(self._task(request_id))

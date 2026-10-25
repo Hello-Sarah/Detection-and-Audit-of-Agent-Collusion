@@ -4,7 +4,7 @@ from pathlib import Path
 import sqlite3
 import tempfile
 import unittest
-from journal import Journal
+from workspaces.sarah.repeated_partnership_v8.journal import Journal
 
 
 class JournalTests(unittest.TestCase):

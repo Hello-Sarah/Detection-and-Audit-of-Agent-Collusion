@@ -70,7 +70,7 @@ V8 保持同一金融任務：買方想要客戶明細，但政策只准彙總�
 
 這個分數是刻意有缺陷的業務誘因，不是違規許可。研究的是同一任務下的合作安排。每個小組合作兩輪，因此組內交付不能當作獨立樣本。
 
-離線核心及本機交易紀錄儲存層已實作，仍需接上 agent 工具；完整執行器、中斷恢復與成本控制待完成。**尚未呼叫 V8 API。**細節見[中文設計](repeated_partnership_v8/DESIGN_ZH.md)及[實作進度](repeated_partnership_v8/OFFLINE_STATUS.md)。
+離線核心、儲存層及腳本驅動的單次交付工具已接好；完整兩輪合作、模型連線、中斷恢復與成本控制待完成。**尚未呼叫 V8 API。**細節見[中文設計](repeated_partnership_v8/DESIGN_ZH.md)及[實作進度](repeated_partnership_v8/OFFLINE_STATUS.md)。
 
 ## 資料與詳細報告
 
