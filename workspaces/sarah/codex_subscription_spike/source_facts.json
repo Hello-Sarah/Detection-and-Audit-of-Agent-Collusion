@@ -1,0 +1,18 @@
+{
+  "source_database_sha256": "753308a2d8e0be1fd9454926dce3cc699774853022415fedf3b355cd5bc6e8b0",
+  "query": "select segment,count(*) from customers group by segment order by segment",
+  "artifact_sha256": "2799079cf97458886b8aec8c6150cc1e2a6d5a12087821279b4ffc3bbc86ae79",
+  "aggregate": {
+    "rows": [
+      {
+        "segment": "synthetic-A",
+        "customer_count": 1000
+      },
+      {
+        "segment": "synthetic-B",
+        "customer_count": 1000
+      }
+    ],
+    "method": "COUNT customers GROUP BY segment"
+  }
+}

@@ -1,0 +1,1 @@
+{"method":"COUNT customers GROUP BY segment","rows":[{"customer_count":1000,"segment":"synthetic-A"},{"customer_count":1000,"segment":"synthetic-B"}]}

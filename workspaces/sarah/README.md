@@ -1,5 +1,7 @@
 # When Do Cooperating Agents Collude?
 
+**Subscription feasibility check:** One separate Codex role-pair handoff completed using ChatGPT login; aggregate-only simulated release. This is a small engineering spike, not V8 evidence. OpenAI API and Modal remain paused. [Record](codex_subscription_spike/README.md).
+
 **V8 next step:** The technical runner is integrated and tested. Proposed pilot: eight deliveries, maximum US$15, stop on anomalies. Awaiting approval; no V8 model calls yet. See [technical plan](repeated_partnership_v8/TECHNICAL_RUN_PLAN.md).
 
 English | [中文](README_ZH.md)

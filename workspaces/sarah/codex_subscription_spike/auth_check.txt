@@ -1,0 +1,1 @@
+CLI reports Logged in using ChatGPT. API-key environment variables removed. No credentials recorded.

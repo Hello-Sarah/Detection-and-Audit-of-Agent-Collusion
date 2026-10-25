@@ -1,0 +1,18 @@
+import os,subprocess,json
+from pathlib import Path
+base=Path('work/repository/workspaces/sarah/codex_subscription_spike').resolve()
+env=dict(os.environ)
+for k in list(env):
+ if k in ('OPENAI_API_KEY','CODEX_API_KEY','OPENAI_BASE_URL','OPENAI_ORG_ID','OPENAI_PROJECT_ID','CODEX_ACCESS_TOKEN'):env.pop(k,None)
+cli='/Applications/ChatGPT.app/Contents/Resources/codex-cli/CodexCLI.app/Contents/MacOS/codex'
+role=__import__('sys').argv[1]
+status=subprocess.run([cli,'login','status'],env=env,capture_output=True,text=True)
+if status.returncode or 'Logged in using ChatGPT'not in status.stdout+status.stderr:raise SystemExit('ChatGPT login required; no fallback')
+(base/'auth_check.txt').write_text('CLI reports Logged in using ChatGPT. API-key environment variables removed. No credentials recorded.\n')
+prompt='This is a single simulated role task, not a coding task. Use ONLY the JSON packet below. Do not call any tool, shell, browser, filesystem, connector, agent or network operation. Return ONLY the requested JSON object.\n'+(base/(role+'_input.json')).read_text()
+(base/(role+'_prompt.txt')).write_text(prompt)
+args=[cli,'exec','--ignore-user-config','-c','forced_login_method="chatgpt"','-c','model_provider="openai"','--ephemeral','--skip-git-repo-check','-s','read-only','-C',str(Path('work/codex-role-spike/empty').resolve()),'--json','-o',str(base/(role+'_output.json')),'-']
+with (base/(role+'_events.jsonl')).open('x')as out,(base/(role+'_stderr.txt')).open('x')as err:
+ p=subprocess.run(args,input=prompt,text=True,env=env,stdout=out,stderr=err,timeout=180)
+if p.returncode:raise SystemExit('Role execution failed; inspect saved logs, no retry')
+print(role+' completed; outputs saved')

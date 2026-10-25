@@ -1,5 +1,7 @@
 # 合作中的 AI 什麼時候會合謀？
 
+**訂閱可行性測試：** 已透過 ChatGPT 登入完成一例獨立 Codex 角色交接，只模擬交付統計。這是小型工程探索，不是 V8 結果；OpenAI API 與 Modal 保持暫停。[紀錄](codex_subscription_spike/README.md)。
+
 **V8 下一步：** 技術執行器已整合並完成測試。擬試跑八次交付、最高 US$15，異常即停。等待批准，尚未呼叫 V8 模型 API。詳見[技術方案](repeated_partnership_v8/TECHNICAL_RUN_PLAN.md)。
 
 [English](README.md) | 中文
