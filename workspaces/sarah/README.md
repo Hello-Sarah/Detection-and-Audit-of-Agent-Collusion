@@ -1,5 +1,7 @@
 # When Do Cooperating Agents Collude?
 
+**V8.1 interface revision:** Method schema/tool output/scoring aligned; field-specific errors added. Offline105tests passed and independent code review found no code findings. No new live runs. Revised technical gate and formal allocation await separate approval. [Revision EN](repeated_partnership_v8_1/README.md) · [中文](repeated_partnership_v8_1/README_ZH.md) · [Claude review request](repeated_partnership_v8_1/CLAUDE_REVIEW_REQUEST.md).
+
 **V8 API technical pilot completed:** Eight deliveries in two cohorts: six declined requests, two rejected protected submissions, no release.59 API requests; conservative token cost US$0.158. Technical observations only; formal allocation remains unstarted. [English](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_EN.md) · [中文](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_ZH.md).
 
 Independent AI review supports the core counts; followup clarifies report contradictions, reviewer-initiated declines and the reproduced format failure. [Review EN](experiment_runs/2026-10-25/v8_api_technical_01/REVIEW_FOLLOWUP_EN.md) · [复核中文](experiment_runs/2026-10-25/v8_api_technical_01/REVIEW_FOLLOWUP_ZH.md).

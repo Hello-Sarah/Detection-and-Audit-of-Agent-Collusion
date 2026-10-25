@@ -1,0 +1,293 @@
+{
+  "status": "prospective_unapproved",
+  "seed": 2026102504,
+  "allocation_unit": "four-agent cohort",
+  "cohorts": [
+    {
+      "block": 1,
+      "cohort_id": "v8r1formal_b1_s0f0",
+      "condition": "S0F0",
+      "request_ids": [
+        "v8r1formal_b1_s0f0_a",
+        "v8r1formal_b1_s0f0_b",
+        "v8r1formal_b1_s0f0_c",
+        "v8r1formal_b1_s0f0_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b1_s0f0_b",
+        "v8r1formal_b1_s0f0_a",
+        "v8r1formal_b1_s0f0_c",
+        "v8r1formal_b1_s0f0_d"
+      ]
+    },
+    {
+      "block": 1,
+      "cohort_id": "v8r1formal_b1_s0f1",
+      "condition": "S0F1",
+      "request_ids": [
+        "v8r1formal_b1_s0f1_a",
+        "v8r1formal_b1_s0f1_b",
+        "v8r1formal_b1_s0f1_c",
+        "v8r1formal_b1_s0f1_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b1_s0f1_b",
+        "v8r1formal_b1_s0f1_a",
+        "v8r1formal_b1_s0f1_d",
+        "v8r1formal_b1_s0f1_c"
+      ]
+    },
+    {
+      "block": 1,
+      "cohort_id": "v8r1formal_b1_s1f0",
+      "condition": "S1F0",
+      "request_ids": [
+        "v8r1formal_b1_s1f0_a",
+        "v8r1formal_b1_s1f0_b",
+        "v8r1formal_b1_s1f0_c",
+        "v8r1formal_b1_s1f0_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b1_s1f0_a",
+        "v8r1formal_b1_s1f0_b",
+        "v8r1formal_b1_s1f0_c",
+        "v8r1formal_b1_s1f0_d"
+      ]
+    },
+    {
+      "block": 1,
+      "cohort_id": "v8r1formal_b1_s1f1",
+      "condition": "S1F1",
+      "request_ids": [
+        "v8r1formal_b1_s1f1_a",
+        "v8r1formal_b1_s1f1_b",
+        "v8r1formal_b1_s1f1_c",
+        "v8r1formal_b1_s1f1_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b1_s1f1_b",
+        "v8r1formal_b1_s1f1_a",
+        "v8r1formal_b1_s1f1_d",
+        "v8r1formal_b1_s1f1_c"
+      ]
+    },
+    {
+      "block": 2,
+      "cohort_id": "v8r1formal_b2_s0f1",
+      "condition": "S0F1",
+      "request_ids": [
+        "v8r1formal_b2_s0f1_a",
+        "v8r1formal_b2_s0f1_b",
+        "v8r1formal_b2_s0f1_c",
+        "v8r1formal_b2_s0f1_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b2_s0f1_a",
+        "v8r1formal_b2_s0f1_b",
+        "v8r1formal_b2_s0f1_c",
+        "v8r1formal_b2_s0f1_d"
+      ]
+    },
+    {
+      "block": 2,
+      "cohort_id": "v8r1formal_b2_s1f0",
+      "condition": "S1F0",
+      "request_ids": [
+        "v8r1formal_b2_s1f0_a",
+        "v8r1formal_b2_s1f0_b",
+        "v8r1formal_b2_s1f0_c",
+        "v8r1formal_b2_s1f0_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b2_s1f0_b",
+        "v8r1formal_b2_s1f0_a",
+        "v8r1formal_b2_s1f0_d",
+        "v8r1formal_b2_s1f0_c"
+      ]
+    },
+    {
+      "block": 2,
+      "cohort_id": "v8r1formal_b2_s0f0",
+      "condition": "S0F0",
+      "request_ids": [
+        "v8r1formal_b2_s0f0_a",
+        "v8r1formal_b2_s0f0_b",
+        "v8r1formal_b2_s0f0_c",
+        "v8r1formal_b2_s0f0_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b2_s0f0_b",
+        "v8r1formal_b2_s0f0_a",
+        "v8r1formal_b2_s0f0_d",
+        "v8r1formal_b2_s0f0_c"
+      ]
+    },
+    {
+      "block": 2,
+      "cohort_id": "v8r1formal_b2_s1f1",
+      "condition": "S1F1",
+      "request_ids": [
+        "v8r1formal_b2_s1f1_a",
+        "v8r1formal_b2_s1f1_b",
+        "v8r1formal_b2_s1f1_c",
+        "v8r1formal_b2_s1f1_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b2_s1f1_b",
+        "v8r1formal_b2_s1f1_a",
+        "v8r1formal_b2_s1f1_c",
+        "v8r1formal_b2_s1f1_d"
+      ]
+    },
+    {
+      "block": 3,
+      "cohort_id": "v8r1formal_b3_s1f0",
+      "condition": "S1F0",
+      "request_ids": [
+        "v8r1formal_b3_s1f0_a",
+        "v8r1formal_b3_s1f0_b",
+        "v8r1formal_b3_s1f0_c",
+        "v8r1formal_b3_s1f0_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b3_s1f0_a",
+        "v8r1formal_b3_s1f0_b",
+        "v8r1formal_b3_s1f0_d",
+        "v8r1formal_b3_s1f0_c"
+      ]
+    },
+    {
+      "block": 3,
+      "cohort_id": "v8r1formal_b3_s0f0",
+      "condition": "S0F0",
+      "request_ids": [
+        "v8r1formal_b3_s0f0_a",
+        "v8r1formal_b3_s0f0_b",
+        "v8r1formal_b3_s0f0_c",
+        "v8r1formal_b3_s0f0_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b3_s0f0_a",
+        "v8r1formal_b3_s0f0_b",
+        "v8r1formal_b3_s0f0_c",
+        "v8r1formal_b3_s0f0_d"
+      ]
+    },
+    {
+      "block": 3,
+      "cohort_id": "v8r1formal_b3_s1f1",
+      "condition": "S1F1",
+      "request_ids": [
+        "v8r1formal_b3_s1f1_a",
+        "v8r1formal_b3_s1f1_b",
+        "v8r1formal_b3_s1f1_c",
+        "v8r1formal_b3_s1f1_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b3_s1f1_a",
+        "v8r1formal_b3_s1f1_b",
+        "v8r1formal_b3_s1f1_c",
+        "v8r1formal_b3_s1f1_d"
+      ]
+    },
+    {
+      "block": 3,
+      "cohort_id": "v8r1formal_b3_s0f1",
+      "condition": "S0F1",
+      "request_ids": [
+        "v8r1formal_b3_s0f1_a",
+        "v8r1formal_b3_s0f1_b",
+        "v8r1formal_b3_s0f1_c",
+        "v8r1formal_b3_s0f1_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b3_s0f1_b",
+        "v8r1formal_b3_s0f1_a",
+        "v8r1formal_b3_s0f1_c",
+        "v8r1formal_b3_s0f1_d"
+      ]
+    },
+    {
+      "block": 4,
+      "cohort_id": "v8r1formal_b4_s1f0",
+      "condition": "S1F0",
+      "request_ids": [
+        "v8r1formal_b4_s1f0_a",
+        "v8r1formal_b4_s1f0_b",
+        "v8r1formal_b4_s1f0_c",
+        "v8r1formal_b4_s1f0_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b4_s1f0_b",
+        "v8r1formal_b4_s1f0_a",
+        "v8r1formal_b4_s1f0_c",
+        "v8r1formal_b4_s1f0_d"
+      ]
+    },
+    {
+      "block": 4,
+      "cohort_id": "v8r1formal_b4_s1f1",
+      "condition": "S1F1",
+      "request_ids": [
+        "v8r1formal_b4_s1f1_a",
+        "v8r1formal_b4_s1f1_b",
+        "v8r1formal_b4_s1f1_c",
+        "v8r1formal_b4_s1f1_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b4_s1f1_a",
+        "v8r1formal_b4_s1f1_b",
+        "v8r1formal_b4_s1f1_d",
+        "v8r1formal_b4_s1f1_c"
+      ]
+    },
+    {
+      "block": 4,
+      "cohort_id": "v8r1formal_b4_s0f0",
+      "condition": "S0F0",
+      "request_ids": [
+        "v8r1formal_b4_s0f0_a",
+        "v8r1formal_b4_s0f0_b",
+        "v8r1formal_b4_s0f0_c",
+        "v8r1formal_b4_s0f0_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b4_s0f0_a",
+        "v8r1formal_b4_s0f0_b",
+        "v8r1formal_b4_s0f0_d",
+        "v8r1formal_b4_s0f0_c"
+      ]
+    },
+    {
+      "block": 4,
+      "cohort_id": "v8r1formal_b4_s0f1",
+      "condition": "S0F1",
+      "request_ids": [
+        "v8r1formal_b4_s0f1_a",
+        "v8r1formal_b4_s0f1_b",
+        "v8r1formal_b4_s0f1_c",
+        "v8r1formal_b4_s0f1_d"
+      ],
+      "execution_order": [
+        "v8r1formal_b4_s0f1_a",
+        "v8r1formal_b4_s0f1_b",
+        "v8r1formal_b4_s0f1_d",
+        "v8r1formal_b4_s0f1_c"
+      ]
+    }
+  ],
+  "budget_proposal": {
+    "spending_authorized": false,
+    "formal_deliveries": 64,
+    "independent_formal_cohorts": 16,
+    "formal_requests_max": 1024,
+    "technical_deliveries": 8,
+    "technical_requests_max": 128,
+    "formal_uncached_ceiling_usd": "110.788608",
+    "technical_uncached_ceiling_usd": "13.848576",
+    "combined_uncached_ceiling_usd": "124.637184",
+    "proposed_formal_cap_usd": "115",
+    "proposed_technical_cap_usd": "15",
+    "note": "Conservative token reservations, not expected bills. Historical approval is not transferable. No formal launcher is supplied by this allocation module."
+  }
+}
