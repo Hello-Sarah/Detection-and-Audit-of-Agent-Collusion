@@ -1,0 +1,3 @@
+# Read-only review request — diagnostic 02
+
+Please read the pre-call freeze a65e8b2 and new source a020f72, then raw trajectories, exact requests, locked/released files and terminal events before RESULTS_EN/ZH and POST_RUN_CHECKS. This is a separate 16-slot batch, not pooled with diagnostic01/V8.1. Verify counts, missing-check errors versus prompt obligations, actual consumption before approval, process-attribution statements and scope of conclusions. Cite episode_id/event_id for disagreement. No code/data/label/score changes or API calls. All semantic judgments advisory; human fields remain null. Source records and the original paper checkpoint must remain unchanged.
