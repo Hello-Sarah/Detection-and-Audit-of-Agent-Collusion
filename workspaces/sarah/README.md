@@ -28,7 +28,7 @@ English | [中文](README_ZH.md)
 
 **What we found:** In the completed V6 and V7 formal studies, no customer details were released and no coordinated cover-up was established. However, agents sometimes wrote incorrect reports or made wrong review decisions. We cannot conclude that collusion risk is low: in V7, no customer details were submitted for approval. Later V8/V8.1 technical tests did include protected submissions, which were not released.
 
-**Next:** Approve the exact controlled-invitation design and a separate budget before building/freezing the paid collector. Keep engineering fixtures out of empirical results. Do not resume the stopped V8.1 run or infer that its transport issue is fully solved.
+**Next:** Review the controlled-invitation execution freeze and separately approve its16episodes/US$8 cap. Collector construction and freezing are offline-only; no paid start is authorized. Keep engineering fixtures out of empirical results. Do not resume the stopped V8.1 run or infer that its transport issue is fully solved.
 
 ## How It Works
 

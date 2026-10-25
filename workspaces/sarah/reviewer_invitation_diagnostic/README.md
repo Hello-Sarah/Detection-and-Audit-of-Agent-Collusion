@@ -1,6 +1,6 @@
 # Controlled reviewer invitation diagnostic — offline implementation
 
-**No live reviewer results and no new API calls.** Sarah authorized offline continuation. The proposed 16-episode collection and US$8 cap remain unapproved; this directory has no paid collection command. This is separate from V8/V8.1 and cannot resume their stopped slots.
+**No live reviewer results and no new API calls.** Sarah authorized offline continuation. The proposed 16-episode collection and US$8 cap remain unapproved. The collector can be prepared and checked offline; its run command requires a separate approval reference. This is separate from V8/V8.1 and cannot resume their stopped slots.
 
 Question: will a reviewer approve the same prohibited financial-data package when a scripted preparer asks for an exception or an inaccurate decision statement?
 
@@ -37,6 +37,28 @@ The generated fixture approvals/rejections are hand-programmed engineering route
 
 ## Next gate
 
-Review and approve exact message text/design, then separately approve a budget before a paid collector is implemented/frozen/launched. A live collector still needs global allocation-level stop handling, persistent transport integration, per-episode artifact/hash checks, missingness export and a reviewed execution path. No current offline pass establishes that this future collection path is complete.
+The collector is now implemented for offline review and execution freezing. Actual paid collection still requires explicit approval of the16-slot design and US$8 cap. A frozen bundle is not spending authorization. See the collector contract below; verification/review status is recorded separately in COLLECTOR_VERIFICATION.json.
 
 See [English design](DESIGN_EN.md), [中文设计](DESIGN_ZH.md), and [implementation plan](IMPLEMENTATION_PLAN.md). Original V8.1 remains stopped; its final transport cause remains unknown.
+
+
+## Collector execution contract
+
+`collector.py prepare` creates a separate `execution_freeze_01/` bundle with all16 exact first requests, fixed reports/packages/message hashes, source/data hashes, tokenizer/config, pricing evidence and execution manifest. Prior offline_proposal_01 remains an historical proposal from commit1006333; do not use it as the current execution freeze.
+
+The collector uses one64-request ledger for the whole allocation, at most4requests per reviewer. It persists exact request bytes before sending, uses the durable allowlisted transport diagnostics, preserves raw provider responses and uncertainties, and checks the frozen stimulus and source before dispatch. Failure anywhere stops the allocation; existing output cannot resume. A one-shot LIVE_CLAIM.json beside the execution manifest also prevents an accidental second live run under another output path. Copying/bypassing that marker is not an approved recovery procedure. A partially written claim still requires manual review, never automatic retry.
+
+Exports include per-episode journals/JSONL, locked files/report, actual released files, terminal records, immutable episode checkpoints, global budget, all allocated/unrun/initialization-failed/running/terminal states, confirmed initial exposures and by-condition raw counts. A local export failure retains the known journal outcome in the batch summary when available. Physical disk/process failures can still prevent final exports; preserve partial evidence and holds for manual recovery. No claim that every crash is recoverable automatically.
+
+Human labels, verbal-acceptance and false-statement annotations remain empty. A valid provider response confirms that the corresponding input was processed; dispatch alone does not. Holds, request limits, failed attempts and technical nondecisions remain separate from successful rejection. Scripted fixture decisions never become empirical model results.
+
+Current official [pricing](https://developers.openai.com/api/docs/pricing) was fetched for the exact [GPT-5 Mini snapshot](https://developers.openai.com/api/docs/models/gpt-5-mini). Conservative uncached rates are recorded in PRICING_CHECK.json. Any live start rejects a pricing check older than24hours or differing rates; stale pricing requires reverification and a new freeze. Account/model access and actual billing are not verified by this offline work. The US$8 limit applies to this collector, not unrelated account activity.
+
+Offline preparation/check commands (zero model calls):
+
+```
+../v8-runtime/bin/python -m workspaces.sarah.reviewer_invitation_diagnostic.collector prepare --output workspaces/sarah/reviewer_invitation_diagnostic/execution_freeze_01
+../v8-runtime/bin/python -m workspaces.sarah.reviewer_invitation_diagnostic.collector check --manifest workspaces/sarah/reviewer_invitation_diagnostic/execution_freeze_01/EXECUTION_MANIFEST.json
+```
+
+Paid execution has not been approved or started. It uses official API credentials only after approval/config/path/runtime/price gates; the tests inject scripted transports and never read the key.

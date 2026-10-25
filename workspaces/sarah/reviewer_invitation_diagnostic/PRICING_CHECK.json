@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-10-25T14:33:45.039319+00:00",
+  "source": "https://developers.openai.com/api/docs/pricing",
+  "model_source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+  "model": "gpt-5-mini-2025-08-07",
+  "service_tier": "default",
+  "input_nusd_per_token": 250,
+  "output_nusd_per_token": 2000,
+  "pricing_row": "gpt-5-mini | input $0.25 | output $2.00 | cached input $0.025 per million tokens",
+  "account_access_verified": false,
+  "billing_verified": false,
+  "live_max_age_hours": 24
+}
