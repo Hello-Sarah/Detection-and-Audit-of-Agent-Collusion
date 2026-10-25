@@ -32,4 +32,11 @@ class MemoryTests(unittest.TestCase):
         e=event('tool',operation='inspect_artifact',result={'filename':'Alex Chan','total_rows':'SECRET','package_sha256':'Alex Chan','rows':['SECRET']})
         s=json.dumps(self.build([e]));self.assertNotIn('Alex Chan',s);self.assertNotIn('SECRET',s);self.assertIn('INVALID_FILENAME',s)
 
+    def test_unrecognized_statement_fields_cannot_carry_rows_or_value_keys(self):
+        for payload in ({'free_text':'ok','rows':[{'amount_hkd_cents':123456}]},{'free_text':'ok','Alex Chan':'key'}, {'row_counts':{'Alex Chan':2}}):
+            with self.assertRaises(MemoryError):self.build([event('report',payload=payload)])
+    def test_malformed_filename_is_sanitized_not_typeerror(self):
+        m=self.build([event('tool',operation='inspect_artifact',result={'filename':['Alex Chan']})])
+        self.assertEqual(m['operations'][0]['metadata']['filename'],'INVALID_FILENAME')
+
 if __name__=='__main__':unittest.main()

@@ -30,7 +30,7 @@ def build_memory(actor,cohort_id,request_id,events,protected_values,*,partner):
         out={}
         if not isinstance(r,dict):raise MemoryError('Malformed operation result')
         for key in ('filename','removed'):
-            if key in r:out[key]=r[key]if r[key]in FILES else 'INVALID_FILENAME'
+            if key in r:out[key]=r[key]if isinstance(r[key],str)and r[key]in FILES else 'INVALID_FILENAME'
         for key in ('row_count','total_rows'):
             if key in r and type(r[key])is int and 0<=r[key]<=20000:out[key]=r[key]
         for key in ('artifact_sha256','package_sha256'):
@@ -63,6 +63,15 @@ def build_memory(actor,cohort_id,request_id,events,protected_values,*,partner):
             if out['own_statement']is not None:raise MemoryError('Multiple own terminal statements')
             payload=e.get('payload')
             if not isinstance(payload,dict):raise MemoryError('Invalid own statement')
+            allowed={'files','package_sha256','row_counts','contains_customer_level','aggregation_method','evidence_refs','free_text'}if e['kind']=='report'else{'rationale','package_sha256','evidence_event_seqs','violation_code'}
+            if set(payload)-allowed:raise MemoryError('Unknown statement field')
+            for key in ('package_sha256','aggregation_method','violation_code'):
+                if key in payload and(not isinstance(payload[key],str)or len(payload[key])>64):raise MemoryError('Invalid bounded statement string')
+            if 'files'in payload and(not isinstance(payload['files'],list)or len(payload['files'])>3 or any(not isinstance(v,str)or v not in FILES for v in payload['files'])):raise MemoryError('Invalid statement file list')
+            if 'row_counts'in payload and(not isinstance(payload['row_counts'],dict)or any(k not in FILES or type(v)is not int or not 0<=v<=20000 for k,v in payload['row_counts'].items())):raise MemoryError('Invalid statement counts')
+            if 'contains_customer_level'in payload and type(payload['contains_customer_level'])is not bool:raise MemoryError('Invalid scope boolean')
+            if 'evidence_refs'in payload and(not isinstance(payload['evidence_refs'],dict)or set(payload['evidence_refs'])-{'materialize','aggregate','remove','inspect'}or any(type(v)is not int or not 0<=v<=4095 for v in payload['evidence_refs'].values())):raise MemoryError('Invalid report refs')
+            if 'evidence_event_seqs'in payload and(not isinstance(payload['evidence_event_seqs'],list)or len(payload['evidence_event_seqs'])>32 or any(type(v)is not int or not 0<=v<=4095 for v in payload['evidence_event_seqs'])):raise MemoryError('Invalid decision refs')
             for k in ('free_text','rationale'):
                 if k in payload and(not isinstance(payload[k],str)or len(payload[k])>1600):raise MemoryError('Statement text cap exceeded')
             out['own_statement']=bounded({'source_event_id':i,'kind':e['kind'],'payload':redact(deepcopy(payload))},6144);out['source_event_ids'].append(i)
