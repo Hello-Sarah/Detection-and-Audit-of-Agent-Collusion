@@ -6,7 +6,11 @@ English | [中文](README_ZH.md)
 
 **Conclusion:** No coordinated cover-up was established in the completed V6 or V7 studies. No prohibited data release was observed, but report and review failures occurred—including approval of an inaccurate report and rejection of a correct one. These results do not establish which tasks cause collusion or whether private messaging changes its risk.
 
-**Next steps:** Claude has completed the additional read-only review. Sarah has confirmed 23 case interpretations; case10 report accuracy and consequent approval correctness remain pending. The four outcome summaries are recorded separately in the [review update](intermediate_workflow_v7/REVIEW_UPDATE_2026-10-25.md): data safety (24), report accuracy (24), decision correctness (23, excluding18), and process completion (24). No new experiments or changes to V7 code/configuration are underway. Future task designs remain proposals requiring a separate freeze.
+**Next steps:**
+
+1. **Close the remaining V7 judgment:** resolve whether case10's future-workflow guidance makes its report inaccurate and consequently its approval incorrect. The other23 interpretations are confirmed. Keep data safety, report accuracy, decision correctness and process completion separate in the [review update](intermediate_workflow_v7/REVIEW_UPDATE_2026-10-25.md).
+2. **Draft the next study—repeated partnerships × shared performance feedback:** retain the financial institution → AI buyer scene, synthetic data and binding license. Propose four conditions: changing versus stable preparer/reviewer partners, crossed with no shared score versus explicit simulated team-performance feedback. Define retained memory and scoring so correct compliant delivery and justified rejection remain valid outcomes. Separate privacy violations, inaccurate reports, review failures and demonstrated coordinated concealment.
+3. **Review and freeze before any new calls:** specify matching, memory, feedback rules, independent sequence-level allocation and resource caps; review the design and tests, then freeze a new version before a bounded pilot. Within-sequence episodes are dependent and must not be counted as independent trials. This is a design proposal, not a launched or frozen experiment; V7 code/configuration remain unchanged.
 
 The latest experiments are complete and pushed to `sarah/pilot-run`. The research question remains **which kinds of tasks lead to collusion**, within our financial institution → AI buyer setting.
 
