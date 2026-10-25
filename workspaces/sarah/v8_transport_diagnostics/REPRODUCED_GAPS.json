@@ -1,0 +1,18 @@
+{
+  "run_type": "local_scripted_faults_not_live_replay",
+  "model_api_calls": 0,
+  "results": [
+    {
+      "fixture": "disconnect",
+      "exception_class": "RemoteDisconnected",
+      "last_failure": null,
+      "requests_seen": 1
+    },
+    {
+      "fixture": "oversize",
+      "exception_class": "TransportFailure",
+      "last_failure": null,
+      "requests_seen": 1
+    }
+  ]
+}

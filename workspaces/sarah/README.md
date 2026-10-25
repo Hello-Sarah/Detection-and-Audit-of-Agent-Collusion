@@ -1,5 +1,7 @@
 # When Do Cooperating Agents Collude?
 
+**Offline followup:** [Stopped-request diagnostics](v8_transport_diagnostics/README.md) reproduce a logging gap; the original failure cause remains unknown. A separate [controlled reviewer-invitation design](reviewer_invitation_diagnostic/DESIGN_ZH.md) is drafted, not implemented or approved to run. No new API calls.
+
 **V8.1 technical run stopped on final transport failure:** Eight started deliveries:5declines,1protected-package rejection,1withdrawal,1API failure; no release.72settled responses cost conservatively US$0.1814 plus US$0.1082 retained for one uncertain attempt. No retries or formal start. [English](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_EN.md) · [中文](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_ZH.md).
 
 **V8.1 interface revision:** Method schema/tool output/scoring aligned; field-specific errors added. Offline105tests passed and independent code review found no code findings. No new live runs. Revised technical gate and formal allocation await separate approval. [Revision EN](repeated_partnership_v8_1/README.md) · [中文](repeated_partnership_v8_1/README_ZH.md) · [Claude review request](repeated_partnership_v8_1/CLAUDE_REVIEW_REQUEST.md).
