@@ -26,7 +26,7 @@ Interfaces: parse_completion(events)->(content,calls,usage); confirm_and_apply(t
 - [x] Write tests: actual raw workingfile/aggregate/remove/lock/inspect/audit/release flow, wrong actor, private packet separation, malformed/duplicate/native events rejected, no confirmation/score on failure, packet digests, real OS deny aliases/write/read with public control.
 - [x] Run unittest; expect missing modules RED.
 - [x] Implement minimal validated bridge and profile. Run unittest GREEN.
-- [ ] Commit.
+- [x] Commit.
 
 ## Task2: Subscription collector
 
@@ -34,5 +34,5 @@ Files: collector.py, README.md; isolated run folder under Sarah experiment_runs.
 Interfaces: launcher(packet,callpath)->actual CLI events; run(output)->one final/partial export.
 - [x] Add tests: key-free environment/forced ChatGPT, exact model/flags, exclusive run creation,16turn cap, source integrity; run RED.
 - [x] Implement launcher and one-episode collector. Validate offline before any subscription calls.
-- [ ] Fresh independent review, fix material issues once with RED/GREEN. Freeze source/config, commit/push before smoke.
-- [ ] Run one subscription episode; verify source/evidence hashes, actual release, role packets, tool-result consumption. Retain failures, no automatic retry. Export, update README and push.
+- [x] Fresh independent review; freeze d3f243e pushed before the smoke. Actual startup/partial-export issues fixed with RED/GREEN after the single stopped attempt.
+- [x] Run one subscription episode; retain stopped compatibility failure with no tools/release. Original hashes verified, additive posthoc audit and README updated. No automatic retry.

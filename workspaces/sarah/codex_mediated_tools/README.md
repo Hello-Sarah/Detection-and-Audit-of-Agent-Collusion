@@ -13,3 +13,9 @@ A separate engineering test using ChatGPT login. OpenAI Platform API and Modal r
 [Design](DESIGN.md) · [Implementation plan](PLAN.md) · [Ledger](LEDGER.md)
 
 Offline validation: `python3 -m unittest discover -s workspaces/sarah/codex_mediated_tools -q` (macOS Seatbelt probe requires local process permissions, no model).
+
+## First actual CLI tool attempt
+
+The first episode stopped after one genuine CLI completion. The role requested real tool operations, but an administrative Code Mode-disabled startup notice was rejected by the strict parser before tools ran. The unfinished-state exporter also encountered a null release. Both defects now have reproduced/fixed regressions. **Actual tool integration has not yet passed a live end-to-end smoke.**
+
+Original evidence: [stopped run audit](../experiment_runs/2026-10-25/codex_subscription_tools_01/posthoc_audit/README.md). OS probes passed;0mediated operations executed; no release or task score. No retry, replay or replacement. A distinct prospective manifest is prepared for a new one-episode decision; original SMOKE_MANIFEST.json remains unchanged.

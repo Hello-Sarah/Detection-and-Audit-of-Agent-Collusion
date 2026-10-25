@@ -29,6 +29,17 @@ class BridgeTests(unittest.TestCase):
         for bad in (envelope()+[{'type':'item.completed','item':{'type':'command_execution'}}],envelope()+[envelope()[2]],envelope()[:-1],envelope(calls=[{'name':'x','arguments':{'x':float('nan')}}])):
             with self.subTest(bad=bad),self.assertRaises(BridgeError):parse_completion(bad)
 
+    def test_exact_startup_code_mode_notice_allowed_but_tool_errors_still_rejected(self):
+        notice={'type':'item.completed','item':{'id':'notice','type':'error','message':'Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`.'}}
+        original=envelope(calls=[{'name':'read_policy','arguments':{}}])
+        events=[original[0],notice]+original[1:]
+        self.assertEqual(parse_completion(events)[1],[{'name':'read_policy','arguments':{}}])
+        for changed in ('auth failed','some tool failed'):
+            bad=json.loads(json.dumps(events));bad[1]['item']['message']=changed
+            with self.assertRaises(BridgeError):parse_completion(bad)
+        bad=[original[0],original[1],notice]+original[2:]
+        with self.assertRaises(BridgeError):parse_completion(bad)
+
     def test_malformed_output_never_confirms_or_executes_or_scores(self):
         packet=self.t.input('P1',dispatched=False);h=packet_digest(packet)
         self.t.mark_dispatched('P1','c',h)

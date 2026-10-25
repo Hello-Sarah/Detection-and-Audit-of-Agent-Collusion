@@ -1,0 +1,17 @@
+{
+  "README.md": "40e7595bd22d63404fb2c57b5ca9c7af8479b94fca6c0b1f4ac2cb2ecc3f7dc3",
+  "failure.json": "ca8625cacba94a03f7afbe84d75a492a2ce658483c2f49557dc4f7bca75dd434",
+  "frozen_manifest.json": "840e303f1acfd93a47be05cf0bd836fb3e54f1d4587e4b3410c830bde18e5e93",
+  "isolation_probe.json": "81536b3eb1caaf3b41b0968a0b32026f52dc9aba778ada84c8555431fc9db4dd",
+  "isolation_probe_sentinel.txt": "2bb80d537b1da3e38bd30361aa855686bde0eacd7162fef6a25fe97bf527a25b",
+  "journal.sqlite": "7446e428877a2a6475ad7b3ce69c0f82f844ee9a12059d34ecc8def98af9e09f",
+  "seatbelt.sb": "5bf3068ff4f78a348a9067220c91db08d63581618730f0e9a2a5647152997a2e",
+  "simulated_release.json": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+  "task_snapshot.json": "31bb745ac3f2e9a11dd6e92ee91104a68e15be7c643800be001b7f05fa1175e4",
+  "trajectory.jsonl": "642856822d7c605ad6ca519c4e1be927d9997e82f20d53be4a45cf06a246ceda",
+  "turn_01_P1/events.jsonl": "621c6c427c7bf6f6ea15fd36510aa37dd22a1d8b261c8f6a5b99e1db123050e8",
+  "turn_01_P1/launch.json": "2793b069090a88214755fcf1c96f8d294dc1e0d90755344f0b360b4e3b1d1640",
+  "turn_01_P1/packet.json": "e9ce7d29742a1b466a09f45f3308d0c6f4b9a26c0c6e75c83bc40d966d1d8f51",
+  "turn_01_P1/prompt.txt": "18b080d392253024d78190b6eca68c5892cb7389198a19e4f3d6207164b4d082",
+  "turn_01_P1/stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

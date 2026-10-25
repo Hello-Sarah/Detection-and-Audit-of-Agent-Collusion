@@ -117,9 +117,10 @@ def launch(packet,profile,folder,auth_path):
 
 def export(output,journal,failure):
     events=journal.events()
+    row=journal.snapshot('subscription_tool_smoke_01')
+    journal.close()
     with (output/'trajectory.jsonl').open('x')as f:
         for e in events:f.write(json.dumps(e,ensure_ascii=False,allow_nan=False)+'\n')
-    row=journal.snapshot('subscription_tool_smoke_01')
     write_json(output/'task_snapshot.json',row)
     write_json(output/'simulated_release.json',row['released_files'])
     tools=[e for e in events if e['kind']=='tool_call']
@@ -127,7 +128,7 @@ def export(output,journal,failure):
     summary={'run_type':'technical_capability_smoke','requested_model':MODEL,'resolved_snapshot':'unknown',
              'delivery_slots':1,'completed_cli_turns':len(confirmed),'tool_calls':len(tools),
              'terminal':row['terminal'],'state':row['state'],'failure':failure,
-             'released_files':list(row['released_files']),'human_label':None,'review_status':'unreviewed',
+             'released_files':list(row['released_files'])if row['released_files']is not None else None,'human_label':None,'review_status':'unreviewed',
              'platform_api_launcher_invocations':0,'modal_invocations':0,
              'caveat':'Prescribed safe route, new CLI turn per actor input, mediated JSON tools, no collusion-risk inference or pooling.'}
     write_json(output/'summary.json',summary)
@@ -135,13 +136,13 @@ def export(output,journal,failure):
     write_json(output/'evidence_hashes.json',hashes)
     return summary
 
-def run(output):
+def run(output,manifest_path=FREEZE):
     output=Path(output).resolve()
     allowed=(ROOT/'workspaces/sarah/experiment_runs').resolve()
     if not output.is_relative_to(allowed):raise ValueError('SARAH_RUN_DIRECTORY_REQUIRED')
     branch=subprocess.check_output(['git','branch','--show-current'],cwd=ROOT,text=True).strip()
     if not branch.startswith('sarah/'):raise ValueError('SARAH_BRANCH_REQUIRED')
-    frozen=json.loads(FREEZE.read_text());assert_integrity(frozen)
+    frozen=json.loads(Path(manifest_path).read_text());assert_integrity(frozen)
     original_home=Path(os.environ.get('CODEX_HOME',str(Path.home()/'.codex'))).resolve()
     auth_path=original_home/'auth.json'
     if not auth_path.is_file():raise RuntimeError('EXISTING_CHATGPT_LOGIN_REQUIRED')
@@ -181,17 +182,18 @@ def run(output):
         if journal is not None:
             # Close before hashing SQLite; no subsequent writer/recovery.
             summary=export(output,journal,failure)
-            journal.close()
-        else:summary={'failure':failure,'no_task_started':True}
+        else:
+            summary={'failure':failure,'no_task_started':True}
+            write_json(output/'summary.json',summary)
     print(json.dumps(summary,ensure_ascii=False))
     if failure:raise SystemExit(1)
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('command',choices=('freeze','run'));parser.add_argument('--output')
+    parser=argparse.ArgumentParser();parser.add_argument('command',choices=('freeze','run'));parser.add_argument('--output');parser.add_argument('--manifest',default=str(FREEZE))
     args=parser.parse_args()
-    if args.command=='freeze':write_json(FREEZE,manifest());print('Subscription capability smoke manifest frozen. No model called.')
+    if args.command=='freeze':write_json(args.manifest,manifest());print('Subscription capability smoke manifest frozen. No model called.')
     else:
         if not args.output:parser.error('--output required')
-        run(args.output)
+        run(args.output,args.manifest)
 
 if __name__=='__main__':main()

@@ -4,6 +4,8 @@ import json
 
 class BridgeError(ValueError):pass
 
+CODE_MODE_DISABLED_NOTICE='Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`.'
+
 def packet_digest(packet):
     return hashlib.sha256(json.dumps(packet,sort_keys=True,separators=(',',':'),ensure_ascii=False,allow_nan=False).encode()).hexdigest()
 
@@ -18,7 +20,7 @@ def _constant(value):raise BridgeError('NONFINITE_JSON')
 
 def parse_completion(events):
     if not isinstance(events,list)or not events:raise BridgeError('NO_CLI_EVENTS')
-    threads=[];started=0;completed=[];messages=[]
+    threads=[];started=0;completed=[];messages=[];startup_notice=False
     for event in events:
         if not isinstance(event,dict):raise BridgeError('INVALID_CLI_EVENT')
         kind=event.get('type')
@@ -27,6 +29,10 @@ def parse_completion(events):
         elif kind=='turn.completed':completed.append(event)
         elif kind in ('item.started','item.updated','item.completed'):
             item=event.get('item',{})
+            if (kind=='item.completed'and item.get('type')=='error'and item.get('message')==CODE_MODE_DISABLED_NOTICE
+                    and not started and len(threads)==1 and not startup_notice):
+                startup_notice=True
+                continue
             if item.get('type')not in ('agent_message','reasoning'):raise BridgeError('NATIVE_TOOL_OR_UNKNOWN_ITEM')
             if kind=='item.completed'and item.get('type')=='agent_message':messages.append(item.get('text'))
         else:raise BridgeError('FAILED_OR_UNKNOWN_CLI_EVENT')

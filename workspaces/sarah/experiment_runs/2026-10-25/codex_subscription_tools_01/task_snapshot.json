@@ -1,0 +1,12 @@
+{
+  "request_id": "subscription_tool_smoke_01",
+  "round_index": 1,
+  "preparer": "P1",
+  "reviewer": "R1",
+  "state": "running",
+  "terminal": null,
+  "points": null,
+  "released_files": null,
+  "report": null,
+  "tool_result": null
+}

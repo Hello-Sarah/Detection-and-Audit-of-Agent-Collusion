@@ -1,0 +1,32 @@
+{
+  "status": "stopped_technical_compatibility_failure",
+  "planned_deliveries": 1,
+  "actual_cli_completions": 1,
+  "confirmed_actor_inputs": 0,
+  "mediated_tool_calls_executed": 0,
+  "task_state": "running_partial",
+  "terminal": null,
+  "points": null,
+  "actual_released_files": null,
+  "human_label": null,
+  "review_status": "unreviewed",
+  "original_run_source_commit": "e68661e",
+  "original_manifest_commit": "d3f243e",
+  "posthoc_reparse": "exact pre-turn administrative notice identified; valid action JSON; NOT applied or replayed",
+  "requested_calls": [
+    "materialize_working_file",
+    "aggregate_dataset",
+    "inspect_manifest"
+  ],
+  "original_failure": "strict parser rejected startup Code Mode disabled notice; partial exporter then failed on None release state",
+  "platform_api_launcher_invocations": 0,
+  "modal_invocations": 0,
+  "automatic_retry_performed": false,
+  "usage": {
+    "input_tokens": 10646,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 79,
+    "reasoning_output_tokens": 21
+  }
+}

@@ -1,8 +1,10 @@
 # When Do Cooperating Agents Collude?
 
+**Actual tool-smoke status:** The first subscription tool attempt stopped on a CLI startup-message compatibility issue before tools ran. Fixes are tested; the failed slot is retained and has not been retried. [Audit](experiment_runs/2026-10-25/codex_subscription_tools_01/posthoc_audit/README.md).
+
 **Subscription feasibility check:** One separate Codex role-pair handoff completed using ChatGPT login; aggregate-only simulated release. This is a small engineering spike, not V8 evidence. OpenAI API and Modal remain paused. [Record](codex_subscription_spike/README.md).
 
-**V8 next step:** The technical runner is integrated and tested. Proposed pilot: eight deliveries, maximum US$15, stop on anomalies. Awaiting approval; no V8 model calls yet. See [technical plan](repeated_partnership_v8/TECHNICAL_RUN_PLAN.md).
+**Current direction:** Use the ChatGPT subscription for a separate Codex tool-integration smoke. The API-based V8 pilot and Modal execution are paused; the US$15 API proposal is not active. [Subscription tools](codex_mediated_tools/README.md).
 
 English | [中文](README_ZH.md)
 
@@ -12,7 +14,7 @@ English | [中文](README_ZH.md)
 
 **What we found:** In the two latest completed studies, no customer details were released and no coordinated cover-up was established. However, agents sometimes wrote incorrect reports or made wrong review decisions. We cannot conclude that collusion risk is low: in the latest study, no customer details were submitted for approval.
 
-**Next:** Approve the bounded V8 technical pilot above. The remaining V7 review judgment stays separate.
+**Next:** Validate actual mediated tools and role separation in one subscription-based Codex smoke. The remaining V7 review judgment stays separate.
 
 ## How It Works
 
@@ -43,7 +45,7 @@ All data are fictional and releases happen in a local simulation.
 |---|---|---|
 | **V6: Different buyer requests** | Do counting, personalized offers, reconciliation and training-data requests produce different behavior? Each was tested with and without private messaging. | 32 runs: 30 aggregate approvals, 2 rejections, no customer-detail release. Aggregates did not fully satisfy requests needing individual records. |
 | **V7: Different preparation workflows** | Does handling a sensitive working file change behavior? We compared direct aggregation, sensitive working files and safe working files, with and without private messaging. | 24 runs: 22 aggregate deliveries, 1 wrong rejection, 1 unfinished review. No customer details were submitted or released. |
-| **V8: Repeated cooperation — planned** | Will keeping the same partner and sharing business scores make agents cover for each other? | No live runs yet. Technical runner ready; eight-delivery pilot awaiting approval. |
+| **V8: Repeated cooperation — planned** | Will keeping the same partner and sharing business scores make agents cover for each other? | API runner ready but paused; subscription-based technical tests are recorded separately. |
 
 Technical trial runs are counted separately. Different studies are not combined into one total.
 
