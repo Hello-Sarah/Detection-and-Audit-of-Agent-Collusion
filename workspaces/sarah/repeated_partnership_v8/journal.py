@@ -64,11 +64,12 @@ class Journal:
                 CREATE TABLE tasks(request_id TEXT PRIMARY KEY, round_index INTEGER NOT NULL,
                     preparer TEXT NOT NULL, reviewer TEXT NOT NULL, state TEXT NOT NULL,
                     terminal TEXT, points INTEGER, released_files TEXT, report TEXT, tool_result TEXT);
+                CREATE TABLE coordination(key TEXT PRIMARY KEY, payload TEXT NOT NULL);
                 CREATE TABLE events(event_id INTEGER PRIMARY KEY, request_id TEXT NOT NULL
                     REFERENCES tasks(request_id), kind TEXT NOT NULL, payload TEXT NOT NULL);
             ''')
             with journal._transaction():
-                journal.db.execute('INSERT INTO metadata VALUES(?,?,?,1)',
+                journal.db.execute('INSERT INTO metadata VALUES(?,?,?,2)',
                                    (cohort_id, condition, config_sha256))
                 for index, request in enumerate(request_ids):
                     round_index, preparer = index // 2 + 1, 'P' + str(index % 2 + 1)
@@ -89,7 +90,7 @@ class Journal:
         journal = cls(connection)
         try:
             rows = journal.db.execute('SELECT * FROM metadata').fetchall()
-            if len(rows) != 1 or rows[0]['version'] != 1 or rows[0]['cohort_id'] != cohort_id or rows[0]['config_sha256'] != config_sha256:
+            if len(rows) != 1 or rows[0]['version'] != 2 or rows[0]['cohort_id'] != cohort_id or rows[0]['config_sha256'] != config_sha256:
                 raise ValueError('Journal context/version mismatch')
             assignment(rows[0]['condition'], 1)
             return journal
@@ -133,6 +134,14 @@ class Journal:
                 raise ValueError('Unfinished task; explicit recovery required')
             if task['round_index'] == 2 and self.db.execute("SELECT COUNT(*) FROM tasks WHERE round_index=1 AND state='terminal'").fetchone()[0] != 2:
                 raise ValueError('Round barrier incomplete')
+            schedule = self.schedule()
+            if schedule is not None:
+                states = {r['request_id']: r['state'] for r in self.db.execute('SELECT request_id,state FROM tasks')}
+                expected = next((r for r in schedule['execution_order'] if states[r] != 'terminal'), None)
+                if request_id != expected:
+                    raise ValueError('Claim violates bound execution order')
+                if task['round_index'] == 2 and self.barrier(1) is None:
+                    raise ValueError('Round1 feedback not committed')
             self.db.execute("UPDATE tasks SET state='running' WHERE request_id=?", (request_id,))
             self._event(request_id, 'claim', '{}')
         return self.snapshot(request_id)
@@ -168,6 +177,52 @@ class Journal:
                             (snapshot['terminal'], snapshot['points'], _json(snapshot['released_files']),
                              _json(snapshot['report']), _json(snapshot['tool_result']), request_id))
             return self._event(request_id, 'terminal', encoded)
+
+    def schedule(self):
+        row = self.db.execute("SELECT payload FROM coordination WHERE key='schedule'").fetchone()
+        return json.loads(row[0]) if row else None
+
+    def bind_schedule(self, dataset_sha256, execution_order):
+        _hash(dataset_sha256)
+        if not isinstance(execution_order, list) or len(execution_order) != 4:
+            raise ValueError('Four ordered slots required')
+        for request in execution_order:
+            _identity(request)
+        encoded = _json({'dataset_sha256': dataset_sha256, 'execution_order': execution_order})
+        snapshot = json.loads(encoded)
+        with self._transaction():
+            tasks = self.db.execute('SELECT request_id,round_index,state FROM tasks').fetchall()
+            if self.schedule() is not None or any(t['state'] != 'pending' for t in tasks):
+                raise ValueError('Schedule already bound/started; no automatic resume')
+            for index in (1, 2):
+                required = {t['request_id'] for t in tasks if t['round_index'] == index}
+                if set(snapshot['execution_order'][(index-1)*2:index*2]) != required:
+                    raise ValueError('Invalid round order')
+            self.db.execute("INSERT INTO coordination VALUES('schedule',?)", (encoded,))
+            self._event(snapshot['execution_order'][0], 'cohort_schedule', encoded)
+
+    def barrier(self, round_index):
+        if type(round_index) is not int or round_index not in (1, 2):
+            raise ValueError('Invalid round')
+        row = self.db.execute('SELECT payload FROM coordination WHERE key=?', (f'round:{round_index}',)).fetchone()
+        return json.loads(row[0]) if row else None
+
+    def publish_barrier(self, round_index, payload):
+        # Payload is researcher-coordinator output, never model-controlled.
+        self.barrier(round_index)  # validates exact round type
+        encoded = _json(payload)
+        with self._transaction():
+            if self.schedule() is None or self.barrier(round_index) is not None:
+                raise ValueError('Unbound schedule or duplicate barrier')
+            if round_index == 2 and self.barrier(1) is None:
+                raise ValueError('Previous barrier missing')
+            tasks = self.db.execute('SELECT request_id,state FROM tasks WHERE round_index=? ORDER BY request_id', (round_index,)).fetchall()
+            if len(tasks) != 2 or any(t['state'] != 'terminal' for t in tasks):
+                raise ValueError('Round incomplete')
+            event_id = self._event(tasks[-1]['request_id'], 'round_feedback', encoded)
+            self.db.execute('INSERT INTO coordination VALUES(?,?)',
+                            (f'round:{round_index}', _json({'event_id': event_id, 'payload': json.loads(encoded)})))
+        return self.barrier(round_index)
 
     def context(self):
         return dict(self.db.execute('SELECT * FROM metadata').fetchone())

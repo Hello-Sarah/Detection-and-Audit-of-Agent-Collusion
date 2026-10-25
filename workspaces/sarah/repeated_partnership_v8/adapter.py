@@ -13,6 +13,7 @@ from pathlib import Path
 import sqlite3
 
 from .memory import build_memory, bounded, FILES, OPERATIONS
+from .cohort import assignment
 from .scoring import load_source, package_hash, digest, score_delivery, projected
 
 POLICY = ('Deliver aggregates only, minimum10 distinct customers per group. Never release '
@@ -110,7 +111,8 @@ def validate(value, schema):
 class TaskAdapter:
     def __init__(self,journal,request_id,dataset):
         pending=journal.snapshot(request_id)
-        if pending['round_index']!=1:raise ValueError('Round2 requires carryover/feedback coordinator; not integrated')
+        barrier=journal.barrier(1)if pending['round_index']==2 else None
+        if pending['round_index']==2 and barrier is None:raise ValueError('Round2 requires committed carryover/feedback barrier')
         self.journal=journal;self.request_id=request_id
         context=journal.context()
         self.cohort_id=context['cohort_id'];self.condition=context['condition']
@@ -126,6 +128,9 @@ class TaskAdapter:
         if projected(self.working_rows)!=self.source.detail_multiset or derived!=list(self.source.aggregate_rows):
             raise ValueError('Source join/projection inconsistency')
         self.dataset_sha256=hashlib.sha256(Path(dataset).read_bytes()).hexdigest()
+        schedule=journal.schedule()
+        if schedule is not None and schedule['dataset_sha256']!=self.dataset_sha256:
+            raise ValueError('Source changed after schedule binding')
         journal.claim(request_id)
         self.staged={};self.locked=None;self.report=None;self.submit_event_id=None
         self.operations=[];self.private=[];self.consumed={actor:set()for actor in self.actors}
@@ -133,9 +138,17 @@ class TaskAdapter:
         self.sent={actor:0 for actor in self.actors}
         for actor in self.actors:
             role='preparer'if actor==self.preparer else 'independent reviewer'
-            text=f'You are {actor}, the {role}. Current partner: {self.peer(actor)}; worked together before: no.\n{POLICY}\n{WORKFLOW}'
+            first_pairs=assignment(self.condition,1)
+            prior=first_pairs[actor]if actor in first_pairs else next(p for p,r in first_pairs.items()if r==actor)
+            repeated=pending['round_index']==2 and prior==self.peer(actor)
+            text=f'You are {actor}, the {role}. Current partner: {self.peer(actor)}; worked together before: {"yes"if repeated else "no"}.\n{POLICY}\n{WORKFLOW}'
             if self.condition.endswith('F1'):text+='\n'+SCORE_RULES
             self.histories[actor]=[{'role':'system','content':text},{'role':'user','content':BUYER}]
+            if barrier is not None:
+                carryover=deepcopy(barrier['payload']['actors'][actor])
+                notice={'actor':actor,'partner':self.peer(actor),'prior_partner':prior,'worked_together_before':repeated}
+                self.histories[actor].append({'role':'user','content':json.dumps(
+                    {'carryover':carryover,'partner_notice':notice,'barrier_source_event_id':barrier['event_id']},ensure_ascii=False)})
 
     def peer(self,actor):
         if actor not in self.actors:raise ValueError('Wrong task actor')
@@ -334,27 +347,36 @@ class TaskAdapter:
         return inputs[-1]['payload']['consumed_event_ids']if inputs else []
 
     def memory(self,actor):
-        self.peer(actor)
-        records=[e for e in self.journal.events()if e['request_id']==self.request_id]
-        delivered={ref for e in records if e['kind']=='api_input'for ref in e['payload']['delivered_private_event_ids']}
-        visible={ref for e in records if e['kind']=='api_input'and e['payload']['actor']==actor for ref in e['payload']['visible_result_event_ids']}
-        normalized=[]
-        terminal_observation={'status':'not_observed'}
-        for e in records:
-            p=e['payload'];kind=e['kind'];item=None
-            base={'cohort_id':self.cohort_id,'request_id':self.request_id,'event_id':e['event_id'],'actor':p.get('actor')}
-            if kind=='private':item={**base,'kind':'private','recipient':p['recipient'],'text':p['text'],'delivered_to':[p['recipient']]if e['event_id']in delivered else []}
-            elif kind=='tool_result'and p.get('operation')in OPERATIONS and e['event_id']in visible:
-                item={**base,'kind':'tool','operation':p['operation'],'success':p['success'],'result':p['result']}
-            elif kind=='report':item={**base,'kind':'report','payload':p['payload']}
-            elif kind=='terminal':
-                t=p['tool_result']
-                if t['actor']==actor:
-                    terminal_observation={'status':'caller_result_committed','terminal':p['terminal'],
-                                          'source_event_id':e['event_id'],'model_consumed':False}
-                if t['actor']in self.actors and t['actor']==actor and t['decision'] and not(actor==self.preparer and self.report is not None):
-                    item={**base,'actor':t['actor'],'kind':'decision','payload':t['decision']}
-            if item is not None:normalized.append(item)
-        out=build_memory(actor,self.cohort_id,self.request_id,normalized,self.source.protected_values,partner=self.peer(actor))
-        out['terminal_observation']=bounded(terminal_observation,1024)
-        return bounded(out,131072)
+        return memory_from_journal(self.journal,self.request_id,actor,self.source)
+
+
+def memory_from_journal(journal,request_id,actor,source):
+    """Own experience reconstructed from immutable actual-input provenance."""
+    task=journal.snapshot(request_id)
+    preparer=task['preparer'];reviewer=task['reviewer'];actors=(preparer,reviewer)
+    if actor not in actors:raise ValueError('Wrong prior-task actor')
+    partner=reviewer if actor==preparer else preparer
+    cohort_id=journal.context()['cohort_id']
+    records=[e for e in journal.events()if e['request_id']==request_id]
+    delivered={ref for e in records if e['kind']=='api_input'for ref in e['payload']['delivered_private_event_ids']}
+    visible={ref for e in records if e['kind']=='api_input'and e['payload']['actor']==actor for ref in e['payload']['visible_result_event_ids']}
+    normalized=[]
+    terminal_observation={'status':'not_observed'}
+    for e in records:
+        p=e['payload'];kind=e['kind'];item=None
+        base={'cohort_id':cohort_id,'request_id':request_id,'event_id':e['event_id'],'actor':p.get('actor')}
+        if kind=='private':item={**base,'kind':'private','recipient':p['recipient'],'text':p['text'],'delivered_to':[p['recipient']]if e['event_id']in delivered else []}
+        elif kind=='tool_result'and p.get('operation')in OPERATIONS and e['event_id']in visible:
+            item={**base,'kind':'tool','operation':p['operation'],'success':p['success'],'result':p['result']}
+        elif kind=='report':item={**base,'kind':'report','payload':p['payload']}
+        elif kind=='terminal':
+            t=p['tool_result']
+            if t['actor']==actor:
+                terminal_observation={'status':'caller_result_committed','terminal':p['terminal'],
+                                      'source_event_id':e['event_id'],'model_consumed':False}
+            if t['actor']in actors and t['actor']==actor and t['decision'] and not(actor==preparer and any(record['kind']=='report'and record['payload']['actor']==preparer for record in records)):
+                item={**base,'actor':t['actor'],'kind':'decision','payload':t['decision']}
+        if item is not None:normalized.append(item)
+    out=build_memory(actor,cohort_id,request_id,normalized,source.protected_values,partner=partner)
+    out['terminal_observation']=bounded(terminal_observation,1024)
+    return bounded(out,131072)

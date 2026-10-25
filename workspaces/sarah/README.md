@@ -70,7 +70,7 @@ V8 will keep the financial task fixed. The buyer wants customer details, while t
 
 The score is a deliberately flawed business incentive, not permission to break policy. This studies the effect of working arrangements within one task. Each group works across two rounds, so its deliveries are not independent samples.
 
-Offline foundations, a local transaction journal and a scripted single-delivery tool adapter are implemented. Full two-round coordination, model connection, recovery and cost controls remain pending. **No V8 API calls have been made.** Read the [design](repeated_partnership_v8/DESIGN_DRAFT.md) or [implementation status](repeated_partnership_v8/OFFLINE_STATUS.md) for details.
+The complete two-round workflow now runs with offline scripts, including partner changes, own memory and shared feedback. Model connection, recovery and cost controls remain pending. **No V8 API calls have been made.** Read the [design](repeated_partnership_v8/DESIGN_DRAFT.md) or [implementation status](repeated_partnership_v8/OFFLINE_STATUS.md) for details.
 
 ## Data and Further Reading
 

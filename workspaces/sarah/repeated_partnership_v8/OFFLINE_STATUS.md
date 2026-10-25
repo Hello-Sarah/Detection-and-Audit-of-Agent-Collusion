@@ -1,6 +1,6 @@
 # V8 offline implementation checkpoint — 25 October 2026
 
-**Offline foundations implemented; not a live runner, source freeze or API authorization.** No provider/API calls were made. These scripted tests are not experimental observations or collusion results.
+**Two-round scripted workflow implemented; not a live runner, source freeze or API authorization. Latest gate:59V8tests plus44existingtests pass.** No provider/API calls were made. These scripted tests are not experimental observations or collusion results.
 
 ## Completed
 
@@ -12,7 +12,7 @@
 
 ## What this does not prove / 尚未完成
 
-The modules consume **trusted researcher-normalized records**. They do not yet create/replay actual provider inputs. Actual agent/prompt/tool adapter and live limits, visibility/provenance construction, full cohort/round2 integration with atomic release persistence and explicit recovery, exact tokenizer/input-inclusive pricing and enforceable spend ceiling, bounded collector/freeze/audits, and semantic/human labels remain pending. Never treat the scorer as an online oracle or a substitute for human evidence review. Memory filters are field/value filters, not a universal disclosure guarantee.
+The offline adapter now constructs role-local inputs and normalized scoring records from scripted responses; the coordinator integrates both rounds. Actual provider parsing/transport and replay, input/output/time/spend enforcement, explicit recovery, exact tokenizer/input-inclusive pricing and an approved spend ceiling, bounded collector/freeze/audits, and semantic/human labels remain pending. Never treat the scorer as an online oracle or a substitute for human evidence review. Memory filters are field/value filters, not a universal disclosure guarantee.
 
 The proposed2technical+16formal cohorts/72deliveries remain a proposed ceiling, not an executed or approved allocation. No model called, no source freeze, no positive outcome sought. V7case10 remains pending independently.
 
@@ -47,3 +47,13 @@ Approval has no hidden privacy/inspection veto: a scripted complete raw package 
 Actual carryover extraction excludes tool results never present in the actor's inputs, removes row previews and filters exact protected values. Caller terminal commitment is explicitly distinguished from model consumption and peer non-observation. Round2 construction is blocked until the cohort feedback/new-history coordinator is implemented. No full-cohort exposure validation is claimed.
 
 18adapter tests /47totalV8 tests pass; root23 and frozenV7 21 pass. Fresh independent review findings were fixed with RED->GREEN regressions. Journal package import corrected during integration. Pending: round2 coordinator and barrier memory/feedback exposure, actual provider parser/transport and request limits, token/pricing/approved enforceable spend cap, recovery, collector/source freeze and technical live gate. No V8 API calls.
+
+## Two-round coordinator checkpoint (latest)
+
+[coordinator.py](coordinator.py) integrates allfour S/Fconditions with two dependent deliveries per round. Before any claim, it binds the source SHA256 and counterbalanced execution order. Round2starts only after both round1tasks terminate and the feedback barrier is durably committed. Each actor receives fresh current-task history plus only its own redacted prior experience, new own terminal feedback and the fixed public count block; F1alone adds team totals. Correct prior/current partner notices are explicit. Old evidence IDs in memory never become current-task consumed references.
+
+The journal's version2 coordination table/event records atomically preserve schedules and barriers. No schema1migration, rebinding or automatic interrupted-run resume. Source changes or uncertain running slots block continuation. Final round2feedback is recorded without an extra model request. Scripted mixed unsafe fulfillment3 + refusal1 produces a cohort total4; this is a simulator check, not an observed AI result.
+
+12newcoordinator tests /59V8total,23root,21frozenV7pass. All24V7raw hashes unchanged. Fresh independent review found no Critical/Important issues. Deferred new coverage: each reviewer's four-cell memory/partner assertions, rollback failure after feedback-event insert, and distinct-round cumulative score assertion; earlier journal stress/event-cap/init gaps remain. See [plan](COORDINATOR_PLAN.md) and [ledger](IMPLEMENTATION_LEDGER.md).
+
+This supersedes earlier checkpoint statements that round2is blocked. **No V8 API calls or experimental observations exist.** Next:provider protocol parsing, bounded token/pricing/spend enforcement, explicit recovery, collector/source freeze and approved technical gate. Proposed allocation still requires approval; offline implementation does not grant API authorization.
