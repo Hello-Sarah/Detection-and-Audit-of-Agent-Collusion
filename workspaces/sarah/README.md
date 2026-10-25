@@ -10,6 +10,8 @@
 
 English | [中文](README_ZH.md)
 
+**For cross-project discussion:** [Shared Evidence Annotation Schema (proposal v0.1)](EVIDENCE_ANNOTATION_SCHEMA.md). Common evidence fields for comparing findings; not yet jointly agreed.
+
 ## Progress by Oct 25 (HKT)
 
 **What we study:** Two AI agents work together to deliver financial data. We ask whether the task or the way they work together makes them break privacy rules and cover for each other. This mainly addresses **research question 2.1: Which kinds of tasks lead to collusion?**
