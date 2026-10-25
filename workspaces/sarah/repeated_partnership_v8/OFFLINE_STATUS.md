@@ -1,6 +1,6 @@
 # V8 offline implementation checkpoint — 25 October 2026
 
-**Two-round scripted workflow implemented; not a live runner, source freeze or API authorization. Latest gate:59V8tests plus44existingtests pass.** No provider/API calls were made. These scripted tests are not experimental observations or collusion results.
+**Two-round scripted workflow implemented; not a live runner, source freeze or API authorization. Latest gate:75V8tests plus44existingtests pass.** No provider/API calls were made. These scripted tests are not experimental observations or collusion results.
 
 ## Completed
 
@@ -57,3 +57,13 @@ The journal's version2 coordination table/event records atomically preserve sche
 12newcoordinator tests /59V8total,23root,21frozenV7pass. All24V7raw hashes unchanged. Fresh independent review found no Critical/Important issues. Deferred new coverage: each reviewer's four-cell memory/partner assertions, rollback failure after feedback-event insert, and distinct-round cumulative score assertion; earlier journal stress/event-cap/init gaps remain. See [plan](COORDINATOR_PLAN.md) and [ledger](IMPLEMENTATION_LEDGER.md).
 
 This supersedes earlier checkpoint statements that round2is blocked. **No V8 API calls or experimental observations exist.** Next:provider protocol parsing, bounded token/pricing/spend enforcement, explicit recovery, collector/source freeze and approved technical gate. Proposed allocation still requires approval; offline implementation does not grant API authorization.
+
+## Provider protocol and budget reservation checkpoint (latest)
+
+[protocol.py](protocol.py) builds immutable exact request bytes with the original snapshot model, standard service tier, one choice and4096completion cap. It validates response envelopes, original tool IDs, finite object arguments and provider usage. Invalid generated arguments remain errors with original raw evidence; truncated/refusal responses do not become invented tool actions. [budget.py](budget.py) reserves a conservative worst-case token-cost envelope durably before an injected transport, settles known usage with integer nanoUSD arithmetic, and retains the full hold/stops after unknown costs or malformed responses. Structurally invalid finite raw responses are preserved. Exclusive creation, no duplicates/retries, reopen, concurrent reservations and transaction rollback are tested.
+
+This is **not yet wired to TaskAdapter or a real HTTP/model client**. No credentials/client/CLI were added. Optional local serialized-body token measurement fails explicitly without tiktoken; it is never labeled an exact provider prompt count. Exact tokenizer/provider-format calibration remains mandatory before live. Pricing was read from [official pricing](https://developers.openai.com/api/docs/pricing) on2026-10-25 and must be reverified at freeze; standard uncached model-token rates are used. The400000input+4096output reserve is a conservative per-call envelope, not actual expected usage. Proposed full allocation's theoretical$124.637184 ceiling and technical$13.848576 ceiling are not approved budgets or cost estimates.
+
+16new protocol/budget tests /75totalV8, root23/frozenV7 21pass. Fresh reviewer ran16tests and found no Critical/Important defect. Deferred minor: malformed top-level request list returns AttributeError rather than ProtocolError before any reservation/transport. Earlier journal/coordinator gaps remain. All24V7raw hashes unchanged.
+
+Next:raw-provider response/ID/usage integration into the two-round driver, actual transport and tokenizer/billing-format verification, explicit recovery and remaining boundary tests, then reviewable approved cap/allocation and source/collector freeze before technical API calls. **No V8 paid/API experiments have started.**
