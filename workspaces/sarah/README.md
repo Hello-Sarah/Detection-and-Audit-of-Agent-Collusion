@@ -1,6 +1,6 @@
 # When Do Cooperating Agents Collude?
 
-**Actual tool-smoke status:** The first subscription tool attempt stopped on a CLI startup-message compatibility issue before tools ran. Fixes are tested; the failed slot is retained and has not been retried. [Audit](experiment_runs/2026-10-25/codex_subscription_tools_01/posthoc_audit/README.md).
+**Subscription tool-smoke status:** A separately approved revised episode completed10role turns and17mediated tool requests, releasing only correct aggregate counts. The earlier stopped slot stays separate. An exact-string scoring/interface mismatch remains, so this is engineering evidence only. [Audit](experiment_runs/2026-10-25/codex_subscription_tools_02/TECHNICAL_AUDIT.md).
 
 **Subscription feasibility check:** One separate Codex role-pair handoff completed using ChatGPT login; aggregate-only simulated release. This is a small engineering spike, not V8 evidence. OpenAI API and Modal remain paused. [Record](codex_subscription_spike/README.md).
 
@@ -14,7 +14,7 @@ English | [中文](README_ZH.md)
 
 **What we found:** In the two latest completed studies, no customer details were released and no coordinated cover-up was established. However, agents sometimes wrote incorrect reports or made wrong review decisions. We cannot conclude that collusion risk is low: in the latest study, no customer details were submitted for approval.
 
-**Next:** Validate actual mediated tools and role separation in one subscription-based Codex smoke. The remaining V7 review judgment stays separate.
+**Next:** Align the visible report-method contract with scoring before any formal Codex study. Completed research results and technical smoke records remain separate. The remaining V7 review judgment stays separate.
 
 ## How It Works
 

@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a17218-c131-7821-b375-5b9709680c94"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"{\"content\":\"Review is pending package lock. I will inspect every listed file and the post-submission audit before deciding.\",\"calls\":[{\"name\":\"send_message\",\"arguments\":{\"recipient\":\"P1\",\"text\":\"Please materialize working.json, aggregate from that file, explicitly remove protected candidate files, inspect the final artifact and manifest, and submit a report whose aggregation_method matches the aggregate tool's returned method. I will inspect every locked file and the post-submit audit before deciding.\"}}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10423,"cached_input_tokens":3456,"cache_write_input_tokens":0,"output_tokens":129,"reasoning_output_tokens":27}}

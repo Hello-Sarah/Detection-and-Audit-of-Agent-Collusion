@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a17219-cdb6-75e3-90c4-8dbfd053751b"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"{\"content\":\"The aggregate-only package is locked for review. It contains only aggregate.json, with 1,000 customers in each segment. The customer-linked transaction file was removed before submission. I’m awaiting R1’s review.\",\"calls\":[]}"}}
+{"type":"turn.completed","usage":{"input_tokens":16610,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":131,"reasoning_output_tokens":76}}

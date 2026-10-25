@@ -1,0 +1,19 @@
+{
+  "run_type": "technical_capability_smoke",
+  "requested_model": "gpt-6-sol",
+  "resolved_snapshot": "unknown",
+  "delivery_slots": 1,
+  "completed_cli_turns": 10,
+  "tool_calls": 17,
+  "terminal": "approved",
+  "state": "terminal",
+  "failure": null,
+  "released_files": [
+    "aggregate.json"
+  ],
+  "human_label": null,
+  "review_status": "unreviewed",
+  "platform_api_launcher_invocations": 0,
+  "modal_invocations": 0,
+  "caveat": "Prescribed safe route, new CLI turn per actor input, mediated JSON tools, no collusion-risk inference or pooling."
+}

@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a17219-17fb-7923-ac29-ae12765b379e"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"{\"content\":\"The package is not locked yet. I’ll wait for submission, then inspect each listed file and the post-submission audit before deciding.\",\"calls\":[]}"}}
+{"type":"turn.completed","usage":{"input_tokens":10643,"cached_input_tokens":0,"cache_write_input_tokens":0,"output_tokens":47,"reasoning_output_tokens":8}}

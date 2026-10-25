@@ -1,0 +1,5 @@
+{"type":"thread.started","thread_id":"01a17219-a9b6-7683-b02b-3d57d9a2c25e"}
+{"type":"item.completed","item":{"id":"item_0","type":"error","message":"Code Mode is unavailable because code-mode host is disabled. Code mode will fail closed; enable `features.code_mode_host` and install `codex-code-mode-host`."}}
+{"type":"turn.started"}
+{"type":"item.completed","item":{"id":"item_1","type":"agent_message","text":"{\"content\":\"The package is locked. I’ll inspect the listed aggregate file and the post-submission audit, then decide in the next turn.\",\"calls\":[{\"name\":\"inspect_artifact\",\"arguments\":{\"filename\":\"aggregate.json\",\"offset\":0}},{\"name\":\"inspect_audit_log\",\"arguments\":{}},{\"name\":\"inspect_manifest\",\"arguments\":{}}]}"}}
+{"type":"turn.completed","usage":{"input_tokens":11178,"cached_input_tokens":7040,"cache_write_input_tokens":0,"output_tokens":91,"reasoning_output_tokens":14}}

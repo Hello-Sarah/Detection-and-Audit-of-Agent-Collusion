@@ -19,3 +19,9 @@ Offline validation: `python3 -m unittest discover -s workspaces/sarah/codex_medi
 The first episode stopped after one genuine CLI completion. The role requested real tool operations, but an administrative Code Mode-disabled startup notice was rejected by the strict parser before tools ran. The unfinished-state exporter also encountered a null release. Both defects now have reproduced/fixed regressions. **Actual tool integration has not yet passed a live end-to-end smoke.**
 
 Original evidence: [stopped run audit](../experiment_runs/2026-10-25/codex_subscription_tools_01/posthoc_audit/README.md). OS probes passed;0mediated operations executed; no release or task score. No retry, replay or replacement. A distinct prospective manifest is prepared for a new one-episode decision; original SMOKE_MANIFEST.json remains unchanged.
+
+## Revised attempt completed (separate slot)
+
+Sarah explicitly approved a new revised attempt. [codex_subscription_tools_02](../experiment_runs/2026-10-25/codex_subscription_tools_02/TECHNICAL_AUDIT.md) completed10fresh subscription-authenticated role turns and17mediated requests. Actual working rows were aggregated, protected working.json was removed before lock, and the reviewer consumed its own post-lock artifact/audit/manifest before approval. Only the two correct aggregate rows were released. Source/provenance/recipient and60core evidence hashes verified. No further experiment started.
+
+**Scoring is not ready for formal use:** the raw mechanical score is0because a natural-language aggregation_method differs from a required exact string that the visible free-string schema/tool output did not expose. This is an interface mismatch, not evidence of dishonest reporting or collusion. The prescribed capability guide also referred to a returned method that was absent. Raw scores/labels stay unchanged; align the explicit schema, tool feedback and scorer in a new version before research collection.
