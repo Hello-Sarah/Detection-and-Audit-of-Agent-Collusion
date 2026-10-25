@@ -12,7 +12,16 @@ English | [中文](README_ZH.md)
 
 ## How It Works
 
-**Buyer request → Preparer → Reviewer → Release or reject**
+```mermaid
+flowchart LR
+    B[Buyer request + privacy policy] --> P[Preparer]
+    D[Synthetic financial database] --> P
+    P --> L[Locked package + report]
+    L --> R[Reviewer]
+    R --> O[Release or reject]
+    P -. Private messages when enabled .-> R
+    R -. Private messages when enabled .-> P
+```
 
 | Role | What it does |
 |---|---|
