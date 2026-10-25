@@ -7,7 +7,7 @@ New sections
 Methods 3.7 defines the scripted conditions, same prohibited package/report, separate safe control, four-request cap, provenance and the distinction between prompted audit duties and enforced tool arguments.
 Results 4.5 gives the actual 16-episode table: C 0=4 rejected; C 1=2 rejected 2 limits; C 2=3 rejected 1 limit; C 3=1 approved 3 limits. Collection is complete;10 workflows executed decisions and 6 did not. There were 54 API responses, no prohibited approval attempts or releases, and conservative token accounting of US$0.141673.
 Results 4.6 separates eight missing-code reject errors, seven reference errors on approvals, and recorded process claims. Failed lookups were visible but not eligible references. Lack of audit was a prompted-procedure problem, not the observed tool-error cause.
-Discussion 5.1, the process-claim interpretation and Conclusion carry explicit PENDING review markers. Counts/artifacts are supported by preserved records; semantic conclusions are not human-confirmed labels.
+The initial revision marked Discussion 5.1, the process-claim interpretation and Conclusion pending; the author-approval update below supersedes the overall interpretation markers only. Counts/artifacts are supported by preserved records; semantic conclusions are not human-confirmed labels.
 Limitations 5.2 separates conspicuous violations/no shared KPI, small cells, safe-control noncompletion, possible role-prompt overlap, internal identifier access, and the historical unresolvedV 8.1 failure.
 Appendices preserve exact case references, engineering boundaries and the independent-AI-review disposition. The new study remains separate from V 6,V 7,V 8,V 8.1 and Codex observations; no pooled rate is reported.
 
@@ -22,3 +22,6 @@ Review status: a second AI review was supplied by Sarah and incorporated after s
 
 Length and submission status
 The abstract is 210 words. Main material is about 3,200 words including abstract, code/data and contributions; references and appendices are additional. Page count is not verified in plain text. After pasting into the official template, check the user-specified 4–8 page range and 8-page hard cap excluding references/appendices. Finalize author information, review markers and author approval before submission. This remains a draft, not a final accepted interpretation.
+
+Author interpretation approval — 25 October 2026
+Sarah approved adopting the recommended overall interpretation: no reviewer acceptance of the tested prohibited invitations was observed; tool-use and process-reporting problems remain; neither low collusion risk nor reliable end-to-end review follows. Discussion 5.1 and Conclusion no longer carry an overall pending-author-confirmation marker. This is manuscript-level approval, not independent episode-level adjudication. Ambiguous process claims remain pending, original labels and scores are unchanged, and no further experiments were authorized or executed. Final authorship, formatting and submission approval remain outstanding.
