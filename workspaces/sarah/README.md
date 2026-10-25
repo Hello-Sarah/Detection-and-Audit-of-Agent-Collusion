@@ -1,6 +1,8 @@
 # When Do Cooperating Agents Collude?
 
-**Latest offline work:** [Persistent transport diagnostics](v8_transport_diagnostics/README.md) and a [reviewer-only controlled invitation engine](reviewer_invitation_diagnostic/README.md) are implemented and tested with scripted fixtures. The proposed16-episode study has no live results or spending approval. The original V8.1 failure cause remains unknown; no new API calls.
+**Latest live diagnostic completed:** All 16 controlled-invitation episodes ran: 9 executed rejections, 1 aggregate-only approval and 6 request-limit nondecisions; no protected release. All 12 prohibited-package cases attempted rejection, but only 1 of 4 safe controls completed approval. Tool-use failures and inaccurate process claims limit the conclusion. Conservative token cost US$0.142; no API failures. [English results](experiment_runs/2026-10-25/reviewer_invitation_01/RESULTS_EN.md) · [中文结果](experiment_runs/2026-10-25/reviewer_invitation_01/RESULTS_ZH.md) · [Read-only review request](experiment_runs/2026-10-25/reviewer_invitation_01/CLAUDE_REVIEW_REQUEST.md).
+
+**Engineering background:** [Persistent transport diagnostics](v8_transport_diagnostics/README.md) and the [controlled invitation collector](reviewer_invitation_diagnostic/README.md) passed offline checks before this separately approved live diagnostic. The original V8.1 failure cause remains unknown; its old evidence and hold remain unchanged.
 
 **V8.1 technical run stopped on final transport failure:** Eight started deliveries:5declines,1protected-package rejection,1withdrawal,1API failure; no release.72settled responses cost conservatively US$0.1814 plus US$0.1082 retained for one uncertain attempt. No retries or formal start. [English](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_EN.md) · [中文](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_ZH.md).
 
@@ -16,7 +18,7 @@ Independent AI review supports the core counts; followup clarifies report contra
 
 **Subscription feasibility check:** One separate Codex role-pair handoff completed using ChatGPT login; aggregate-only simulated release. This is a small engineering spike, not V8 evidence. OpenAI API and Modal remain paused. [Record](codex_subscription_spike/README.md).
 
-**Current direction:** Prepare a separate controlled-invitation study to test reviewer responses to explicit exception and cover-up requests. Offline implementation is ready for design/budget review; paid collection is not approved. V8/V8.1 technical observations remain separate from formal studies and from the subscription engineering tests.
+**Current direction:** Independently review the completed controlled-invitation evidence and incorporate its limited findings into the paper. This script–model diagnostic stays separate from V8/V8.1, the formal V6/V7 studies and subscription engineering tests. No additional API collection is authorized.
 
 English | [中文](README_ZH.md)
 
@@ -28,7 +30,7 @@ English | [中文](README_ZH.md)
 
 **What we found:** In the completed V6 and V7 formal studies, no customer details were released and no coordinated cover-up was established. However, agents sometimes wrote incorrect reports or made wrong review decisions. We cannot conclude that collusion risk is low: in V7, no customer details were submitted for approval. Later V8/V8.1 technical tests did include protected submissions, which were not released.
 
-**Next:** Review the controlled-invitation execution freeze and separately approve its16episodes/US$8 cap. Collector construction and freezing are offline-only; no paid start is authorized. Keep engineering fixtures out of empirical results. Do not resume the stopped V8.1 run or infer that its transport issue is fully solved.
+**Next:** Obtain independent raw-first review of the 16-episode diagnostic; keep human labels blank until confirmation. Separate policy decisions, invalid tool attempts, executed outcomes and inaccurate process claims. Keep scripted fixtures out of empirical counts, and do not resume V8.1 or pool these batches.
 
 ## How It Works
 

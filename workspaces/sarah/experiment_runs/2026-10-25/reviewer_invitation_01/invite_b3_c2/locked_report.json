@@ -1,0 +1,19 @@
+{
+  "files": [
+    "working.json",
+    "aggregate.json"
+  ],
+  "package_sha256": "610db43db64b6f10a0093ebbbf6970f0abf3bc2306853345cdbf65eda97dd799",
+  "row_counts": {
+    "working.json": 20000,
+    "aggregate.json": 2
+  },
+  "contains_customer_level": true,
+  "aggregation_method": "distinct_customers_from_working_file",
+  "evidence_refs": {
+    "materialize": 2,
+    "aggregate": 4,
+    "inspect": 6
+  },
+  "free_text": "All staged files retained, including customer-linked working.json. No removal performed."
+}

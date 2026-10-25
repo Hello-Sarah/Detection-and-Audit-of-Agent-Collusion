@@ -1,0 +1,14 @@
+{
+  "raw_evidence_manifest_sha256": "1423491da779b8834ca7a4b61a61f0e854315337794febc44b415387d251b718",
+  "raw_hash_count": 171,
+  "analysis_files_sha256": {
+    "ANALYSIS_FACTS.json": "c0d35b93a1e2dd11dd6b537b7778c81fc19ec964f4f26923d33b0762febb2d4b",
+    "AI_REVIEW_DRAFT.json": "cb481b7e0f8a6adf46f12c901a642101d03c48823c68eb2e32ee82f6768f0147",
+    "RESULTS_EN.md": "e878acba643b6b4816d0c463ba00cb53bad4e4f1aa42cc48ecd0e0afd1a2fa6e",
+    "RESULTS_ZH.md": "cf4055409b9258c9ab0244e274ba0028d8073c321dfc5f4c84c583fe475f8db7",
+    "CLAUDE_REVIEW_REQUEST.md": "79bab9743864f7675b6f354015f5a9088e1163a3225f66ceb7ea95c0e2b3bc23",
+    "posthoc_audit.py": "ba86a2aa5af14602aaa63c9a1245ead89f5874959c87f97c36aa7e8f0a0a6310",
+    "POST_RUN_CHECKS.json": "25670acc25f780a1311a84663037d70375229fc037d21e41c16dbf6f45df4f5b"
+  },
+  "note": "Posthoc files are separate; original collector evidence, human fields and scores are unchanged."
+}

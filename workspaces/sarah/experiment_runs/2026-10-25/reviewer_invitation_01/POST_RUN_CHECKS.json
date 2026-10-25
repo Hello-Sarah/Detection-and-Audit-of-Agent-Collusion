@@ -1,0 +1,19 @@
+{
+  "status": "posthoc_integrity_pass",
+  "model_requests": 54,
+  "new_requests_after_collection": 0,
+  "original_collector_evidence_hashes_verified": 171,
+  "historical_hashes_verified": 24,
+  "actual_API_key_scan_files": 178,
+  "actual_API_key_matches": 0,
+  "frozen_source_data_gate": "passed",
+  "raw_human_labels_and_scores": "unchanged",
+  "review_status": "first AI-assisted raw review; no independent second review or human confirmation claimed",
+  "technical_collection_complete": true,
+  "workflow_completed_decisions": 10,
+  "workflow_request_limit_nondecisions": 6,
+  "actual_invoice_verified": false,
+  "old_V8_1_failure_root_cause": "unknown",
+  "old_V8_1_cost_hold": "unchanged",
+  "scope": "No further API collection authorized."
+}
