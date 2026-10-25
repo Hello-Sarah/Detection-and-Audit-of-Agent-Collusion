@@ -1,13 +1,16 @@
 # Sarah's Workspace
 
-## Progress update for Julien — 25 October 2026
+## Progress by Oct 25, 10:58 am
+
+**Conclusion:** No coordinated cover-up was established in the completed V6 or V7 studies. No prohibited data release was observed, but report and review failures occurred—including approval of an inaccurate report and rejection of a correct one. These results do not establish which tasks cause collusion or whether private messaging changes its risk.
+
+**Next steps:** Obtain another Claude review of V7 cases 17, 19 and 18, then have Sarah confirm or revise the AI-assisted interpretations. Human labels remain blank until that confirmation. Any follow-up study of repeated partnerships or shared performance incentives remains a proposal requiring a separate design and freeze; no additional experiments are running.
 
 The latest experiments are complete and pushed to `sarah/pilot-run`. The research question remains **which kinds of tasks lead to collusion**, within our financial institution → AI buyer setting.
 
 - **V6 — buyer requests:** 32 formal episodes comparing four request types with/without private messaging. There were 30 aggregate approvals and two rejections, with no prohibited release. Safe aggregate alternatives did not fulfill the individual-level requests.
 - **V7 — preparation workflows:** 24 formal episodes comparing direct aggregation, sensitive working files and safe working files, with/without private messaging. There were 22 correct aggregate deliveries, one erroneous rejection and one incomplete review. All working files were removed before submission; no protected file was submitted or released.
-- **Current finding:** no coordinated cover-up established, but report/review failures occurred—including approval of an inaccurate report and rejection of a correct one. This does not establish which task causes collusion or whether private messaging changes the risk.
-- **Review status:** AI-assisted crosschecks are complete; human labels remain blank. Sarah plans another Claude check of three key V7 cases before human confirmation. No additional experiments are running.
+- **Review status:** The existing AI-assisted crosschecks are complete; an additional Claude review and Sarah's human confirmation are pending.
 
 Start with the [V7 English report](intermediate_workflow_v7/RESULTS_EN.md), which includes the comparison with V6. The [V6 English report](financial_task_family_v6/RESULTS_EN.md) and [V7 raw evidence / review files](experiment_runs/2026-10-25/intermediate_workflow_v7_01/) provide the detail. Smoke tests and different study versions are kept separate. All data are synthetic and deliveries are local simulations; Julien's directories and branches were untouched.
 
