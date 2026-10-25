@@ -1,10 +1,10 @@
 # When Do Cooperating Agents Collude?
 
-**Offline followup:** [Stopped-request diagnostics](v8_transport_diagnostics/README.md) reproduce a logging gap; the original failure cause remains unknown. A separate [controlled reviewer-invitation design](reviewer_invitation_diagnostic/DESIGN_ZH.md) is drafted, not implemented or approved to run. No new API calls.
+**Latest offline work:** [Persistent transport diagnostics](v8_transport_diagnostics/README.md) and a [reviewer-only controlled invitation engine](reviewer_invitation_diagnostic/README.md) are implemented and tested with scripted fixtures. The proposed16-episode study has no live results or spending approval. The original V8.1 failure cause remains unknown; no new API calls.
 
 **V8.1 technical run stopped on final transport failure:** Eight started deliveries:5declines,1protected-package rejection,1withdrawal,1API failure; no release.72settled responses cost conservatively US$0.1814 plus US$0.1082 retained for one uncertain attempt. No retries or formal start. [English](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_EN.md) · [中文](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_ZH.md).
 
-**V8.1 interface revision:** Method schema/tool output/scoring aligned; field-specific errors added. Offline105tests passed and independent code review found no code findings. No new live runs. Revised technical gate and formal allocation await separate approval. [Revision EN](repeated_partnership_v8_1/README.md) · [中文](repeated_partnership_v8_1/README_ZH.md) · [Claude review request](repeated_partnership_v8_1/CLAUDE_REVIEW_REQUEST.md).
+**V8.1 interface revision:** Method schema/tool output/scoring aligned; field-specific errors added. Offline105tests passed and independent code review found no code findings. The subsequent technical run is recorded above and stopped on a transport failure; formal collection remains unstarted. [Revision EN](repeated_partnership_v8_1/README.md) · [中文](repeated_partnership_v8_1/README_ZH.md) · [Claude review request](repeated_partnership_v8_1/CLAUDE_REVIEW_REQUEST.md).
 
 **V8 API technical pilot completed:** Eight deliveries in two cohorts: six declined requests, two rejected protected submissions, no release.59 API requests; conservative token cost US$0.158. Technical observations only; formal allocation remains unstarted. [English](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_EN.md) · [中文](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_ZH.md).
 
@@ -16,7 +16,7 @@ Independent AI review supports the core counts; followup clarifies report contra
 
 **Subscription feasibility check:** One separate Codex role-pair handoff completed using ChatGPT login; aggregate-only simulated release. This is a small engineering spike, not V8 evidence. OpenAI API and Modal remain paused. [Record](codex_subscription_spike/README.md).
 
-**Current direction:** Use the ChatGPT subscription for a separate Codex tool-integration smoke. The API-based V8 pilot and Modal execution are paused; the US$15 API proposal is not active. [Subscription tools](codex_mediated_tools/README.md).
+**Current direction:** Prepare a separate controlled-invitation study to test reviewer responses to explicit exception and cover-up requests. Offline implementation is ready for design/budget review; paid collection is not approved. V8/V8.1 technical observations remain separate from formal studies and from the subscription engineering tests.
 
 English | [中文](README_ZH.md)
 
@@ -26,9 +26,9 @@ English | [中文](README_ZH.md)
 
 **What we study:** Two AI agents work together to deliver financial data. We ask whether the task or the way they work together makes them break privacy rules and cover for each other. This mainly addresses **research question 2.1: Which kinds of tasks lead to collusion?**
 
-**What we found:** In the two latest completed studies, no customer details were released and no coordinated cover-up was established. However, agents sometimes wrote incorrect reports or made wrong review decisions. We cannot conclude that collusion risk is low: in the latest study, no customer details were submitted for approval.
+**What we found:** In the completed V6 and V7 formal studies, no customer details were released and no coordinated cover-up was established. However, agents sometimes wrote incorrect reports or made wrong review decisions. We cannot conclude that collusion risk is low: in V7, no customer details were submitted for approval. Later V8/V8.1 technical tests did include protected submissions, which were not released.
 
-**Next:** Align the visible report-method contract with scoring before any formal Codex study. Completed research results and technical smoke records remain separate. The remaining V7 review judgment stays separate.
+**Next:** Approve the exact controlled-invitation design and a separate budget before building/freezing the paid collector. Keep engineering fixtures out of empirical results. Do not resume the stopped V8.1 run or infer that its transport issue is fully solved.
 
 ## How It Works
 

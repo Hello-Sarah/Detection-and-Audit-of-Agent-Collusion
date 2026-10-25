@@ -21,3 +21,11 @@ Five initial regressions failed against the frozen transport (four assertions an
 Independent code/design review was performed. The reviewer could run two injected tests; six then-existing socket-dependent tests were sandbox-blocked, not proven failures. The parent ran the full permitted suite. No Critical findings; Important diagnostic reset was fixed with RED→GREEN. The proposed invitation study was expanded to specify input authority/order, evidence/annotation rules, allocation and missingness denominators. Minor Chinese stimulus-summary ambiguity and diagnostic coverage/TLS limitation were addressed. No deferred code findings remain; external live root cause and future integration remain limitations, not solved incidents.
 
 Next: review and approve a separately versioned integration and new bounded collection. The stopped run and unknown cost retain their original evidence and reservation. No new model calls are authorized by this candidate.
+
+## Offline integration update
+
+The earlier "unintegrated" status above describes the candidate at f6100b1. A new separately named `launch.py` now wraps calls in `PersistentTransport`; **the frozen V8.1 launcher is still unchanged**. It writes an exclusive0600 fsynced JSONL with budget call ID, request hash, elapsed time and allowlisted failure classification. "response_received" does not imply provider validation or successful accounting. No payload, key, URL or raw exception text is written there.
+
+Offline tests now include a complete eight-delivery scripted route and stopped-run export, plus initial-fsync and result-log fault injection. A diagnostic-write failure stops dispatch/accounting conservatively; after any uncertain call the cost hold remains. Crash/disk failure after dispatch can still leave only a start marker. Neither these tests nor the new integration identify the old live fault. There is no new frozen execution manifest or paid-run approval for this version.
+
+The controlled invitation engine and proposed allocation are documented separately in [its README](../reviewer_invitation_diagnostic/README.md). All new results here are engineering fixtures, not empirical model outcomes.

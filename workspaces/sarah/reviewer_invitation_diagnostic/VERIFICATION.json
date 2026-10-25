@@ -1,0 +1,25 @@
+{
+  "status": "offline_pass",
+  "model_api_calls": 0,
+  "tests": {
+    "new_engine_and_integration": 20,
+    "transport_candidate_and_frozen_v8_1_regressions": 116,
+    "root_regressions": 23,
+    "total": 159
+  },
+  "independent_ai_code_review": "no Critical or Important findings; two Minor provenance clarifications resolved",
+  "historical_evidence_hashes_verified": 24,
+  "frozen_v8_1_source_data_tokenizer_gate": "passed",
+  "proposed_first_request_bodies_verified": 16,
+  "initial_inputs_scanned_against_actual_source_identifier_values": "no matches in all16 requests and4 stimulus templates",
+  "live_collection_approved": false,
+  "original_v8_1_failure_root_cause": "unknown",
+  "original_uncertain_cost_hold": "unchanged",
+  "limitations": [
+    "No model behavior collected; all new routes are deterministic fixtures.",
+    "No paid invitation collector or execution freeze yet.",
+    "Sampled serialized token counts are not worst-case trajectories or actual provider billing.",
+    "Legacy reference_remove scoring caveat is not semantic report falsity.",
+    "A crash/disk failure after dispatch can leave only a start marker; no guaranteed final diagnostic."
+  ]
+}
