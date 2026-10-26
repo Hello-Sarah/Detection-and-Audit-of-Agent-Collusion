@@ -35,13 +35,13 @@ flowchart LR
 
 | 批次 | 測試內容 | 觀察結果 |
 |---|---|---|
-| [V6](financial_task_family_v6/RESULTS_EN.md)，32 例 | 買方任務 × 有無私信 | 30 次聚合釋放、2 次拒絕；沒有違規提交或釋放。聚合沒有滿足需要個體資料的要求。 |
-| [V7](intermediate_workflow_v7/RESULTS_EN.md)，24 例 | 準備流程 × 有無私信 | 22 次聚合交付、1 次錯誤拒絕、1 次未完成；8 次客戶明細工作檔都在提交前刪除。 |
-| [V8 技術試跑](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_EN.md)，8 次交付 | 兩輪合作安排 | 6 次提交前拒接、2 次違規包拒絕；沒有釋放。 |
-| [V8.1 技術檢查](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_EN.md)，8 次交付 | 修訂介面與工程檢查 | 5 次拒接、1 次違規包拒絕、1 次撤回、1 次 API 失敗；沒有釋放，工程檢查並非全部通過。 |
-| [邀請 01](experiment_runs/2026-10-25/reviewer_invitation_01/RESULTS_EN.md)，16 例 | 一般交接、破例要求、虛報範圍要求及合規對照 | 9 次有效拒絕、1 次合規批准、6 次輪次耗盡；12 個違規案例都嘗試拒絕。 |
-| [邀請 02](experiment_runs/2026-10-25/reviewer_invitation_02/RESULTS_EN.md)，16 例 | 新介面與檢查條件，獨立批次 | 12 次有效拒絕、1 次合規批准、3 次未完成；沒有違規批准嘗試。 |
-| [V9](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_EN.md)，36 例 | 任務描述 × 共同 KPI 披露 × 明確邀請，另加合規對照 | 32 次有效拒絕、4 次合規批准；沒有違規批准嘗試或釋放。 |
+| [V6](financial_task_family_v6/RESULTS_ZH.md)，32 例 | 買方任務 × 有無私信 | 30 次聚合釋放、2 次拒絕；沒有違規提交或釋放。聚合沒有滿足需要個體資料的要求。 |
+| [V7](intermediate_workflow_v7/RESULTS_ZH.md)，24 例 | 準備流程 × 有無私信 | 22 次聚合交付、1 次錯誤拒絕、1 次未完成；8 次客戶明細工作檔都在提交前刪除。 |
+| [V8 技術試跑](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_ZH.md)，8 次交付 | 兩輪合作安排 | 6 次提交前拒接、2 次違規包拒絕；沒有釋放。 |
+| [V8.1 技術檢查](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_ZH.md)，8 次交付 | 修訂介面與工程檢查 | 5 次拒接、1 次違規包拒絕、1 次違規包撤回、1 次聚合包審查中的 API 失敗；沒有釋放，工程檢查並非全部通過。 |
+| [邀請 01](experiment_runs/2026-10-25/reviewer_invitation_01/RESULTS_ZH.md)，16 例 | 一般交接、破例要求、虛報範圍要求及合規對照 | 9 次有效拒絕、1 次合規批准、6 次輪次耗盡；12 個違規案例都嘗試拒絕。 |
+| [邀請 02](experiment_runs/2026-10-25/reviewer_invitation_02/RESULTS_ZH.md)，16 例 | 新介面與檢查條件，獨立批次 | 12 次有效拒絕、1 次合規批准、3 次未完成；沒有違規批准嘗試。 |
+| [V9](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_ZH.md)，36 例 | 任務描述 × 共同 KPI 披露 × 明確邀請，另加合規對照 | 32 次有效拒絕、4 次合規批准；沒有違規批准嘗試或釋放。 |
 | [V10](experiment_runs/2026-10-26/task_structure_v10_01/RESULTS_ZH.md)，24 個名額 | 不同任務資料包與同儕保證 | 首次連線失敗即停止，23 例未執行；沒有確認模型回應或行為結果。 |
 
 各批次不合併計算。V8／V8.1 同小組內的交付不是獨立樣本，技術試跑不能判定搭檔或評分效應。Smoke tests、腳本工程測試及另行進行的 Codex 可行性案例，不併入上述研究分母。
@@ -65,7 +65,7 @@ flowchart LR
 
 ## 複核狀態與下一步
 
-V7 有 23 例經 Sarah 確認為 AI 輔助結論，第 10 例的一項報告／決定判斷仍待定。邀請 01 與 V9 有 Claude 的獨立 AI 複核；邀請 02 尚未經過這次 Claude 複核。新語意分類仍屬建議，原始人工欄位及未審查標籤保持不變。[完整狀態](paper_draft/REVIEW_STATUS_2026-10-26.md)
+V7 有 23 例經 Sarah 確認為 AI 輔助結論，第 10 例的一項報告／決定判斷仍待定。邀請 01 與 V9 有 Claude 的獨立 AI 複核；Claude 在 b7f0304 另行核對了邀請 02 的計數及引用事件；其他陳述的語意尚未獨立複核。新語意分類仍屬建議，原始人工欄位及未審查標籤保持不變。[完整狀態](paper_draft/REVIEW_STATUS_2026-10-26.md)
 
 下一步是審閱英文初稿、確認剩餘語意判斷，並貼入提交範本核對 4–8 頁限制。本次文件更新不包含新增付費調用或恢復 V10。
 

@@ -38,7 +38,7 @@ Autonomous studies use model preparers and reviewers. Controlled diagnostics use
 | [V6](financial_task_family_v6/RESULTS_EN.md), 32 episodes | Buyer task × private-channel availability | 30 aggregate releases, 2 rejections; no prohibited submission or release. Aggregates did not fulfill the individual-input requests. |
 | [V7](intermediate_workflow_v7/RESULTS_EN.md), 24 episodes | Preparation workflow × private-channel availability | 22 aggregate deliveries, 1 wrong rejection, 1 incomplete review. All 8 customer-linked working files were removed before submission. |
 | [V8 technical](experiment_runs/2026-10-25/v8_api_technical_01/RESULTS_EN.md), 8 deliveries | Two-round partnership mechanisms | 6 pre-submission declines and 2 protected-package rejections; no release. |
-| [V8.1 technical](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_EN.md), 8 deliveries | Revised interface and technical gate | 5 declines, 1 protected-package rejection, 1 withdrawal, 1 API failure; no release. The gate did not fully pass. |
+| [V8.1 technical](experiment_runs/2026-10-25/v8_1_api_technical_01/RESULTS_EN.md), 8 deliveries | Revised interface and technical gate | 5 declines, 1 protected-package rejection, 1 protected-package withdrawal, 1 API failure during aggregate-only review; no release. The gate did not fully pass. |
 | [Invitation 01](experiment_runs/2026-10-25/reviewer_invitation_01/RESULTS_EN.md), 16 episodes | Neutral handoff, exception request, false-scope invitation, safe control | 9 executed rejections, 1 safe approval, 6 request-limit nondecisions. All 12 prohibited cases attempted rejection. |
 | [Invitation 02](experiment_runs/2026-10-25/reviewer_invitation_02/RESULTS_EN.md), 16 episodes | New interface/check guard, separate diagnostic | 12 executed rejections, 1 safe approval, 3 nondecisions. No prohibited approval attempt. |
 | [V9](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_EN.md), 36 episodes | Task framing × disclosed shared KPI × explicit invitation, plus safe controls | 32 executed rejections and 4 safe approvals. No prohibited approval attempt or release. |
@@ -65,7 +65,7 @@ For **2.3**, the evidence shows why disclosure, statements, decision attempts, e
 
 ## Review status and next step
 
-V7 has 23 human-confirmed AI-assisted interpretations; one case-10 report/decision judgment remains pending. Invitation 01 and V9 have supplied independent Claude AI reviews. Invitation 02 has not received that Claude review. New statement categories remain advisory; original human fields and unreviewed labels are unchanged. See the [review-status note](paper_draft/REVIEW_STATUS_2026-10-26.md).
+V7 has 23 human-confirmed AI-assisted interpretations; one case-10 report/decision judgment remains pending. Invitation 01 and V9 have supplied independent Claude AI reviews. At b7f0304, Claude also checked Invitation 02 counts and cited events; other statement semantics were not independently reviewed. New statement categories remain advisory; original human fields and unreviewed labels are unchanged. See the [review-status note](paper_draft/REVIEW_STATUS_2026-10-26.md).
 
 Next: review the updated English manuscript, confirm remaining semantic judgments, and paste it into the submission template to check the 4–8 page limit. No further paid call or V10 resumption is part of this documentation update.
 

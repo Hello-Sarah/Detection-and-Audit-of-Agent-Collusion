@@ -4,7 +4,7 @@
 
 ## Scope of the supplied review
 
-Sarah supplied Claude Code's raw-first read-only review of remote checkpoint `4b6ba83`. Claude reports examining V9 source, all 36 trajectories, exact requests, tools, locked/released files and task-utility records before comparing the draft. Its current review covers V9 and the public V10 status record, not a fresh audit of every earlier batch. The earlier independent review of invitation 01 remains separate. Invitation 02 has not received the supplied independent Claude review.
+Sarah supplied Claude Code's raw-first read-only review of remote checkpoint `4b6ba83`. Claude reports examining V9 source, all 36 trajectories, exact requests, tools, locked/released files and task-utility records before comparing the draft. That review covers V9 and the public V10 status record, not a fresh audit of every earlier batch. The earlier independent review of invitation 01 remains separate. In a subsequent read-only review of b7f0304, Claude checked V8/V8.1 cited events, Invitation 02 counts and cited events, V9 counts, V10 DNS records and the manuscript. Invitation 02's other statement semantics were not independently reviewed.
 
 For this manuscript revision, Codex checked the referenced additional V9 process statements and the V8.1 protected-submission counterexamples against local original events. This is targeted verification, not a new independently blinded full-batch review. All new semantic categories below remain AI-assisted and pending Sarah's case-level confirmation.
 
@@ -35,7 +35,7 @@ All episode IDs above have prefix `v9_`. Eight of nine candidates are in T1; one
 
 The 32 main packages are already locked. No reviewer tool offers cleaning or partial release. T therefore changes business-purpose/necessity framing, not availability of an executable compliant route. The identical attainable main-branch payoff gap is disclosed in F1; F0 receives no score disclosure. Correct factor-text assignment is not proof of causal isolation or motivational efficacy.
 
-F1 explicitly says policy overrides the KPI. No independent manipulation check establishes that scores influenced decisions. Lack of explicit score discussion does not prove they were ignored. The design-boundary clarification was recorded during collection after initial descriptive checkpoints, without changing the frozen stimuli, allocation or scoring. The manuscript now states that timing.
+F1 also describes a five-point licensed planning approval that the reviewer cannot select in the locked main conditions. That mismatch further limits incentive interpretation. F1 explicitly says policy overrides the KPI. No independent manipulation check establishes that scores influenced decisions. Lack of explicit score discussion does not prove they were ignored. The design-boundary clarification was recorded during collection after initial descriptive checkpoints, without changing the frozen stimuli, allocation or scoring. The manuscript now states that timing.
 
 ## Corrections to the supplied overall synthesis
 
@@ -56,8 +56,19 @@ The later offline investigation, remote commit `2178a7e`, reproduced DNS failure
 
 - V7: 23 human-confirmed AI-assisted interpretations; case10's report/decision judgment remains pending, per its existing review update.
 - Invitation 01: supplied independent AI review and Sarah's earlier bounded manuscript-level interpretation approval; ambiguous case statements remain pending.
-- Invitation 02: AI-assisted audit, not covered by the supplied Claude review.
+- Invitation 02: Claude checked counts and cited events at b7f0304; other statement semantics were not independently reviewed. This is not a full independent semantic adjudication.
 - V9: supplied independent AI review supports factual counts and cited statements; new category-level author confirmation remains pending.
 - V10: engineering stop record, with no behavioral outcome to annotate as acceptance/refusal.
 
 The revised manuscript is a draft awaiting final author review, affiliation/authorship decisions and template page verification. It is not a submitted paper, an expansion of prior human confirmation or permission for new API calls.
+
+## Follow-up disposition: read-only review of b7f0304
+
+The supplied follow-up confirmed the protected-submission cases in both V8 and V8.1, Invitation 02 counts/cited events, V9 facts and the qualified V10 DNS interpretation. It identified four documentation issues, which were checked and addressed without changing research evidence:
+
+1. The abstract now scopes the four materialization statements to V9, and Results 4.3 separately records four in Invitation 01 and two in Invitation 02. No pooled error rate is inferred.
+2. F0 is described as no score disclosure. The inaccessible five-point planning alternative in the F1 text is stated explicitly.
+3. V8.1's outcomes total eight: five declines, one protected rejection, one protected withdrawal and one API failure. The aggregate-only submission's failed review is that API-failure outcome, not another delivery.
+4. Invitation 02's factual AI-review status is updated, without extending it to all candidate statement semantics.
+
+The manuscript no longer narrates the earlier reviewer correction; that history stays in this review record. V8.1 and V10 each retain a distinct uncertain reservation of 108,192,000 nUSD under the same fixed per-call limit. Chinese README result links now point to available Chinese reports. No new human confirmation, paid call, raw-evidence edit or retry is implied.
