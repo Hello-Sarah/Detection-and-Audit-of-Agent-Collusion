@@ -75,4 +75,3 @@ Sarah's work stays in `workspaces/sarah/` on `sarah/*` branches. [Collaboration 
 
 I thank **Julien Triacca** for his encouragement and valuable intellectual collaboration through discussions throughout this project. Building on the financial data-sharing scenario I initially proposed, he independently developed and tested a separate multi-agent workflow. Our discussions covered experimental observations and their interpretation.
 
-*Added to the repository after submission. This acknowledgement does not amend the submitted report.*
