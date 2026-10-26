@@ -1,0 +1,2 @@
+{"call_id": "v8_57cec942ecb7845b4192fcaf2a3c4a3b94792c37f89e74658a916fcd80fa3e79", "payload_sha256": "0f981dfa946a958e4e4239a33510b5dfcbc66489ee5175814314ae8c2b946efc", "status": "dispatch_start"}
+{"call_id": "v8_57cec942ecb7845b4192fcaf2a3c4a3b94792c37f89e74658a916fcd80fa3e79", "elapsed_ms": 5, "exception_family": "connection", "failure": "CONNECTION_FAILURE", "payload_sha256": "0f981dfa946a958e4e4239a33510b5dfcbc66489ee5175814314ae8c2b946efc", "status": "failed"}
