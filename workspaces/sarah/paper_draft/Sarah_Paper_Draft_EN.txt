@@ -5,7 +5,7 @@ Sarah Shen
 
 Abstract
 
-A reviewer can make the right privacy decision while giving an inaccurate account of its checks. We audit a synthetic financial workflow in which a preparer constructs a data package and a reviewer controls release under an aggregate-only license. Two autonomous-agent studies, with 32 and 24 episodes, observed no prohibited submissions or releases. Separate technical pilots reached protected submissions with inaccurate scope claims. Review or withdrawal prevented release. We then conducted two 16-episode scripted-invitation diagnostics and a separate 36-episode screening of task framing, shared simulated scores and explicit invitations. None recorded a prohibited approval attempt. However, valid rejection, tool execution and accurate process reporting diverged. Earlier diagnostics included incomplete reviews. All four safe controls in the 36-episode batch initially attempted approval before completing required checks. In the 36-episode batch, four rationales misattributed scripted file creation to the reviewer. Earlier diagnostics contained four and two similar statements. These observations do not establish deliberate deception or autonomous coordination. We contribute a trace-based distinction among disclosure, process claims, decision attempts, executed outcomes and coordination evidence. Results constrain behavior in the tested workflows but do not establish low collusion risk, a task-risk ranking or a validated detector.
+A reviewer can make the right privacy decision while giving an inaccurate account of its own actions. We audit a synthetic financial workflow in which a preparer constructs a data package and a reviewer controls release under an aggregate-only license. Two autonomous-agent studies, with 32 and 24 episodes, observed no prohibited submissions or releases. Two technical pilots each produced two protected submissions with inaccurate scope claims, but rejection or withdrawal prevented release. We then conducted two 16-episode scripted-invitation diagnostics and a separate 36-episode screening of task framing, shared simulated scores and explicit invitations. None recorded a prohibited approval attempt. However, valid rejection, tool execution and accurate process reporting diverged. Earlier diagnostics included incomplete reviews. All four safe controls in the 36-episode batch initially attempted approval before completing required checks. In the 36-episode batch, four rationales misattributed scripted file creation to the reviewer. Earlier diagnostics contained four and two similar statements. These observations do not establish deliberate deception or autonomous coordination. We contribute a trace-based distinction among disclosure, process claims, decision attempts, executed outcomes and coordination evidence. Results constrain behavior in the tested workflows but do not establish low collusion risk, a task-risk ranking or a validated detector.
 
 1. Introduction
 
@@ -15,7 +15,7 @@ These distinctions matter when evaluating cooperating agents. Counting only fina
 
 We study two questions from the collusion research track: which tasks or working arrangements lead to collusion (2.1), and what constitutes convincing evidence (2.3). Our experiments cover a single synthetic financial setting. Task and workflow comparisons are followed by technical pilots and controlled peer invitations. Autonomous preparer and reviewer studies are kept separate from diagnostics whose preparer is a fixed script. The latter test responses to a stimulus, rather than the spontaneous emergence of coordination between two models.
 
-We built a release workflow in which wrong approvals remain possible and observable. We report each experiment separately and use individual events to distinguish what was disclosed, what agents claimed and what their tools executed. We did not identify a task condition that causes autonomous collusion. Instead, we found cases where reviewers made correct privacy decisions but inaccurately described their own checks. We do not compare dialogue-only, action-only and combined detectors (2.2).
+We built a release workflow in which wrong approvals remain possible and observable. We report each experiment separately and use individual events to distinguish what was disclosed, what agents claimed and what their tools executed. We did not identify a task condition that causes autonomous collusion. Instead, we found cases where reviewers made correct privacy decisions but inaccurately described their own actions. We do not compare dialogue-only, action-only and combined detectors (2.2).
 
 2. Related Work
 
@@ -31,7 +31,7 @@ The synthetic source contains 2,000 fictional customers and 20,000 transactions,
 
 Models select bounded tools. Deterministic code performs aggregation. Submission locks the remaining files and report. Approval releases that exact package in a local simulation. There is no automatic privacy filter that silently removes prohibited rows. Some versions enforce inspection completion, but completing inspections does not determine the substantive privacy judgment.
 
-Figure 1. Financial release workflow and retained audit evidence. The preparer is a model in autonomous studies and a fixed script in controlled diagnostics. The dashed path represents peer messages when enabled. All messages are researcher-logged. Scripted diagnostics supply fixed peer inputs without an adaptive scripted reply. Approval releases the complete locked package, without a privacy veto. Artifact contents, claims, tool attempts, executed decisions and actor visibility are inspected separately when assessing coordination.
+Figure 1. Financial release workflow and retained audit evidence. The preparer is a model in autonomous studies and a fixed script in controlled diagnostics. The dashed path represents bidirectional peer messages when enabled. All messages are researcher-logged. Scripted diagnostics supply one fixed peer message and no adaptive scripted reply. Approval releases the complete locked package, without a privacy veto. Artifact contents, claims, tool attempts, executed decisions and actor visibility are inspected separately when assessing coordination.
 
 3.2 Evidence axes and review status
 
@@ -39,7 +39,7 @@ Our specific coordinated-cover-up endpoint requires actual prohibited release, c
 
 We record disclosure content, report accuracy, decision correctness, procedural compliance, completion and coordination separately. We also distinguish script/model provenance, proposed versus executed calls, successful versus failed observations, and whether a result entered the deciding model input. A returned tool result or local dispatch marker alone does not prove model consumption or provider receipt.
 
-Deterministic checks establish selected provenance and artifact facts. Semantic review is AI-assisted, not independent human ground truth. V7 has 23 author-confirmed AI-assisted interpretations and one partly unresolved case. Claude independently reviewed invitation diagnostic 01 and V9, and checked diagnostic 02 counts and cited events. New V9 categories await author confirmation. Appendix B gives review scopes [4]. The program is sequential and exploratory. Individual batches were frozen, but the overall search was not preregistered.
+Deterministic checks establish selected provenance and artifact facts. Semantic review is AI-assisted, not independent human ground truth. V7 has 23 author-confirmed AI-assisted interpretations and one partly unresolved case. Claude independently reviewed invitation diagnostic 01 and V9, and checked diagnostic 02 counts and cited events. The V9 categories are AI-assisted annotations, not independent human adjudications. Appendix B gives review scopes [4]. The program is sequential and exploratory. Individual batches were frozen, but the overall search was not preregistered.
 
 3.3 Autonomous task and workflow studies
 
@@ -47,7 +47,7 @@ V6 compares four buyer requests with and without a private channel: cohort sizin
 
 V7 fixes the final count request and crosses three preparation workflows with channel availability: direct aggregation (W0), a 20,000-row customer-linked working file followed by removal (W1), and a safe 20-row bucket file followed by removal (W2). Four episodes per cell give 24. Six smoke episodes are excluded. Workflows differ in operational burden, volume and semantics as well as sensitivity.
 
-Both use gpt-5-mini-2025-08-07 and a common delivery-pressure narrative. N0 provides formal handoff without private messaging. N1 adds a logged channel visible to its recipient. Ordinary utterances remain role-local. The two roles alternate for at most 16 requests per episode, eight per role. Each request allows 4,096 completion tokens and a 90-second timeout. Allocations, source and configurations were frozen before collection. These are exploratory batches. Deterministic engineering fixtures are excluded from behavioral counts.
+Both use gpt-5-mini-2025-08-07 and a common delivery-pressure narrative. N0 provides formal handoff without private messaging. N1 adds a logged channel visible to its recipient. Ordinary utterances remain role-local. The two roles alternate for at most 16 requests per episode, eight per role. Each request allows 4,096 completion tokens and a 90-second timeout. These exploratory batches used allocations, source and configurations frozen before collection. Deterministic engineering fixtures are excluded from behavioral counts.
 
 3.4 Partnership technical pilots
 
@@ -83,7 +83,7 @@ Personalized offers | 4 | 4 | 0 of 8
 Reconciliation | 4 | 4 | 0 of 8
 Training examples | 4 | 4 | 0 of 8
 
-V7 produced 22 aggregate deliveries, one unsupported rejection and one request-limit nondecision. All eight W1 episodes internally created customer-linked files and removed them before submission. No customer-level file entered review. Interception is therefore unestimable, not zero or perfect.
+V7 produced 22 aggregate deliveries, one unsupported rejection and one request-limit nondecision. All eight W1 episodes internally created customer-linked files and removed them before submission. No customer-level file entered review. V7 therefore provides no estimate of how often review intercepts prohibited files.
 
 Table 2. V7 executed outcomes. Four episodes per cell.
 
@@ -101,11 +101,11 @@ Case 17 approved safe data with an inaccurate package hash in the report. A late
 
 V8 ended with six pre-submission declines and two protected-package rejections. Five declines were reviewer-initiated. Both submitted reports claimed aggregate-only scope while retaining working.json. One preparer private message repeated inaccurate scope/deletion claims. The reviewer inspected the package and rejected it. Contradictory row counts in the reports limit any inference of intentional concealment.
 
-V8.1 recorded eight outcomes: five reviewer-initiated declines, one protected-package rejection, one protected-package withdrawal, and one API failure. The API failure occurred during review of an aggregate-only submission with an inaccurate report. No data were released. That transport failure retained an uncertain reservation. This technical gate did not fully pass. No prohibited release or qualifying autonomous coordinated cover-up was established in either pilot.
+V8.1 recorded eight outcomes: five reviewer-initiated declines, one protected-package rejection, one protected-package withdrawal, and one API failure. The API failure occurred during review of an aggregate-only submission with an inaccurate report. No data were released. The transport failure left an uncertain reservation, so this technical gate did not fully pass. No prohibited release or qualifying autonomous coordinated cover-up was established in either pilot.
 
 4.3 Controlled invitations and tool completion
 
-Neither diagnostic recorded an approval attempt on a prohibited package. In diagnostic 01 all 12 such cases attempted rejection, but only nine executed it. Three exhausted requests. Diagnostic 02 executed all 12 rejections. Both approved one safe control and left three safe workflows incomplete.
+Neither diagnostic recorded an approval attempt on a prohibited package. In diagnostic 01 all 12 such cases attempted rejection, but only nine executed it. The other three reached the request limit. Diagnostic 02 executed all 12 rejections. Both approved one safe control and left three safe workflows incomplete.
 
 Table 3. Separate diagnostic batches, four episodes per condition. Entries are executed rejection / approval / request-limit nondecision.
 
@@ -115,7 +115,7 @@ C1 exception request | 2 / 0 / 2 | 4 / 0 / 0
 C2 exception + false scope | 3 / 0 / 1 | 4 / 0 / 0
 C3 safe control | 0 / 1 / 3 | 0 / 1 / 3
 
-Diagnostic 01 had eight missing-code rejection errors and seven ineligible-reference approval errors. The failed lookups were visible to the reviewer but did not qualify as references, which had to cite its own successful observations. They were not necessarily unseen or fabricated. Missing audit violated the prompted procedure but was not the observed cause of the tool errors. Diagnostic 02 had two corrected missing-code errors. Three safe approvals were blocked by incomplete checks and reached the request cap before consuming the final audit and deciding.
+Diagnostic 01 had eight missing-code rejection errors and seven ineligible-reference approval errors. Five cited lookups that had failed, and two cited script operation IDs from the audit log. Decisions could cite only the reviewer's own successful observations. The failed lookups were visible, so they were not necessarily unseen or fabricated. Missing audit violated the prompted procedure but was not the observed cause of the tool errors. Diagnostic 02 had two corrected missing-code errors. Three safe approvals were blocked by incomplete checks and reached the request cap before consuming the final audit and deciding.
 
 Four rationales in diagnostic 01 and two in diagnostic 02 also claimed reviewer file creation, although the script performed it. These counts concern attribution of operations, rather than whether the privacy decision was correct.
 
@@ -123,7 +123,7 @@ Four rationales in diagnostic 01 and two in diagnostic 02 also claimed reviewer 
 
 All 36 episodes completed: each of the eight main cells executed four rejections, and all four safe controls approved only aggregate.json with counts 1,000/1,000. There was no prohibited approval attempt, release, hold, API failure or unrun slot. Nine missing-code rejection calls were corrected. All four controls first attempted approval before required audit consumption. Two also lacked manifest inspection. The guard blocked these attempts, and all subsequently completed in five requests each. Final correctness was partly supported by enforcement and recovery.
 
-Claude's independent review of original trajectories confirmed these counts and four first-person file-creation claims. For example, v9_b1_t1f0m0 response 28 says that the reviewer inspected the package and materialized working.json. Terminal 30 executes rejection. The file was actually materialized by the script at event 2. The reviewer had inspection tools and received limited previews. Its correct rejection therefore coexists with an account that misattributes an operation to itself. Other statements claim independent counting beyond the recorded observations. Nine broad text candidates require differentiated review: one merely describes counts that were actually displayed. Appendix B separates attribution errors from unsupported or ambiguous verification claims. These categories await author confirmation.
+An independent AI-assisted review of the original trajectories (Appendix B) confirmed these counts and four first-person file-creation claims. For example, v9_b1_t1f0m0 response 28 says that the reviewer inspected the package and materialized working.json. Terminal 30 executes rejection. The file was actually materialized by the script at event 2. The reviewer had inspection tools and received limited previews. Its correct rejection therefore coexists with an account that misattributes an operation to itself. Other statements claim independent counting beyond the recorded observations. Nine broad text candidates require differentiated review: one merely describes counts that were actually displayed. Appendix B separates attribution errors from unsupported or ambiguous verification claims. These categories are AI-assisted annotations, not independent human adjudications.
 
 All 102 responses settled. Conservative uncached token accounting was US$0.243426, not a verified invoice. No independent manipulation check shows that F1 scores motivated decisions. Absence of explicit score discussion cannot prove the model ignored them.
 
@@ -135,15 +135,15 @@ A separately authorized and frozen 24-slot follow-up stopped on its first connec
 
 5.1 What the evidence supports
 
-Autonomous batches did not establish coordinated cover-up. Scripted diagnostics did not observe prohibited approval attempts. Their packages and invitations cannot be counted as autonomous violations. Executed rejection differs from an intended refusal, just as a local dispatch differs from confirmed model input.
+Autonomous batches did not establish coordinated cover-up. Scripted diagnostics did not observe prohibited approval attempts. Their packages and invitations cannot be counted as autonomous violations. An intended refusal is not an executed rejection, just as a dispatched request is not confirmed model input.
 
-The main finding is that a correct privacy decision can accompany an inaccurate account of the reviewer's actions. V8 and V8.1 exposed inaccurate package reports. The invitation diagnostics and V9 exposed inaccurate claims about who created files or checked counts. Some intended decisions also failed to execute. Reading the final decision alone would miss these differences. None of these errors, by itself, establishes deliberate deception or agreement between agents. The evidence record helps keep these judgments separate, but is not a validated detector or annotation standard.
+The main finding is that a correct privacy decision can accompany an inaccurate account of the reviewer's actions. In V8 and V8.1, preparer reports misstated package scope. The invitation diagnostics and V9 exposed inaccurate claims about who created files or checked counts. Some intended decisions also failed to execute. Reading the final decision alone would miss these differences. None of these errors, by itself, establishes deliberate deception or agreement between agents. The evidence record helps keep these judgments separate, but is not a validated detector or annotation standard.
 
 5.2 Limits on task and mechanism claims
 
 The studies use one financial dataset, small cells and mainly one API snapshot. We report descriptive counts rather than population-level effects, a task-risk ranking or a private-channel null effect. V6 couples purpose with feasibility. V7 couples sensitivity with volume and burden. Partnership pilots contain one cohort per tested corner, two rounds and substantial pre-submission termination.
 
-The controlled violations are obvious. V9's fixed locked package precludes a clean reviewer-selected alternative, and its F1 policy disclaimer and unverified motivational effect limit incentive interpretation. The absence of prohibited approvals cannot show whether these factors matter in other environments. The evidence cannot yet identify which arrangements cause collusion.
+The controlled violations are obvious. V9's fixed locked package precludes a clean reviewer-selected alternative, and its F1 policy disclaimer and unverified motivational effect limit incentive interpretation. Because no cell produced a prohibited approval, these data cannot show whether the factors matter, in this environment or elsewhere. The evidence cannot yet identify which arrangements cause collusion.
 
 Tool guards and request budgets constrain completion. The four V9 safe paths each used five requests, but prompts and versions also changed. Cross-batch differences cannot be attributed solely to an extra request allowance. Safe-control completion is not the probability that a willing prohibited approver would execute successfully.
 
@@ -153,7 +153,7 @@ Future work should resolve annotation disagreements and test task structure or p
 
 6. Conclusion
 
-These workflows did not establish autonomous coordinated cover-up, and controlled reviewers did not attempt prohibited approval. The evidence nevertheless exposes inaccurate reporting, unsupported process claims and incomplete reviews. Actual disclosure, decision attempts, executed outcomes, review procedure and coordination must be evaluated separately. This is a bounded contribution to task-condition exploration and standards of evidence, not proof of low collusion risk or a general explanation of its causes.
+These workflows did not establish autonomous coordinated cover-up, and controlled reviewers did not attempt prohibited approval. The evidence nevertheless exposes inaccurate reporting, unsupported process claims and incomplete reviews. Actual disclosure, decision attempts, executed outcomes, review procedure and coordination must be evaluated separately. Our contribution is bounded: an exploration of task conditions and of evidence standards, not proof of low collusion risk or an account of its causes.
 
 Code and Data
 
@@ -213,7 +213,7 @@ T1F1M0 | 4 | 4 | 0 | 0
 T1F1M1 | 4 | 4 | 0 | 0
 SAFE | 4 | 0 | 4 | 0
 
-V9 materialization claims (model response → executed terminal decision): b1_t1f0m0 28→30; b1_t1f0m1 26→28; b4_t1f0m1 26→28; b4_t1f1m0 33→35. The script, not the reviewer, materialized at event2. All four also claim recomputation. Three additional unsupported-counting candidates are b2_t1f0m0 response28, b2_t1f1m0 responses26/33, and b4_t0f1m1 response31. Qualified preview-based overstatement: b4_t1f0m0 responses28/35. Likely acceptable observation of reported counts: b3_t1f0m1 response38. These are proposed semantic categories rather than finalized human labels. Eight of the nine candidates occur in T1, including the likely acceptable statement; this posthoc distribution does not establish a task effect.
+V9 materialization claims (model response → executed terminal decision): b1_t1f0m0 28→30; b1_t1f0m1 26→28; b4_t1f0m1 26→28; b4_t1f1m0 33→35. The script, not the reviewer, materialized at event2. All four also claim recomputation. Three additional unsupported-counting candidates are b2_t1f0m0 response28, b2_t1f1m0 responses26/33, and b4_t0f1m1 response31. Qualified preview-based overstatement: b4_t1f0m0 responses28/35. Likely acceptable observation of reported counts: b3_t1f0m1 response38. These are exploratory AI-assisted categories rather than independently adjudicated human labels. Eight of the nine candidates occur in T1, including the likely acceptable statement; this posthoc distribution does not establish a task effect.
 
 V9 safe-control incomplete-check errors: b1_safe35, b2_safe37, b3_safe30 and b4_safe32; successful terminal approvals49/51/51/53. All four required five requests. Missing violation_code occurred in nine attempted rejection calls and was corrected. The clarification in POSTHOC_DESIGN_BOUNDARY.md was recorded during collection after initial descriptive checkpoints, without changing the frozen manipulation.
 
@@ -225,8 +225,8 @@ The original V8 aggregation-method tool accepted free text while the scorer expe
 
 Diagnostic 01's audit duty was prompted but unenforced at approval. A scripted offline check executed aggregate-only approval without audit; it is not a model observation. The observed approval errors were ineligible references. Diagnostic 02 and V9 enforce consumed inspections, but offline fixtures establish that they can still release a prohibited package after those checks. Thus the guard enforces procedure rather than privacy and cannot supply an unobserved model outcome.
 
-V8 and V8.1 each recorded two protected submissions and are reported separately. V9's nine text candidates are stratified as advisory categories; ambiguous interpretations remain pending and human fields are unchanged. Absence of private replies or approval attempts is narrower evidence than access to internal intent.
+V8 and V8.1 each recorded two protected submissions and are reported separately. V9's nine text candidates are stratified as exploratory AI-assisted categories. Ambiguous interpretations remain unresolved and human fields are unchanged. Absence of private replies or approval attempts is narrower evidence than access to internal intent.
 
 LLM Usage Statement
 
-Codex and Claude supported implementation, tests, literature checking, trajectory review and manuscript drafting. Deterministic checks establish selected artifact/accounting facts; semantic judgments remain AI-assisted unless their human-confirmation status is explicitly recorded. Independent AI review is not independent human ground truth. Sarah's approval of an earlier manuscript-level interpretation does not confirm newly added V9 case categories or replace final manuscript approval. Human authors remain responsible for the submitted text and must approve contributions and authorship.
+Codex and Claude supported implementation, tests, literature checking, trajectory review and manuscript drafting. Deterministic checks establish selected artifact/accounting facts; semantic judgments remain AI-assisted unless their human-confirmation status is explicitly recorded. Independent AI review is not independent human ground truth. Human authors remain responsible for the submitted text, contributions and authorship. Approval of an earlier overall interpretation is not independent adjudication of the V9 cases.

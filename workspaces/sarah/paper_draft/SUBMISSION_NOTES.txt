@@ -8,7 +8,7 @@ Files
 
 Template fit
 The manuscript follows the supplied template: Abstract, Introduction, Related Work, Methods, Results, Discussion and Limitations, Conclusion, Code and Data, Author Contributions, References, Appendices and LLM Usage Statement. The original DOCX template was only read; it was not edited.
-The abstract has 193 words, within the template's 150–250-word range. Abstract through Author Contributions has approximately 3,103 words. References, appendices and the trailing LLM usage statement are additional. Actual page count is not verified in the official layout. Check the user-specified 4–8 pages and 8-page hard cap excluding references and appendices after pasting.
+The abstract has 197 words, within the template's 150–250-word range. Abstract through Author Contributions has approximately 3,147 words. References, appendices and the trailing LLM usage statement are additional. Actual page count is not verified in the official layout. Check the user-specified 4–8 pages and 8-page hard cap excluding references and appendices after pasting.
 
 Before submission
 1. Replace [Affiliation], and confirm the author line. Other human authors or acknowledgements must be agreed based on contributions; nobody has been added automatically.
@@ -18,4 +18,4 @@ Before submission
 5. Verify page count, legibility, citations, dataset/code links, author information and the LLM usage disclosure. Delete any remaining template guidance before submitting.
 
 Scope of this writing pass
-The prose was shortened and revised to use direct sentences with fewer repeated cautions. The workflow figure now shows all remaining candidate files, buyer input, non-release paths and claims in reports, rationales and messages. At 6.5 inches wide its smallest type is approximately 9.4 points. Keep this width when inserting it. No experiment was run, no human field was filled, and no frozen source, original score, trajectory or uncertain reservation was changed. This file contains editorial instructions and should not be pasted into the scientific manuscript.
+The prose was shortened and revised to use direct sentences with fewer repeated cautions. The workflow figure now shows all remaining candidate files, buyer input, non-release paths and claims in reports, rationales and messages. At 6.5 inches wide the compact figure is approximately 3.5 inches high and its smallest type is approximately 9.4 points. Keep this width when inserting it. Figure_1_Financial_Workflow.png was regenerated from the revised 1100-by-590 SVG and visually checked. No experiment was run, no human field was filled, and no frozen source, original score, trajectory or uncertain reservation was changed. This file contains editorial instructions and should not be pasted into the scientific manuscript.

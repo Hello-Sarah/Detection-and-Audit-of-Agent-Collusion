@@ -72,3 +72,7 @@ The supplied follow-up confirmed the protected-submission cases in both V8 and V
 4. Invitation 02's factual AI-review status is updated, without extending it to all candidate statement semantics.
 
 The manuscript no longer narrates the earlier reviewer correction; that history stays in this review record. V8.1 and V10 each retain a distinct uncertain reservation of 108,192,000 nUSD under the same fixed per-call limit. Chinese README result links now point to available Chinese reports. No new human confirmation, paid call, raw-evidence edit or retry is implied.
+
+## Supplied read-only reviews of manuscript checkpoints 6962c72 and 6b8b2c2
+
+Claude reported checking editorial changes and cited original events without modifying files. The later review identified that Invitation 01's seven approval-reference errors comprise five calls citing failed lookups and two citing script operation IDs. Codex checked the cited trajectories before correcting the paper. Manuscript language now describes exploratory AI-assisted categories rather than editorial instructions to await confirmation. This wording change does not finalize those categories: Sarah's case-level confirmation remains pending, and the original human fields remain unchanged. Figure corrections address message direction, locking semantics and space in the submission layout. The compact PNG was regenerated and visually checked locally. Neither review verifies the final official-template page count or constitutes independent human adjudication.
