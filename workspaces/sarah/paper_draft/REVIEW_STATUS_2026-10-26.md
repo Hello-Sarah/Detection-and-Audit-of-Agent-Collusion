@@ -80,3 +80,7 @@ Claude reported checking editorial changes and cited original events without mod
 ## Supplied final manuscript review of 4db9e6e
 
 Claude reports comparing all changes since 6b8b2c2, rendering the SVG and finding no required correction to facts, counts, evidence scope or submission content. Its optional comments concern diagram readability and Chinese translation alignment. Those editorial points were addressed without changing the English manuscript, original labels or pending case-level confirmation status. The review remains AI-assisted and does not establish independent human adjudication or final official-template pagination.
+
+## Sole-author clarification
+
+Sarah confirmed that she is the sole author and requested an explicit account of her research contribution. The manuscript now distinguishes her conception of the financial scenario and research question, direction and authorization of experiments, and review decisions from AI-assisted implementation, testing, analysis and drafting. This author-role clarification does not supply new case labels or resolve pending semantic categories. Empirical results and original evidence are unchanged. The latest editorial additions have not been represented as a new independent review.

@@ -8,10 +8,10 @@ Files
 
 Template fit
 The manuscript follows the supplied template: Abstract, Introduction, Related Work, Methods, Results, Discussion and Limitations, Conclusion, Code and Data, Author Contributions, References, Appendices and LLM Usage Statement. The original DOCX template was only read; it was not edited.
-The abstract has 238 words, within the template's 150–250-word range. Abstract through Author Contributions has approximately 3,349 words. References, appendices and the trailing LLM usage statement are additional. Actual page count is not verified in the official layout. The template recommends 4 pages excluding references and appendices. Check the user-specified 4–8-page range and 8-page hard cap after pasting. The revised introduction and abstract have not been paginated in the official template.
+The abstract has 235 words, within the template's 150–250-word range. Abstract through Author Contributions has approximately 3,595 words. References, appendices and the trailing LLM usage statement are additional. Actual page count is not verified in the official layout. The template recommends 4 pages excluding references and appendices. Check the user-specified 4–8-page range and 8-page hard cap after pasting. The revised introduction and abstract have not been paginated in the official template.
 
 Before submission
-1. Replace [Affiliation], and confirm the author line. Other human authors or acknowledgements must be agreed based on contributions; nobody has been added automatically.
+1. Replace [Affiliation], and confirm the author line. Sarah Shen is the sole author, as confirmed in conversation. No other author has been added. The contribution statement identifies research conception, experiment direction, scope/budget decisions and review separately from AI assistance.
 2. Review and approve the manuscript. New V9 semantic categories remain AI-assisted and pending author confirmation; the paper does not turn AI review into independent human adjudication. Do not claim every case has a final human reference label.
 3. Paste the text into the original template and convert the three pipe-separated result tables into template tables. Place Figure 1 before its caption in Methods 3.1. The figure is a schematic, not additional empirical data.
 4. Preserve the batch-specific counts and cautions. V8.1 has eight outcomes; V10 has no behavioral data. The equal US$0.108192 reservations are separate uncertain holds, not confirmed charges.
