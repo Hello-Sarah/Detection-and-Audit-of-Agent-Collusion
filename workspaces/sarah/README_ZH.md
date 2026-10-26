@@ -8,7 +8,7 @@
 
 **V10 已停止：** 24 個名額中，第一例連線失敗，沒有供應商回應，另 23 例未執行。後續只做 DNS 對照，重現了預設沙箱的網絡限制。這是最可能的解釋，尚不能完全證實歷史錯誤原因。沒有重試，也沒有行為發現。
 
-[英文論文初稿（可複製貼上）](paper_draft/Sarah_Paper_Draft_EN.txt) · [投稿前說明](paper_draft/SUBMISSION_NOTES.txt) · [圖 1](paper_draft/figures/workflow_evidence.svg) · [目前複核狀態](paper_draft/REVIEW_STATUS_2026-10-26.md) · [V9 結果](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_ZH.md) · [V10 連線排查](v10_connection_investigation/README.md)
+[英文論文初稿（可複製貼上）](paper_draft/Sarah_Paper_Draft_EN.txt) · [中文論文全文（閱讀譯本）](paper_draft/Sarah_Paper_Draft_ZH.txt) · [投稿前說明](paper_draft/SUBMISSION_NOTES.txt) · [圖 1](paper_draft/figures/workflow_evidence.svg) · [目前複核狀態](paper_draft/REVIEW_STATUS_2026-10-26.md) · [V9 結果](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_ZH.md) · [V10 連線排查](v10_connection_investigation/README.md)
 
 本 README 與複核狀態文件是目前的索引；各批次舊報告保留其當時的狀態。目前沒有實驗正在執行，原定 64 次交付的合作安排正式實驗尚未啟動。論文仍是初稿，尚未提交。
 
