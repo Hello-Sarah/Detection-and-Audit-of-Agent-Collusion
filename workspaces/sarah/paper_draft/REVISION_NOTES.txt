@@ -18,7 +18,7 @@ Review and author status
 Sarah's 25 October approval concerned an earlier manuscript-level interpretation; it does not independently adjudicate new V9 categories. The new draft awaits final author review and confirmation of remaining semantic judgments. Human labels, original scores, summaries, raw traces and frozen configurations were not edited. No coauthor or acknowledgement was assigned automatically.
 
 Length
-Abstract: 235 words. Abstract through Code/Data and Author Contributions: approximately 2,501 whitespace-delimited words, excluding the title/author lines, references, appendices and trailing LLM usage statement. Full text: approximately 5,467 words before these notes. The text has not been rendered in the official template. After pasting, check the required 4–8 pages and the hard 8-page maximum excluding references/appendices; formatting or shortening may still be necessary. The original Word template was not modified.
+Abstract: 235 words. Abstract through Code/Data and Acknowledgements: approximately 2,430 whitespace-delimited words, excluding the title/author lines, references, appendices and trailing LLM usage statement. Full text: approximately 5,396 words before these notes. The text has not been rendered in the official template. After pasting, check the required 4–8 pages and the hard 8-page maximum excluding references/appendices; formatting or shortening may still be necessary. The original Word template was not modified.
 
 References
 The three research references were checked against their primary publisher/arXiv pages during this update: the American Economic Association article page, NeurIPS proceedings, and arXiv version2609.24967v2. Their settings motivate hypotheses but do not validate mechanism transfer to this workflow.
@@ -52,3 +52,6 @@ Moved V6/V7 tables and cases, full methods, diagnostic reference-error breakdown
 
 Author-reported manuscript checks
 Sarah stated that she personally checked many results and claims. LLM Usage now explicitly records her manuscript review and checks, alongside Codex/Claude brainstorming and drafting. The statement does not generalize these checks to independent verification of every claim or human adjudication of every episode. Existing AI implementation and substantial drafting disclosures remain. No scientific section, label, score or evidence changed.
+
+Acknowledgement requested by the author
+Replaced the optional Author Contributions section with a short Acknowledgements paragraph thanking Julien Triacca for discussions and his own experiments on the financial data-sharing scenario Sarah proposed. This does not add a coauthor or incorporate his results. The LLM disclosure and all scientific sections remain unchanged.

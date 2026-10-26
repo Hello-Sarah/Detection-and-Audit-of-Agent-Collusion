@@ -132,9 +132,9 @@ API 实验使用一个金融数据集、单一 API 快照及少量案例。未�
 代码与证据：https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/tree/sarah/pilot-run/workspaces/sarah
 合成数据集：https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/tree/sarah/pilot-run/workspaces/sarah/datasets/synthetic_financial_v4_english
 
-作者贡献
+致谢
 
-Sarah Shen 是唯一作者。她提出金融数据共享场景和研究问题，主导实验选择与推进顺序，决定追加收集的范围和支出上限。她审阅 AI 辅助解读、要求进一步核查和修订，并作出复核历史中记录的作者确认决定。Codex 在她的指导下生成和修订实验代码，并执行自动分析。Claude 和 Codex 支持复核，并生成和修订了文稿中的大量内容。各案例的复核与确认范围另见附录 B。
+感谢 Julien Triacca 与我讨论这项研究，并针对我提出的金融数据共享场景开展他自己的实验。
 
 
 参考文献

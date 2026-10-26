@@ -128,9 +128,10 @@ The repository [4] contains versioned code, synthetic data, request/response evi
 Code and evidence: https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/tree/sarah/pilot-run/workspaces/sarah
 Synthetic dataset: https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-Collusion/tree/sarah/pilot-run/workspaces/sarah/datasets/synthetic_financial_v4_english
 
-Author Contributions
+Acknowledgements
 
-Sarah Shen is the sole author. She originated the financial data-sharing scenario and research question, directed the choice and sequence of experiments, and set the scope and spending limits for additional collection. She reviewed AI-assisted interpretations, requested further checks and revisions, and made the author-confirmation decisions recorded in the review history. Codex generated and revised experiment code and carried out automated analyses under her direction. Claude and Codex supported review and generated and revised substantial portions of the manuscript. Case-level review and confirmation scopes are recorded separately in Appendix B.
+I thank Julien Triacca for discussing this research and conducting his own experiments on the financial data-sharing scenario I proposed.
+
 
 References
 
