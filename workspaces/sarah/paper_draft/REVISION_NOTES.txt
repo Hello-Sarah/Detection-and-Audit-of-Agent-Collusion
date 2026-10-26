@@ -1,27 +1,27 @@
-English paper draft revision notes
+English manuscript and README update — 26 October 2026
 
-Scope
-The existing copy/paste plain-text paper has been revised to include the 16-episode controlled diagnostic. The Word template was read for structure and was not modified. No API calls were made. Original trajectories, summary, scores, human_review.json, unreviewed labels and frozen code were not edited.
+Purpose and files
+The copy/paste English manuscript now incorporates the separate invitation-02, V9 and stopped V10 records. The English and Chinese Sarah READMEs were rewritten as a consistent current index, preserving the workflow diagram and linking the manuscript, results and review status. REVIEW_STATUS_2026-10-26.md records the supplied Claude review and its bounded disposition.
 
-New sections
-Methods 3.7 defines the scripted conditions, same prohibited package/report, separate safe control, four-request cap, provenance and the distinction between prompted audit duties and enforced tool arguments.
-Results 4.5 gives the actual 16-episode table: C 0=4 rejected; C 1=2 rejected 2 limits; C 2=3 rejected 1 limit; C 3=1 approved 3 limits. Collection is complete;10 workflows executed decisions and 6 did not. There were 54 API responses, no prohibited approval attempts or releases, and conservative token accounting of US$0.141673.
-Results 4.6 separates eight missing-code reject errors, seven reference errors on approvals, and recorded process claims. Failed lookups were visible but not eligible references. Lack of audit was a prompted-procedure problem, not the observed tool-error cause.
-The initial revision marked Discussion 5.1, the process-claim interpretation and Conclusion pending; the author-approval update below supersedes the overall interpretation markers only. Counts/artifacts are supported by preserved records; semantic conclusions are not human-confirmed labels.
-Limitations 5.2 separates conspicuous violations/no shared KPI, small cells, safe-control noncompletion, possible role-prompt overlap, internal identifier access, and the historical unresolvedV 8.1 failure.
-Appendices preserve exact case references, engineering boundaries and the independent-AI-review disposition. The new study remains separate from V 6,V 7,V 8,V 8.1 and Codex observations; no pooled rate is reported.
+Main manuscript changes
+- Retained the existing title and template-compatible structure: Abstract, Introduction, Related Work, Methods, Results, Discussion/Limitations, Conclusion, Code/Data, Contributions, References and Appendices.
+- Kept V6 and V7 as separate exploratory allocated studies, distinguishing safe disclosure from requested business fulfillment and interception opportunities.
+- Reported two autonomous protected submissions in V8 and separately two in V8.1. The supplied Claude synthesis omitted the latter; local original submit events74/202 confirm them.
+- Added invitation-02's 12 rejections, 1 safe approval and 3 nondecisions, without claiming that Claude reviewed that batch or that several simultaneous interface changes isolate a causal effect.
+- Added V9's 32 rejections and 4 safe approvals, plus the incomplete-check approval attempts, nine corrected rejection errors and process-statement stratification. Claude's independent AI review supports core facts; new semantic categories are not human-confirmed labels.
+- Clarified that V9 task framing does not create a reviewer-selectable clean alternative; the same attainable main-branch score gap is disclosed only in F1. No independent manipulation check establishes incentive efficacy. The design clarification was recorded during collection after initial descriptive checkpoints.
+- Added V10 as an engineering stop: one connection failure, 23 unrun, no confirmed model response. The uncertain US$0.108192 hold is not confirmed billing. Later DNS comparison supports, but does not retrospectively prove, a sandbox explanation. It does not resolve the older V8.1 fault.
+- Distinguished public V10 metadata from the locally retained complete raw bundle, and separate APPROVAL.json from unchanged pending-approval fields in the frozen manifest.
+- Kept failed calls, executed decisions, actual release, process claims and coordination evidence separate. No pooled rate, task-risk ranking or detector claim is made.
 
-Disposition of supplied Claude feedback
-Accepted after checking source: audit consumption is required by prompt but not hard-enforced before release. A scripted offline safe-control check executed approval without audit and receivedQ 0; it used no model and is excluded from empirical denominators.
-Clarified: all four safe controls initially attempted approval without an audit; b 2_c 3 never requested an audit. Only reference qualification caused their observed approval-tool errors.
-Kept separate/pending: passive descriptions of aggregation and broader unverified correctness assertions are not merged into the four explicit reviewer-materialization claims plus one additional private recomputation claim.
-Hypothesis only: shared preparation/review wording could contribute to role attribution errors; no causal test was done.
-Not adopted:1/4 safe-control success is not a probability that a willing reviewer could execute prohibited approval. No such execution probability is estimable here.
-Corrected from supplied review: actual-source-value scanning finds later authorized 20-row previews in 12 episodes, not 11. No source identifier values occur in initial inputs. Internal preview is not buyer-facing release.
-Review status: a second AI review was supplied by Sarah and incorporated after source checks. It is not independent human ground truth, and does not fill human fields or independently endorse unexamined legacy scorer logic.
+Review and author status
+Sarah's 25 October approval concerned an earlier manuscript-level interpretation; it does not independently adjudicate new V9 categories. The new draft awaits final author review and confirmation of remaining semantic judgments. Human labels, original scores, summaries, raw traces and frozen configurations were not edited. No coauthor or acknowledgement was assigned automatically.
 
-Length and submission status
-The abstract is 210 words. Main material is about 3,200 words including abstract, code/data and contributions; references and appendices are additional. Page count is not verified in plain text. After pasting into the official template, check the user-specified 4–8 page range and 8-page hard cap excluding references/appendices. Finalize author information, review markers and author approval before submission. This remains a draft, not a final accepted interpretation.
+Length
+Abstract: 188 words. Abstract through Code/Data and Author Contributions: approximately 2,763 whitespace-delimited words, excluding the draft-status preamble, references, appendices and trailing LLM usage statement. Full text: approximately 4,081 words before these notes. The text has not been rendered in the official template. After pasting, check the required 4–8 pages and the hard 8-page maximum excluding references/appendices; formatting or shortening may still be necessary. The original Word template was not modified.
 
-Author interpretation approval — 25 October 2026
-Sarah approved adopting the recommended overall interpretation: no reviewer acceptance of the tested prohibited invitations was observed; tool-use and process-reporting problems remain; neither low collusion risk nor reliable end-to-end review follows. Discussion 5.1 and Conclusion no longer carry an overall pending-author-confirmation marker. This is manuscript-level approval, not independent episode-level adjudication. Ambiguous process claims remain pending, original labels and scores are unchanged, and no further experiments were authorized or executed. Final authorship, formatting and submission approval remain outstanding.
+References
+The three research references were checked against their primary publisher/arXiv pages during this update: the American Economic Association article page, NeurIPS proceedings, and arXiv version2609.24967v2. Their settings motivate hypotheses but do not validate mechanism transfer to this workflow.
+
+Distribution and scope
+Only documentation changes are part of this update. The English draft and revision notes are copied into the user-facing outputs directory. The GitHub update is restricted to Sarah documentation on sarah/pilot-run; it excludes local-only raw V10 artifacts and previously rejected SQLite uploads. No paid API call, retry, additional episode, human-label change or Julien-workspace change occurred.
