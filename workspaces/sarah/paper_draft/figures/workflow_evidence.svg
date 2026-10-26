@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1664" height="640" viewBox="0 0 1664 640" role="img" aria-labelledby="title desc">
+<title id="title">Financial data release workflow and audit evidence</title>
+<desc id="desc">Synthetic source, preparer, locked package, reviewer and exact release or non release, with logged peer messages and separate evidence categories. Preparer origin varies between model and fixed script.</desc>
+<rect width="1664" height="640" fill="white"/>
+<text x="832" y="45" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="32" font-weight="700" fill="#202428">Financial data release workflow and audit evidence</text>
+<text x="832" y="85" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#535b63">Experimental workflow with exact simulated release</text>
+<text x="828" y="120" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#535b63">Peer messages when enabled, researcher logged</text>
+<polyline points="492,185 492,151 1164,151 1164,185" fill="none" stroke="#626a72" stroke-width="2" stroke-dasharray="8 6"/>
+<polygon points="492,190 485,179 499,179" fill="#626a72"/>
+<polygon points="1164,190 1157,179 1171,179" fill="#626a72"/>
+<rect x="24" y="197" width="264" height="164" rx="12" fill="#f5f6f7" stroke="#626a72" stroke-width="2"/>
+<text x="156" y="231" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Synthetic source</text>
+<text x="156" y="274" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">2,000 fictional customers</text>
+<text x="156" y="302" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">20,000 transactions</text>
+<rect x="360" y="197" width="264" height="164" rx="12" fill="#f5f6f7" stroke="#626a72" stroke-width="2"/>
+<text x="492" y="231" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Preparer</text>
+<text x="492" y="274" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">Model or fixed script</text>
+<text x="492" y="302" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">Stage files and report</text>
+<rect x="696" y="197" width="264" height="164" rx="12" fill="#f5f6f7" stroke="#626a72" stroke-width="2"/>
+<text x="828" y="231" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Locked package</text>
+<text x="828" y="274" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">All submitted files</text>
+<text x="828" y="302" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">and report</text>
+<text x="828" y="330" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">Locked at submission</text>
+<rect x="1032" y="197" width="264" height="164" rx="12" fill="#f5f6f7" stroke="#626a72" stroke-width="2"/>
+<text x="1164" y="231" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Reviewer</text>
+<text x="1164" y="274" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">Model</text>
+<text x="1164" y="302" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">Inspect then decide</text>
+<rect x="1368" y="197" width="264" height="164" rx="12" fill="#f5f6f7" stroke="#626a72" stroke-width="2"/>
+<text x="1500" y="231" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Outcome</text>
+<text x="1500" y="274" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">Exact package release</text>
+<text x="1500" y="302" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="400" fill="#202428">or no release</text>
+<polyline points="300,279 348,279" fill="none" stroke="#626a72" stroke-width="2"/>
+<polygon points="348,279 337,272 337,286" fill="#626a72"/>
+<polyline points="636,279 684,279" fill="none" stroke="#626a72" stroke-width="2"/>
+<polygon points="684,279 673,272 673,286" fill="#626a72"/>
+<polyline points="972,279 1020,279" fill="none" stroke="#626a72" stroke-width="2"/>
+<polygon points="1020,279 1009,272 1009,286" fill="#626a72"/>
+<polyline points="1308,279 1356,279" fill="none" stroke="#626a72" stroke-width="2"/>
+<polygon points="1356,279 1345,272 1345,286" fill="#626a72"/>
+<text x="832" y="415" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Evidence retained for separate judgments</text>
+<rect x="24" y="455" width="248" height="100" rx="8" fill="white" stroke="#626a72" stroke-width="2"/>
+<text x="148" y="490" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Files</text>
+<text x="148" y="523" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#202428">released</text>
+<rect x="296" y="455" width="248" height="100" rx="8" fill="white" stroke="#626a72" stroke-width="2"/>
+<text x="420" y="490" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Report</text>
+<text x="420" y="523" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#202428">claims</text>
+<rect x="568" y="455" width="248" height="100" rx="8" fill="white" stroke="#626a72" stroke-width="2"/>
+<text x="692" y="490" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Tool</text>
+<text x="692" y="523" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#202428">attempts</text>
+<rect x="840" y="455" width="248" height="100" rx="8" fill="white" stroke="#626a72" stroke-width="2"/>
+<text x="964" y="490" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Executed</text>
+<text x="964" y="523" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#202428">decisions</text>
+<rect x="1112" y="455" width="248" height="100" rx="8" fill="white" stroke="#626a72" stroke-width="2"/>
+<text x="1236" y="490" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Actor</text>
+<text x="1236" y="523" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#202428">visibility</text>
+<rect x="1384" y="455" width="248" height="100" rx="8" fill="white" stroke="#626a72" stroke-width="2"/>
+<text x="1508" y="490" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Coordination</text>
+<text x="1508" y="523" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#202428">evidence</text>
+<text x="832" y="603" text-anchor="middle" dominant-baseline="middle" font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="400" fill="#535b63">Only group aggregates are licensed; authorized internal inspection is permitted.</text>
+</svg>

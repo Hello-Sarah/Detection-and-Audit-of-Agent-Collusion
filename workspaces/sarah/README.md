@@ -8,7 +8,7 @@
 
 **V10 stopped:** The first of 24 allocated episodes had a connection failure with no provider response; the other 23 were unrun. Later DNS-only checks reproduced a restriction in the default execution sandbox. This is the leading explanation, not proof of the original underlying error. There was no retry or behavioral finding.
 
-[English paper draft — copy/paste text](paper_draft/Sarah_Paper_Draft_EN.txt) · [Current review status](paper_draft/REVIEW_STATUS_2026-10-26.md) · [V9 results](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_EN.md) · [V10 network investigation](v10_connection_investigation/README.md)
+[English paper draft — copy/paste text](paper_draft/Sarah_Paper_Draft_EN.txt) · [Submission notes](paper_draft/SUBMISSION_NOTES.txt) · [Figure 1](paper_draft/figures/workflow_evidence.svg) · [Current review status](paper_draft/REVIEW_STATUS_2026-10-26.md) · [V9 results](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_EN.md) · [V10 network investigation](v10_connection_investigation/README.md)
 
 The README and review-status note are the current index. Older batch reports retain their dated status snapshots. No experiment is running; the planned 64-delivery partnership study remains unrun. The paper is a draft, not a submitted report.
 

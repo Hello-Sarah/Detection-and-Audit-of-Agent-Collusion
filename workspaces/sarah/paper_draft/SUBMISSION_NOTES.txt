@@ -1,0 +1,21 @@
+Submission notes for the English paper
+26 October 2026
+
+Files
+- Sarah_Paper_Draft_EN.txt is the complete copy/paste manuscript, including references, appendices and the LLM usage statement.
+- Figure_1_Financial_Workflow.png is the ready-to-insert diagram in the user-facing outputs folder. A vector original is in paper_draft/figures/workflow_evidence.svg on GitHub.
+- REVIEW_STATUS_2026-10-26.md records the exact scope of supplied AI reviews and pending author judgments.
+
+Template fit
+The manuscript follows the supplied template: Abstract, Introduction, Related Work, Methods, Results, Discussion and Limitations, Conclusion, Code and Data, Author Contributions, References, Appendices and LLM Usage Statement. The original DOCX template was only read; it was not edited.
+The abstract has 198 words, within the template's 150–250-word range. Abstract through Author Contributions has approximately 3,113 words. References, appendices and the trailing LLM usage statement are additional. Actual page count is not verified in the official layout. Check the user-specified 4–8 pages and 8-page hard cap excluding references and appendices after pasting.
+
+Before submission
+1. Replace [Affiliation], and confirm the author line. Other human authors or acknowledgements must be agreed based on contributions; nobody has been added automatically.
+2. Review and approve the manuscript. New V9 semantic categories remain AI-assisted and pending author confirmation; the paper does not turn AI review into independent human adjudication. Do not claim every case has a final human reference label.
+3. Paste the text into the original template and convert the three pipe-separated result tables into template tables. Place Figure 1 before its caption in Methods 3.1. The figure is a schematic, not additional empirical data.
+4. Preserve the batch-specific counts and cautions. V8.1 has eight outcomes; V10 has no behavioral data. The equal US$0.108192 reservations are separate uncertain holds, not confirmed charges.
+5. Verify page count, legibility, citations, dataset/code links, author information and the LLM usage disclosure. Delete any remaining template guidance before submitting.
+
+Scope of this writing pass
+The narrative, contributions and reproducibility details were improved, and a diagram was added. No experiment was run, no human field was filled, and no frozen source, original score, trajectory or uncertain reservation was changed. This file contains editorial instructions and should not be pasted into the scientific manuscript.
