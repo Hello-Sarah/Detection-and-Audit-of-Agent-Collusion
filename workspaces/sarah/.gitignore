@@ -1,0 +1,19 @@
+# Local configuration, credentials and generated development files
+.env
+.env.*
+!.env.example
+!.env.sample
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+node_modules/
+~$*.docx
+~$*.xlsx
+~$*.pptx
+*.swp
+*.swo
+*.tmp
+*.bak

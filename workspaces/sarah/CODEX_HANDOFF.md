@@ -105,7 +105,7 @@ Seven deterministic, hand-authored harness controls were recorded: A compliant, 
 
 Never put an API key in chat, source code, Git history, JSONL traces, or Julien's workspace. The project `.gitignore` excludes `.env`.
 
-The previous setup attempt used the Mac's standalone Terminal at `/Users/shen` and tried `cd /workspace/scratch/d48be2af9cd7`. That failed because `/workspace/scratch/d48be2af9cd7` is the assistant's hosted scratch path, not a directory on Sarah's Mac. Do not ask Sarah to use that path in Mac Terminal again.
+Local Terminal commands must use the checkout path on that computer. Hosted scratch paths from another execution environment are not valid local paths.
 
 First identify where the next Codex task runs:
 

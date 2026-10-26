@@ -8,9 +8,9 @@
 
 **V10 已停止：** 24 個名額中，第一例連線失敗，沒有供應商回應，另 23 例未執行。後續只做 DNS 對照，重現了預設沙箱的網絡限制。這是最可能的解釋，尚不能完全證實歷史錯誤原因。沒有重試，也沒有行為發現。
 
-[英文論文初稿（可複製貼上）](paper_draft/Sarah_Paper_Draft_EN.txt) · [中文論文全文（閱讀譯本）](paper_draft/Sarah_Paper_Draft_ZH.txt) · [投稿前說明](paper_draft/SUBMISSION_NOTES.txt) · [圖 1](paper_draft/figures/workflow_evidence.svg) · [目前複核狀態](paper_draft/REVIEW_STATUS_2026-10-26.md) · [V9 結果](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_ZH.md) · [V10 連線排查](v10_connection_investigation/README.md)
+[英文論文來源稿](paper_draft/Sarah_Paper_Draft_EN.txt) · [簡體中文閱讀版](paper_draft/Sarah_Paper_Draft_ZH.txt) · [圖 1](paper_draft/figures/workflow_evidence.svg) · [目前複核狀態](paper_draft/REVIEW_STATUS_2026-10-26.md) · [V9 結果](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_ZH.md) · [V10 連線排查](v10_connection_investigation/README.md)
 
-本 README 與複核狀態文件是目前的索引；各批次舊報告保留其當時的狀態。目前沒有實驗正在執行，原定 64 次交付的合作安排正式實驗尚未啟動。論文仍是初稿，尚未提交。
+本 README 與複核狀態文件是目前的索引；各批次舊報告保留其當時的狀態。目前沒有實驗正在執行，原定 64 次交付的合作安排正式實驗尚未啟動。Sarah 已告知於 2026 年 10 月 26 日提交報告。連結中的文字是論文來源稿，不是最終提交 PDF 的存檔。
 
 ## 金融交付流程
 
@@ -63,10 +63,10 @@ flowchart LR
 
 **2.2 尚未測試：** 還沒有完成只看語言、只看行動與兩者結合的偵測器比較。
 
-## 複核狀態與下一步
+## 證據與複核狀態
 
 V7 有 23 例經 Sarah 確認為 AI 輔助結論，第 10 例的一項報告／決定判斷仍待定。邀請 01 與 V9 有 Claude 的獨立 AI 複核；Claude 在 b7f0304 另行核對了邀請 02 的計數及引用事件；其他陳述的語意尚未獨立複核。新語意分類仍屬建議，原始人工欄位及未審查標籤保持不變。[完整狀態](paper_draft/REVIEW_STATUS_2026-10-26.md)
 
-下一步是審閱英文初稿、確認剩餘語意判斷，並貼入提交範本核對 4–8 頁限制。本次文件更新不包含新增付費調用或恢復 V10。
+論文引用的程式、資料集、軌跡、複核紀錄及凍結版本均保留原路徑。早期探索和失敗記錄繼續保留供審計，各批分母維持分開。提交不改變待確認的案例狀態，本次倉庫清理也不授權新增實驗。
 
 Sarah 的工作只放在 `workspaces/sarah/` 與 `sarah/*` 分支。[合作規則](../../COLLABORATION_RULES.md) · [歷史交接](CODEX_HANDOFF.md)

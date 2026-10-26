@@ -1,16 +1,16 @@
 # When Do Cooperating Agents Collude?
 
-**Progress by October 26, 2026 (HKT)** · English | [中文](README_ZH.md)
+**Research record · October 26, 2026 (HKT)** · English | [中文](README_ZH.md)
 
-**Main finding:** We have not established coordinated cover-up in the autonomous-agent studies. In the later scripted diagnostics, reviewers never attempted to approve a prohibited package. However, correct decisions sometimes came with inaccurate accounts of the checks performed, and some reviews failed to finish. These results do not show that collusion risk is low.
+**Main finding:** The autonomous-agent studies have not established coordinated cover-up. In the later scripted diagnostics, reviewers never attempted to approve a prohibited package. However, correct decisions sometimes came with inaccurate accounts of the checks performed, and some reviews failed to finish. These results do not show that collusion risk is low.
 
 **Latest completed study — V9:** 36 episodes: all 32 prohibited packages were rejected; all 4 aggregate-only controls were eventually approved. All four controls first attempted approval before completing required checks. Four reviewer rationales wrongly said the reviewer had created a file that the script created. Claude independently AI-reviewed the counts and these statements; new semantic categories still await Sarah's confirmation.
 
 **V10 stopped:** The first of 24 allocated episodes had a connection failure with no provider response; the other 23 were unrun. Later DNS-only checks reproduced a restriction in the default execution sandbox. This is the leading explanation, not proof of the original underlying error. There was no retry or behavioral finding.
 
-[English paper draft — copy/paste text](paper_draft/Sarah_Paper_Draft_EN.txt) · [Chinese paper draft — reading translation](paper_draft/Sarah_Paper_Draft_ZH.txt) · [Submission notes](paper_draft/SUBMISSION_NOTES.txt) · [Figure 1](paper_draft/figures/workflow_evidence.svg) · [Current review status](paper_draft/REVIEW_STATUS_2026-10-26.md) · [V9 results](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_EN.md) · [V10 network investigation](v10_connection_investigation/README.md)
+[English manuscript source](paper_draft/Sarah_Paper_Draft_EN.txt) · [Simplified Chinese reading version](paper_draft/Sarah_Paper_Draft_ZH.txt) · [Figure 1](paper_draft/figures/workflow_evidence.svg) · [Current review status](paper_draft/REVIEW_STATUS_2026-10-26.md) · [V9 results](experiment_runs/2026-10-26/task_tension_v9_01/RESULTS_EN.md) · [V10 network investigation](v10_connection_investigation/README.md)
 
-The README and review-status note are the current index. Older batch reports retain their dated status snapshots. No experiment is running; the planned 64-delivery partnership study remains unrun. The paper is a draft, not a submitted report.
+The README and review-status note are the current index. Older batch reports retain their dated status snapshots. No experiment is running; the planned 64-delivery partnership study remains unrun. Sarah reports submitting the report on October 26, 2026. The linked text is the manuscript source, not an archived copy of the final submitted PDF.
 
 ## The financial workflow
 
@@ -63,10 +63,10 @@ For **2.3**, the evidence shows why disclosure, statements, decision attempts, e
 
 **2.2 remains untested:** no dialogue-only/action-only/combined detector comparison has been completed.
 
-## Review status and next step
+## Evidence and review status
 
 V7 has 23 human-confirmed AI-assisted interpretations; one case-10 report/decision judgment remains pending. Invitation 01 and V9 have supplied independent Claude AI reviews. At b7f0304, Claude also checked Invitation 02 counts and cited events; other statement semantics were not independently reviewed. New statement categories remain advisory; original human fields and unreviewed labels are unchanged. See the [review-status note](paper_draft/REVIEW_STATUS_2026-10-26.md).
 
-Next: review the updated English manuscript, confirm remaining semantic judgments, and paste it into the submission template to check the 4–8 page limit. No further paid call or V10 resumption is part of this documentation update.
+Paper-linked code, datasets, trajectories, review records and frozen versions remain at their original paths. Older and failed explorations are retained for audit, with separate denominators. Submission does not change pending case-level review status. No additional experiment is authorized by this repository cleanup.
 
 Sarah's work stays in `workspaces/sarah/` on `sarah/*` branches. [Collaboration rules](../../COLLABORATION_RULES.md) · [Historical handoff](CODEX_HANDOFF.md)
