@@ -5,65 +5,66 @@
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#58636c"/></marker></defs>
 <rect x="20" y="10" width="240" height="90" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
 <text x="140.0" y="38" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Synthetic source</text>
-<text x="140.0" y="67" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">2,000 customers</text>
-<text x="140.0" y="93" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">20,000 transactions</text>
+<text x="140.0" y="65" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">2,000 customers</text>
+<text x="140.0" y="88" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">20,000 transactions</text>
 <rect x="390" y="10" width="690" height="90" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
 <text x="735.0" y="38" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Buyer request + license</text>
-<text x="735.0" y="67" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Only qualifying aggregates licensed</text>
+<text x="735.0" y="65" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Only qualifying aggregates licensed</text>
 <polyline points="140,100 140,175" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
-<polyline points="390,80 300,80 300,165 240,165 240,175" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="390,30 280,30 280,110 240,110 240,175" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
 <polyline points="1080,55 1090,55 1090,170 750,170 750,175" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
 <text x="550" y="125" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Peer messages in both directions when enabled</text>
-<polyline points="275,145 820,145" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)" stroke-dasharray="8 5"/>
+<polyline points="100,185 100,145 720,145 720,185" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)" marker-start="url(#arrow)" stroke-dasharray="8 5"/>
 <rect x="20" y="185" width="240" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
 <text x="140.0" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Preparer</text>
-<text x="140.0" y="242" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Model or fixed script</text>
-<text x="140.0" y="268" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Stage files + report</text>
+<text x="140.0" y="240" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Model or fixed script</text>
+<text x="140.0" y="263" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Stage files + report</text>
 <rect x="300" y="185" width="270" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
 <text x="435.0" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Locked package</text>
-<text x="435.0" y="242" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">All remaining candidate</text>
-<text x="435.0" y="268" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">files + report</text>
+<text x="435.0" y="240" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">All remaining candidate</text>
+<text x="435.0" y="263" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">files + report</text>
 <rect x="610" y="185" width="220" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
 <text x="720.0" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Reviewer</text>
-<text x="720.0" y="242" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Model</text>
-<text x="720.0" y="268" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Inspect, then decide</text>
+<text x="720.0" y="240" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Model</text>
+<text x="720.0" y="263" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Inspect, then decide</text>
 <rect x="870" y="185" width="210" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
 <text x="975.0" y="213" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Approval</text>
-<text x="975.0" y="242" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Release exact</text>
-<text x="975.0" y="268" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">package</text>
-<text x="975.0" y="294" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">No privacy veto</text>
+<text x="975.0" y="240" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Release exact</text>
+<text x="975.0" y="263" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">package</text>
+<text x="975.0" y="286" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">No privacy veto</text>
 <polyline points="260,242 300,242" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
 <polyline points="570,242 610,242" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
 <polyline points="830,242 870,242" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
-<rect x="300" y="330" width="780" height="82" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
-<text x="690.0" y="358" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">No release</text>
-<text x="690.0" y="387" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Decline (pre-lock), reject, hold, withdraw or failure</text>
-<polyline points="140,300 140,370 300,370" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
-<polyline points="720,300 720,330" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
-<text x="550" y="440" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Scripted diagnostics: one fixed peer message, no adaptive reply</text>
+<rect x="300" y="315" width="780" height="75" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
+<text x="690.0" y="343" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">No release</text>
+<text x="690.0" y="370" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Decline (pre-lock), reject, hold, withdraw or failure</text>
+<polyline points="140,300 140,355 300,355" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
+<polyline points="720,300 720,315" fill="none" stroke="#58636c" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="550" y="415" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Scripted diagnostics: one fixed peer message, no adaptive reply</text>
+<text x="550" y="448" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Evidence retained for separate judgments</text>
 <rect x="20" y="460" width="160" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
-<text x="100.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Files</text>
-<text x="100.0" y="517" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Released</text>
-<text x="100.0" y="543" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">contents</text>
+<text x="100.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Files</text>
+<text x="100.0" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Released</text>
+<text x="100.0" y="538" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">contents</text>
 <rect x="200" y="460" width="160" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
-<text x="280.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Claims</text>
-<text x="280.0" y="517" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Reports,</text>
-<text x="280.0" y="543" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">rationales,</text>
-<text x="280.0" y="569" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">messages</text>
+<text x="280.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Claims</text>
+<text x="280.0" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Reports,</text>
+<text x="280.0" y="538" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">rationales,</text>
+<text x="280.0" y="561" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">messages</text>
 <rect x="380" y="460" width="160" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
-<text x="460.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Attempts</text>
-<text x="460.0" y="517" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Tool calls</text>
-<text x="460.0" y="543" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">and results</text>
+<text x="460.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Attempts</text>
+<text x="460.0" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Tool calls</text>
+<text x="460.0" y="538" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">and results</text>
 <rect x="560" y="460" width="160" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
-<text x="640.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Decisions</text>
-<text x="640.0" y="517" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Actually</text>
-<text x="640.0" y="543" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">executed</text>
+<text x="640.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Decisions</text>
+<text x="640.0" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Actually</text>
+<text x="640.0" y="538" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">executed</text>
 <rect x="740" y="460" width="160" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
-<text x="820.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Visibility</text>
-<text x="820.0" y="517" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Who could</text>
-<text x="820.0" y="543" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">see what</text>
+<text x="820.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Visibility</text>
+<text x="820.0" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Who could</text>
+<text x="820.0" y="538" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">see what</text>
 <rect x="920" y="460" width="160" height="115" rx="8" fill="#f5f6f7" stroke="#58636c" stroke-width="2"/>
-<text x="1000.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#202428">Coordination</text>
-<text x="1000.0" y="517" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Messages</text>
-<text x="1000.0" y="543" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">and actions</text>
+<text x="1000.0" y="488" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" fill="#202428">Coordination</text>
+<text x="1000.0" y="515" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">Messages</text>
+<text x="1000.0" y="538" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="400" fill="#202428">and actions</text>
 </svg>
