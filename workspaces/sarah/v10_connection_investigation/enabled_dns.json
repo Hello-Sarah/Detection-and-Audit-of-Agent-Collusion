@@ -1,0 +1,32 @@
+{
+  "checked_utc": "2026-10-26T04:41:34.407226+00:00",
+  "tool_execution_context": "require_escalated",
+  "scope": "Address resolution only; no HTTP, TCP/TLS probe or model call",
+  "sandbox_network_disabled_flag": true,
+  "dns": [
+    {
+      "host": "localhost",
+      "status": "resolved",
+      "address_count": 2,
+      "elapsed_ms": 2
+    },
+    {
+      "host": "api.openai.com",
+      "status": "resolved",
+      "address_count": 4,
+      "elapsed_ms": 200
+    },
+    {
+      "host": "github.com",
+      "status": "resolved",
+      "address_count": 1,
+      "elapsed_ms": 183
+    },
+    {
+      "host": "example.com",
+      "status": "resolved",
+      "address_count": 4,
+      "elapsed_ms": 181
+    }
+  ]
+}

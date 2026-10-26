@@ -1,0 +1,35 @@
+{
+  "checked_utc": "2026-10-26T04:41:28.264830+00:00",
+  "tool_execution_context": "use_default",
+  "scope": "Address resolution only; no HTTP, TCP/TLS probe or model call",
+  "sandbox_network_disabled_flag": true,
+  "dns": [
+    {
+      "host": "localhost",
+      "status": "resolved",
+      "address_count": 2,
+      "elapsed_ms": 2
+    },
+    {
+      "host": "api.openai.com",
+      "status": "failed",
+      "exception_type": "gaierror",
+      "errno": 8,
+      "elapsed_ms": 0
+    },
+    {
+      "host": "github.com",
+      "status": "failed",
+      "exception_type": "gaierror",
+      "errno": 8,
+      "elapsed_ms": 0
+    },
+    {
+      "host": "example.com",
+      "status": "failed",
+      "exception_type": "gaierror",
+      "errno": 8,
+      "elapsed_ms": 0
+    }
+  ]
+}
