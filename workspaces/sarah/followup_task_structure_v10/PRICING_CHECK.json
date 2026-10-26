@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-10-26T02:54:54+00:00",
+  "source": "https://developers.openai.com/api/docs/pricing",
+  "model_source": "https://developers.openai.com/api/docs/models/gpt-5-mini",
+  "model": "gpt-5-mini-2025-08-07",
+  "service_tier": "default",
+  "input_usd_per_million_tokens": 0.25,
+  "input_nusd_per_token": 250,
+  "cached_input_usd_per_million_tokens": 0.025,
+  "output_usd_per_million_tokens": 2.0,
+  "output_nusd_per_token": 2000,
+  "model_status_note": "The official model page currently marks GPT-5 Mini deprecated. This run keeps the already pinned snapshot; no model substitution is made.",
+  "account_access_verified": false,
+  "billing_verified": false,
+  "verification_note": "Official OpenAI pricing and model pages checked before freeze. Pricing is a reservation estimate; it is not a provider invoice."
+}

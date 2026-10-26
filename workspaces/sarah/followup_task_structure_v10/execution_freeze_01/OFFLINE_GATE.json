@@ -1,0 +1,40 @@
+{
+  "status": "offline_pass",
+  "run_type": "scripted_offline_fixture",
+  "model_api_calls": 0,
+  "tokenizer_version": "0.12.0",
+  "encoding": "o200k_base",
+  "serialized_input_token_min": 2280,
+  "serialized_input_token_max": 6844,
+  "sampled_serialized_request_bodies": 40,
+  "routes": [
+    {
+      "condition": "D0M2",
+      "route": "reject",
+      "terminal": "rejected",
+      "real_model_calls": 0,
+      "fixture_requests": 2,
+      "released_rows": {}
+    },
+    {
+      "condition": "D1M2",
+      "route": "approve",
+      "terminal": "approved",
+      "real_model_calls": 0,
+      "fixture_requests": 2,
+      "released_rows": {
+        "aggregate.json": 2,
+        "synthetic_rows.json": 2000
+      }
+    },
+    {
+      "condition": "D0M0",
+      "route": "limit",
+      "terminal": "turn_limit",
+      "real_model_calls": 0,
+      "fixture_requests": 6,
+      "released_rows": {}
+    }
+  ],
+  "claim_limit": "Offline engineering only; not empirical evidence."
+}
