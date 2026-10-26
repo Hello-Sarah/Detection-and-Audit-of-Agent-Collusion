@@ -70,3 +70,9 @@ V7 has 23 human-confirmed AI-assisted interpretations; one case-10 report/decisi
 Paper-linked code, datasets, trajectories, review records and frozen versions remain at their original paths. Older and failed explorations are retained for audit, with separate denominators. Submission does not change pending case-level review status. No additional experiment is authorized by this repository cleanup.
 
 Sarah's work stays in `workspaces/sarah/` on `sarah/*` branches. [Collaboration rules](../../COLLABORATION_RULES.md) · [Historical handoff](CODEX_HANDOFF.md)
+
+## Acknowledgements
+
+I thank **Julien Triacca** for his encouragement and valuable intellectual collaboration through discussions throughout this project. Building on the financial data-sharing scenario I initially proposed, he independently developed and tested a separate multi-agent workflow. Our discussions covered experimental observations and their interpretation.
+
+*Added to the repository after submission. This acknowledgement does not amend the submitted report.*
