@@ -88,3 +88,7 @@ Sarah confirmed that she is the sole author and requested an explicit account of
 ## Supplied Claude review of d384eee and condensation
 
 Claude reported checking manuscript changes, method statements and author contributions against records. It found no inflated human contribution or changed Results, and requested clearer disclosure of AI implementation, consistent API-snapshot wording and reduced length. The revision explicitly identifies Codex generation/revision of code and automated analyses under Sarah's direction, and substantial AI manuscript generation/revision. It does not claim manual human authorship of particular paragraphs. Main-text condensation relocates evidence and tables to Appendix D without adjudicating pending semantic categories. These new editorial changes have not been represented as independently reviewed, and template page count remains unverified.
+
+## Author-reported review before submission
+
+Sarah reported personally checking many results and claims and requested acknowledgment in the LLM disclosure. The manuscript now records those author checks. This does not identify additional episode-level adjudications, finalize V9 categories or establish independent human verification of every claim. The existing case-level confirmation records and original human fields remain unchanged.
