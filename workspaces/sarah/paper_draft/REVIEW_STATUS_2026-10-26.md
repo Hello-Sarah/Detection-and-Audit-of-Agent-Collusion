@@ -84,3 +84,7 @@ Claude reports comparing all changes since 6b8b2c2, rendering the SVG and findin
 ## Sole-author clarification
 
 Sarah confirmed that she is the sole author and requested an explicit account of her research contribution. The manuscript now distinguishes her conception of the financial scenario and research question, direction and authorization of experiments, and review decisions from AI-assisted implementation, testing, analysis and drafting. This author-role clarification does not supply new case labels or resolve pending semantic categories. Empirical results and original evidence are unchanged. The latest editorial additions have not been represented as a new independent review.
+
+## Supplied Claude review of d384eee and condensation
+
+Claude reported checking manuscript changes, method statements and author contributions against records. It found no inflated human contribution or changed Results, and requested clearer disclosure of AI implementation, consistent API-snapshot wording and reduced length. The revision explicitly identifies Codex generation/revision of code and automated analyses under Sarah's direction, and substantial AI manuscript generation/revision. It does not claim manual human authorship of particular paragraphs. Main-text condensation relocates evidence and tables to Appendix D without adjudicating pending semantic categories. These new editorial changes have not been represented as independently reviewed, and template page count remains unverified.

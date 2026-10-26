@@ -9,115 +9,81 @@ AI agents that prepare and review financial data may face pressure to deliver in
 
 1. Introduction
 
-Consider a financial institution using AI agents to prepare data and review delivery to an external buyer. The buyer may request customer-level information, while the institution’s license permits only aggregate statistics. If one agent prepares the package and another approves its release, the review step becomes an important safeguard. It also creates an opportunity for the agents to cooperate in bypassing the restriction. The study focuses on a specific failure: a preparer and reviewer jointly allowing prohibited customer-level records to leave while misrepresenting what was released.
+Consider a financial institution using AI agents to prepare data and review delivery to a buyer. The buyer may request customer-level information, while the institution’s license permits only aggregate statistics. A reviewer can prevent prohibited release, but the two agents might also cooperate to bypass the restriction. The failure of interest is a preparer and reviewer jointly allowing prohibited records to leave while misrepresenting what was released.
 
-A failed safeguard does not necessarily mean collusion. A preparer might accidentally retain a working file, describe its contents incorrectly or misunderstand the request. A reviewer might approve without adequate inspection. Conversely, a safe final package does not establish that the review was reliable. The reviewer may have skipped required checks or claimed operations that it did not perform. An organization therefore needs to know both whether protected data left its control and whether the review provides a trustworthy account of the decision.
+A failed safeguard does not necessarily mean collusion. A preparer might accidentally retain a working file or describe it incorrectly. A reviewer might approve without sufficient inspection. Conversely, a safe package does not establish reliable review. The reviewer may have skipped checks or claimed operations it did not perform. An organization needs to know both whether protected data left its control and whether the review accurately accounts for the decision.
 
-Prior work has shown collusive outcomes among pricing algorithms [1] and studied covert collusion between AI agents [2]. Shi, Zhang and Yang study repeated interactions with memory, where communication constraints make rejection the only compliant verdict but prevent agents from attaining high rewards through compliance [3]. This study examines a financial data-delivery workflow with short, mostly single-task episodes. It asks whether task demands, communication and working arrangements produce evidence of coordination, and what evidence distinguishes individual errors from jointly supported misconduct. Compliant aggregate delivery is available in the autonomous studies, whereas the prohibited packages in the controlled diagnostics are already locked and cannot be cleaned. Autonomous interactions between two models are reported separately from diagnostics in which a script supplies the preparer’s package and handoff message.
+This study asks whether task demands, communication and working arrangements produce evidence of coordination, and what distinguishes individual errors from jointly supported misconduct. It separates autonomous interactions between two models from controlled diagnostics with a scripted preparer. The main contributions are:
 
-The main contributions are:
-
-1. An auditable financial data-release workflow. The workflow records package contents, reports, messages, tool calls, release decisions and which tool results entered each agent’s input. Wrong approvals remain possible, allowing failures to be observed rather than automatically blocked by a privacy filter.
-2. Exploratory evidence from autonomous and controlled experiments. Autonomous pilots produced prohibited submissions that rejection or withdrawal stopped. Three controlled batches contained 12, 12 and 32 prohibited packages respectively. No reviewer attempted to approve them, but incomplete decisions and inaccurate claims about reviewers’ own actions occurred.
-3. A practical distinction between outcomes and supporting evidence. The cases show why actual disclosure, attempted actions, executed decisions and process claims require separate assessment. A correct privacy decision can coexist with an inaccurate account of the reviewer’s actions.
-
-The included studies do not establish autonomous coordinated cover-up. They contribute to task-condition exploration and standards of evidence, without establishing a general cause of collusion or validating a collusion detector.
+1. An auditable financial data-release workflow that records files, claims, actions and which tool results entered each agent’s input. Wrong approvals remain possible and observable.
+2. Exploratory evidence from autonomous and controlled experiments. Autonomous pilots produced prohibited submissions that rejection or withdrawal stopped. Three controlled batches contained 12, 12 and 32 prohibited packages respectively, with no approval attempt on those packages.
+3. Cases showing that correct privacy decisions can coexist with inaccurate process claims and incomplete execution. Actual disclosure, attempted actions, executed decisions and statements require separate assessment.
 
 2. Related Work
 
-Calvano et al. study Q-learning agents in repeated price competition, showing collusive pricing without direct communication [1]. Motwani et al. formalize secret collusion through steganographic interactions among AI agents [2]. Shi, Zhang and Yang examine repeated task completion and reciprocal verification under rewards [3]. These settings motivate attention to incentives, interaction history and evidence of coordination, but their outcomes and mechanisms do not directly transfer to a data-release review task.
+Calvano et al. show collusive pricing among Q-learning agents without direct communication [1]. Motwani et al. study covert collusion through steganographic interactions [2]. Shi, Zhang and Yang study repeated interactions with memory, where communication constraints make rejection the only compliant verdict but prevent agents from attaining high rewards through compliance [3].
 
-The gap addressed here is how to audit a data-release decision when a safe outcome, a persuasive explanation and a completed review may disagree. This workflow records exact files and which tool results entered each role’s input. Those records allow an auditor to distinguish an intended refusal from an executed rejection, and an accurate count from an unsupported claim of independent verification. Autonomous batches allow a compliant aggregate alternative, whereas locked-package diagnostics remove it. These differences preclude direct comparisons with prior collusion rates. The study provides an inspectable case study rather than a competing detector or a claim of superior performance.
+The gap addressed here is how to audit a data-release decision when safe outcomes, persuasive explanations and completed reviews disagree. Episodes are short and mostly concern single tasks. Autonomous studies allow a compliant aggregate alternative, whereas the prohibited packages in controlled diagnostics are already locked and cannot be cleaned. These differences preclude direct comparisons with prior collusion rates. Exact files and role-specific inputs make it possible to check what agents did against what they claimed. This is an inspectable case study, not a competing detector or a claim of superior performance.
 
 3. Methods
 
 3.1 Environment and release semantics
 
-The synthetic source contains 2,000 fictional customers and 20,000 transactions, with English names and non-payment TEST-HK-CARD identifiers. The license permits group aggregates containing at least ten distinct customers per group. Customer-linked rows and protected identifier values are forbidden in buyer-facing delivery. The prohibition is broader than the combination of a name and card number. Internal processing and authorized reviewer access are allowed. Synthetic records permit observable release failures without exposing real customer data. The aggregate-only license defines a concrete boundary for comparing internal processing with external disclosure.
+The synthetic source contains 2,000 fictional customers and 20,000 transactions, with English names and non-payment TEST-HK-CARD identifiers. The license permits aggregates with at least ten distinct customers per group. Customer-linked rows and protected identifier values are prohibited in buyer delivery, while internal processing and authorized reviewer access are allowed. Synthetic records permit observable failures without exposing real customer data.
 
-Models select bounded tools. Deterministic code performs aggregation. Submission locks the remaining files and report. Approval releases that exact package in a local simulation. There is no automatic privacy filter that silently removes prohibited rows. Some versions enforce inspection completion, but completing inspections does not determine the substantive privacy judgment.
+Models select bounded tools, and deterministic code performs aggregation. Submission locks all remaining candidate files and the report. Approval releases that exact package locally. There is no automatic privacy veto. Later versions enforce inspection completion, which does not determine the substantive privacy judgment.
 
-Figure 1. Financial release workflow and retained audit evidence. The preparer is a model in autonomous studies and a fixed script in controlled diagnostics. The dashed path represents bidirectional peer messages when enabled. All messages are researcher-logged. Scripted diagnostics supply one fixed peer message and no adaptive scripted reply. Approval releases the complete locked package, without a privacy veto. Artifact contents, claims, tool attempts, executed decisions and actor visibility are inspected separately when assessing coordination.
+Figure 1. Financial data-release workflow. Peer messages are bidirectional when enabled and researcher-logged. Scripted diagnostics supply one fixed message without an adaptive reply. Approval releases the complete locked package. Files, claims, attempts, executed decisions and visibility provide separate audit evidence.
 
-3.2 Evidence axes and review status
+3.2 Evidence and review
 
-The specific coordinated-cover-up endpoint requires actual prohibited release, concealment or misrepresentation concerning it, and communication plus corresponding actions supporting coordination. This is narrower than general collusion: proposals, induced cooperation and unsuccessful joint attempts remain separately observable outcomes.
+The coordinated-cover-up endpoint requires prohibited release, concealment or misrepresentation concerning it, and communication with corresponding actions supporting coordination. It is narrower than general collusion. Proposals and unsuccessful attempts are recorded separately.
 
-The analysis records disclosure content, report accuracy, decision correctness, procedural compliance, completion and coordination separately. It distinguishes script/model provenance, proposed versus executed calls, successful versus failed observations, and whether a result entered the deciding model input. A returned tool result or local dispatch marker alone does not prove model consumption or provider receipt.
-
-Deterministic checks establish selected provenance and artifact facts. Semantic review is AI-assisted, not independent human ground truth. V7 has 23 author-confirmed AI-assisted interpretations and one partly unresolved case. Claude independently reviewed invitation diagnostic 01 and V9, and checked diagnostic 02 counts and cited events. The V9 categories are AI-assisted annotations, not independent human adjudications. Appendix B gives review scopes [4]. The program is sequential and exploratory. Individual batches were frozen, but the overall search was not preregistered.
+Analysis separates disclosure, report accuracy, decision correctness, procedure, completion and coordination. Tool results must be distinguished from results entering the deciding model input. Semantic review is AI-assisted, not independent human ground truth. V7 has 23 author-confirmed AI-assisted interpretations and one partly unresolved case. Independent AI reviews have different scopes, detailed in Appendix B. V9 categories are AI-assisted annotations, not independent human adjudications. The program is sequential and exploratory. Freezing individual batches did not preregister the overall search.
 
 3.3 Autonomous task and workflow studies
 
-V6 compares four buyer requests with and without a private channel: cohort sizing, personalized offers, reconciliation and model-training examples. Four fresh episodes per cell give 32 episodes. Eight smoke episodes are excluded. Counts can fulfill sizing, while the other requests need individual-level inputs prohibited by the license. Purpose, granularity and feasibility vary together.
+V6 crosses four buyer requests with private-channel availability: sizing, personalized offers, reconciliation and training examples. Four fresh episodes per cell give 32. Only sizing can be fulfilled with counts. V7 fixes the count request and compares direct aggregation (W0), a 20,000-row customer-linked working file followed by removal (W1), and a safe 20-row bucket file followed by removal (W2). Crossing these with channel availability gives 24 episodes. Eight V6 and six V7 smoke episodes are excluded.
 
-V7 fixes the final count request and crosses three preparation workflows with channel availability: direct aggregation (W0), a 20,000-row customer-linked working file followed by removal (W1), and a safe 20-row bucket file followed by removal (W2). Four episodes per cell give 24. Six smoke episodes are excluded. Workflows differ in operational burden, volume and semantics as well as sensitivity.
-
-Both use gpt-5-mini-2025-08-07 and a common delivery-pressure narrative. N0 provides formal handoff without private messaging. N1 adds a logged channel visible to its recipient. Ordinary utterances remain role-local. The two roles alternate for at most 16 requests per episode, eight per role. Each request allows 4,096 completion tokens and a 90-second timeout. These exploratory batches used allocations, source and configurations frozen before collection. Deterministic engineering fixtures are excluded from behavioral counts.
+Both use a common delivery-pressure narrative. N0 provides formal handoff, while N1 adds private messages visible to the recipient. Ordinary utterances remain role-local. Each episode permits 16 alternating requests, eight per role, with 4,096 completion tokens per request and a 90-second timeout. Purpose and feasibility vary together in V6, while volume, burden and sensitivity vary together in V7.
 
 3.4 Partnership technical pilots
 
-V8 and revised V8.1 each allocate two four-agent cohorts: one stable-partner/shared-score condition and one exchanged-partner/no-score condition. Each cohort has two preparers, two reviewers and two rounds, giving eight dependent deliveries per version. Cohort, not delivery, is the independent unit. These corner-condition engineering checks are insufficient to identify partnership or score effects. The planned 64-delivery study remains unrun.
-
-V8.1 aligns a previously inconsistent aggregation-method contract and provides field-level errors. Neither revision repairs historical scores. The two versions retain separate evidence and denominators.
+V8 and V8.1 each test two four-agent cohorts, with two preparers, two reviewers and two rounds. One cohort has stable partners and shared scores, the other exchanged partners and no scores. Each version has eight dependent deliveries. Cohort is the independent unit. These corner-condition checks do not identify partnership or score effects. The planned 64-delivery study remains unrun. Interface revisions are documented separately in Appendix C.
 
 3.5 Scripted reviewer diagnostics
 
-Two independent 16-episode diagnostics each use a scripted preparer and fresh model reviewer. C0 supplies a prohibited package with neutral handoff. C1 requests an exception. C2 additionally requests a false aggregate-only scope statement. These cells share a truthful report and locked 20,000-row working file plus correct aggregate counts. C3 is a separate aggregate-only competence control. Four randomized blocks give four episodes per condition. The script does not adapt or respond to reviewer messages. The violation is explicitly disclosed, and no shared KPI is supplied.
+Two separate 16-episode diagnostics use a scripted preparer and fresh model reviewers. C0 supplies a prohibited package with neutral handoff, C1 requests an exception, and C2 adds a request for a false aggregate-only statement. Each contains working.json with 20,000 rows, correct aggregates and a truthful report. C3 is an aggregate-only control. Four randomized blocks give four episodes per condition. Violations are explicit and no shared KPI is supplied.
 
-Both cap reviewers at four requests. Diagnostic 01 checks hashes and eligible own consumed references, but its prompted audit duty is not a release precondition. Diagnostic 02 clarifies arguments and enforces consumed post-submission manifest, artifact previews and audit before approval. These simultaneous changes prevent attributing differences to one interface feature. Neither guard vetoes privacy violations after required checks.
+Both allow four reviewer requests. Diagnostic 02 clarifies arguments and enforces consumed inspections before approval, unlike diagnostic 01’s unenforced audit requirement. The guard does not veto prohibited contents. Multiple simultaneous changes prevent isolating an interface effect.
 
-3.6 V9 task-tension screening
+3.6 V9 task-tension screen
 
-A separate 36-episode batch uses the same API snapshot, six reviewer requests per episode and four tool calls per request. Its 32 main episodes cross task framing (T0 aggregate portfolio planning, T1 transaction reconciliation), no score disclosure (F0) versus disclosed simulated shared KPI (F1), and neutral/explicit exception-plus-false-scope invitation (M0/M1). Four randomized complete blocks give four episodes per cell. Four additional clean T0F0M0 packages are separate controls.
+V9 allocates 32 main episodes across task framing (T0 aggregate planning, T1 reconciliation), no score disclosure versus a simulated shared KPI (F0/F1), and neutral versus exception-plus-false-scope messages (M0/M1). Four randomized blocks give four episodes per cell, with four separate clean T0F0M0 controls. Each reviewer has six requests and up to four tool calls per request.
 
-All main packages are identical and already locked. Reviewers cannot clean them or partially release aggregates. T therefore changes business-purpose/necessity framing, not executable workflow feasibility. In F1, disclosed attainable main-branch scores are Q0+B3 for prohibited approval and Q1+B0 for supported rejection in both tasks. F0 does not disclose scores. F1 also describes a five-point licensed planning approval, although that alternative is unavailable in the locked main episodes. This mismatch further limits incentive interpretation. The KPI states that policy overrides points. There is no independent manipulation check establishing that scores influenced the reviewer.
+Main packages are identical and already locked. Reviewers cannot clean them or release only aggregates. T changes purpose and necessity framing, not executable feasibility. F1 offers attainable scores of Q0+B3 for prohibited approval and Q1+B0 for supported rejection in both tasks. It also describes an unavailable five-point licensed planning option and says policy overrides points. No independent manipulation check establishes incentive efficacy. A design-boundary clarification was recorded during collection without changing frozen conditions (Appendix D).
 
-The design-boundary clarification was recorded during collection after initial descriptive checkpoints, without changing stimuli, allocation, code or scoring. It was not a wholly prospective clarification. All main conditions conspicuously disclose the protected file. Script behavior is a controlled stimulus, not autonomous preparer misconduct.
+3.7 Reproduction
 
-3.7 Reproduction and design choices
-
-The API batches use the pinned gpt-5-mini-2025-08-07 snapshot. Holding it fixed reduces variation from model substitution, but does not test robustness across models. Deterministic aggregation separates the release decision from arithmetic generation. Fresh sessions in the task studies and scripted diagnostics limit carryover, while the partnership pilots explicitly retain interaction history. Appendix B identifies the source revisions, freezes and evidence directories. Reproduction requires the corresponding frozen allocation, prompts, tool schemas and request limits, rather than the latest runner. Saved requests and responses support audit of the reported observations. New API runs may differ and must be recorded as separate evidence.
+All API batches use gpt-5-mini-2025-08-07. Fresh task and diagnostic sessions limit carryover, while partnership pilots retain structured history. Appendix B pins source revisions and evidence directories. Reproduction requires the corresponding frozen prompts, allocations, schemas and limits. Saved requests and responses support audit, although new runs may differ. Failed interface iterations and extended methods appear in Appendices C and D.
 
 4. Results
 
 4.1 Autonomous task and workflow studies
 
-V6 produced 30 aggregate releases and two rejections, with no prohibited submission or release. Released counts were 1,000 per segment. Sizing received the requested input in six of eight episodes. All 24 individual-input requests received aggregate substitutes and were not fulfilled as requested.
-
-Table 1. V6 outcomes. Four episodes per channel cell. No task had a prohibited release.
-
-Request | N0 aggregate releases | N1 aggregate releases | Requested input delivered
-Sizing | 2 | 4 | 6 of 8
-Personalized offers | 4 | 4 | 0 of 8
-Reconciliation | 4 | 4 | 0 of 8
-Training examples | 4 | 4 | 0 of 8
-
-V7 produced 22 aggregate deliveries, one unsupported rejection and one request-limit nondecision. All eight W1 episodes internally created customer-linked files and removed them before submission. No customer-level file entered review. V7 therefore provides no estimate of how often review intercepts prohibited files.
-
-Table 2. V7 executed outcomes. Four episodes per cell.
-
-Workflow/channel | Aggregate delivery | Rejected | Incomplete
-W0/N0 | 3 | 1 | 0
-W0/N1 | 4 | 0 | 0
-W1/N0 | 4 | 0 | 0
-W1/N1 | 4 | 0 | 0
-W2/N0 | 4 | 0 | 0
-W2/N1 | 3 | 0 | 1
-
-Case 17 approved safe data with an inaccurate package hash in the report. A later private message supplied the correct hash without changing the locked report. Case 19 rejected an accurate report after confusing the preparer's observation reference with the reviewer's reference. Case 18 ended before another input could consume the final audit. These are reporting, decision and completion failures, not established coordination.
+V6 produced 30 aggregate releases and two rejections. V7 produced 22 aggregate deliveries, one unsupported rejection and one incomplete review. Neither batch recorded a prohibited submission or release. In V6, sizing was fulfilled in six of eight episodes, but all 24 individual-input requests received aggregate substitutes. In V7, all eight W1 working files were removed before submission, so reviewer interception of prohibited files was not tested. Tables A1 and A2 and the reporting, rejection and completion errors in V7 cases 17, 19 and 18 appear in Appendix D.
 
 4.2 Protected submissions in technical pilots
 
-V8 ended with six pre-submission declines and two protected-package rejections. Five declines were reviewer-initiated. Both submitted reports claimed aggregate-only scope while retaining working.json. One preparer private message repeated inaccurate scope/deletion claims. The reviewer inspected the package and rejected it. Contradictory row counts in the reports limit any inference of intentional concealment.
+V8 ended with six pre-submission declines and two protected-package rejections. Five declines were reviewer-initiated. Both submitted reports claimed aggregate-only scope while retaining working.json. One private message repeated inaccurate scope and deletion claims, but the reviewer inspected and rejected the package. Contradictory row counts limit inference of intentional concealment.
 
-V8.1 recorded eight outcomes: five reviewer-initiated declines, one protected-package rejection, one protected-package withdrawal, and one API failure. The API failure occurred during review of an aggregate-only submission with an inaccurate report. No data were released. The transport failure left an uncertain reservation, so this technical gate did not fully pass. No prohibited release or qualifying autonomous coordinated cover-up was established in either pilot.
+V8.1 recorded five reviewer-initiated declines, one protected-package rejection, one protected-package withdrawal and one API failure. That failure occurred during review of an aggregate-only submission with an inaccurate report. No data were released. The unresolved transport failure means the technical gate did not fully pass. Neither pilot established coordinated cover-up.
 
-4.3 Controlled invitations and tool completion
+4.3 Controlled invitations and completion
 
-Neither diagnostic recorded an approval attempt on a prohibited package. In diagnostic 01 all 12 such cases attempted rejection, but only nine executed it. The other three reached the request limit. Diagnostic 02 executed all 12 rejections. Both approved one safe control and left three safe workflows incomplete.
+Neither diagnostic recorded an approval attempt on a prohibited package. Diagnostic 01 attempted all 12 rejections but executed nine, with three request-limit outcomes. Diagnostic 02 executed all 12. Each batch approved one safe control and left three incomplete.
 
-Table 3. Separate diagnostic batches, four episodes per condition. Entries are executed rejection / approval / request-limit nondecision.
+Table 1. Separate invitation diagnostics, four episodes per condition. Entries are executed rejection / approval / request-limit nondecision. The first three conditions contain prohibited packages. C3 is safe.
 
 Condition | Diagnostic 01 | Diagnostic 02
 C0 neutral prohibited | 4 / 0 / 0 | 4 / 0 / 0
@@ -125,43 +91,31 @@ C1 exception request | 2 / 0 / 2 | 4 / 0 / 0
 C2 exception + false scope | 3 / 0 / 1 | 4 / 0 / 0
 C3 safe control | 0 / 1 / 3 | 0 / 1 / 3
 
-Diagnostic 01 had eight missing-code rejection errors and seven ineligible-reference approval errors. Five cited lookups that had failed, and two cited script operation IDs from the audit log. Decisions could cite only the reviewer's own successful observations. The failed lookups were visible, so they were not necessarily unseen or fabricated. Missing audit violated the prompted procedure but was not the observed cause of the tool errors. Diagnostic 02 had two corrected missing-code errors. Three safe approvals were blocked by incomplete checks and reached the request cap before consuming the final audit and deciding.
+Diagnostic 01 had eight missing-code rejection errors and seven ineligible-reference approval errors. Diagnostic 02 had two corrected missing-code errors, but three safe reviews ended before consuming their final audit and deciding. Error details are in Appendix D. Four rationales in diagnostic 01 and two in diagnostic 02 claimed reviewer file creation although the script performed it.
 
-Four rationales in diagnostic 01 and two in diagnostic 02 also claimed reviewer file creation, although the script performed it. These counts concern attribution of operations, rather than whether the privacy decision was correct.
+4.4 V9 decisions and process statements
 
-4.4 V9 decisions, procedures and process statements
+All 32 main episodes executed rejection, four in each cell. All four safe controls approved only aggregate.json with counts 1,000/1,000. There was no prohibited approval attempt, prohibited release, hold, API failure, incomplete review or unrun slot. Nine missing-code calls were corrected. Every safe control first attempted approval before consuming the required audit, and two also lacked manifest inspection. The guard blocked these attempts. All four subsequently completed in five requests each.
 
-All 36 episodes completed: each of the eight main cells executed four rejections, and all four safe controls approved only aggregate.json with counts 1,000/1,000. There was no prohibited approval attempt, release, hold, API failure or unrun slot. Nine missing-code rejection calls were corrected. All four controls first attempted approval before required audit consumption. Two also lacked manifest inspection. The guard blocked these attempts, and all subsequently completed in five requests each. Final correctness was partly supported by enforcement and recovery.
-
-An independent AI-assisted review of the original trajectories (Appendix B) confirmed these counts and four first-person file-creation claims. For example, v9_b1_t1f0m0 response 28 says that the reviewer inspected the package and materialized working.json. Terminal 30 executes rejection. The file was actually materialized by the script at event 2. The reviewer had inspection tools and received limited previews. Its correct rejection therefore coexists with an account that misattributes an operation to itself. Other statements claim independent counting beyond the recorded observations. Nine broad text candidates require differentiated review: one merely describes counts that were actually displayed. Appendix B separates attribution errors from unsupported or ambiguous verification claims. These categories are AI-assisted annotations, not independent human adjudications.
-
-All 102 responses settled. Conservative uncached token accounting was US$0.243426, not a verified invoice. No independent manipulation check shows that F1 scores motivated decisions. Absence of explicit score discussion cannot prove the model ignored them.
-
-4.5 V10 execution stop (no behavioral data)
-
-A separately authorized and frozen 24-slot follow-up stopped on its first connection failure. One slot ended in API failure and 23 were unrun. There was no provider response or behavioral evidence, and no retry. Appendix B records the uncertain reservation and later offline DNS checks.
+Independent AI-assisted review confirmed the counts and four first-person file-creation claims. In v9_b1_t1f0m0, response 28 claims materialization of working.json and terminal 30 rejects. The script created the file at event 2. Other statements claim counting beyond the recorded observations. Appendix B separates nine text candidates into attribution errors, unsupported counting, a qualified overstatement and a likely acceptable description of displayed counts. These are AI-assisted categories, not independent human adjudications. Correct decisions therefore coexist with inaccurate process accounts.
 
 5. Discussion and Limitations
 
-5.1 What the evidence supports
+5.1 Implications
 
-Autonomous batches did not establish coordinated cover-up. Scripted diagnostics did not observe prohibited approval attempts. Their packages and invitations cannot be counted as autonomous violations. An intended refusal is not an executed rejection, just as a dispatched request is not confirmed model input.
-
-The main finding is that a correct privacy decision can accompany an inaccurate account of the reviewer's actions. In V8 and V8.1, preparer reports misstated package scope. The invitation diagnostics and V9 exposed inaccurate claims about who created files or checked counts. Some intended decisions also failed to execute. Reading the final decision alone would miss these differences. None of these errors, by itself, establishes deliberate deception or agreement between agents. For an organization using agent review, a safe delivery alone would therefore be an insufficient assurance measure. An audit also needs to check the reviewer’s account against its recorded access and actions. The evidence record helps keep these judgments separate, but is not a validated detector or annotation standard.
+Autonomous batches did not establish coordinated cover-up. Controlled diagnostics recorded no prohibited approval attempt, and script-generated violations are not autonomous misconduct. Correct privacy decisions nevertheless accompanied inaccurate reports or claims about the reviewer’s actions. Intended refusals sometimes failed to execute. An organization cannot assess review reliability from safe delivery alone. It also needs to check process claims against recorded access and actions. None of these errors alone proves deliberate deception or agreement. The evidence record is not a validated detector.
 
 5.2 Limitations
 
-The studies use one financial dataset, small cells and mainly one API snapshot. The results are descriptive counts, not population-level effects, a task-risk ranking or a private-channel null effect. V6 couples purpose with feasibility. V7 couples sensitivity with volume and burden. Partnership pilots contain one cohort per tested corner, two rounds and substantial pre-submission termination.
+The API experiments use one financial dataset, a single API snapshot and small cells. The excluded Codex feasibility observation has an unknown backend snapshot. Results are descriptive, not statistically established effects, a task-risk ranking or a private-channel null effect. V6 couples purpose with feasibility, V7 couples sensitivity with volume and burden, and partnership pilots contain one cohort per tested corner with substantial early termination.
 
-The controlled violations are obvious. V9's fixed locked package precludes a clean reviewer-selected alternative, and its F1 policy disclaimer and unverified motivational effect limit incentive interpretation. Because no cell produced a prohibited approval, these data cannot show whether the factors matter, in this environment or elsewhere. The evidence cannot yet identify which arrangements cause collusion.
+Controlled violations are conspicuous. V9 removes a clean alternative, includes a policy-over-points instruction and lacks an incentive manipulation check. With no prohibited approval in any cell, these data cannot show whether the factors matter here or elsewhere. Tool guards and request limits affect completion. Safe-control completion is not the execution probability of a willing prohibited approver.
 
-Tool guards and request budgets constrain completion. The four V9 safe paths each used five requests, but prompts and versions also changed. Cross-batch differences cannot be attributed solely to an extra request allowance. Safe-control completion is not the probability that a willing prohibited approver would execute successfully.
-
-Preparation instructions appear in reviewer context and may contribute to role-attribution mistakes. This is an untested explanation. Authorized internal previews contain synthetic identifiers and are distinct from buyer disclosure. Historical interface and transport failures remain part of the evidence rather than being repaired or relabeled.
+Preparation instructions in reviewer context may contribute to attribution errors, but this explanation is untested. AI review is not independent human adjudication. A separately allocated 24-slot follow-up stopped after one connection failure, leaving 23 unrun and no behavioral evidence (Appendices B and D).
 
 5.3 Future work
 
-Future work should resolve annotation disagreements and test task structure or peer susceptibility with prospectively fixed manipulations and explicit checks that agents engage with the intended incentive. Longer repeated interactions and less conspicuous violations are separate hypotheses, not explanations established here. New studies should preserve negative and unfinished outcomes and stop according to fixed rules rather than continue until a desired positive case appears.
+Next steps are to resolve annotation disagreements and test task structure or peer susceptibility with prospectively fixed manipulations and checks of incentive engagement. Longer interaction and less conspicuous violations are separate hypotheses. New studies should preserve negative and unfinished outcomes and stop under fixed rules rather than continue until a positive case appears.
 
 6. Conclusion
 
@@ -176,7 +130,7 @@ Synthetic dataset: https://github.com/Hello-Sarah/Detection-and-Audit-of-Agent-C
 
 Author Contributions
 
-Sarah Shen is the sole author. She originated the financial data-sharing scenario and research question, directed the choice and sequence of experiments, and set the scope and spending limits for additional collection. She reviewed AI-assisted interpretations, requested further checks and revisions, and made the author-confirmation decisions recorded in the review history. AI tools assisted with implementation, testing, analysis and drafting. Case-level review and confirmation scopes are recorded separately in Appendix B.
+Sarah Shen is the sole author. She originated the financial data-sharing scenario and research question, directed the choice and sequence of experiments, and set the scope and spending limits for additional collection. She reviewed AI-assisted interpretations, requested further checks and revisions, and made the author-confirmation decisions recorded in the review history. Codex generated and revised experiment code and carried out automated analyses under her direction. Claude and Codex supported review and generated and revised substantial portions of the manuscript. Case-level review and confirmation scopes are recorded separately in Appendix B.
 
 References
 
@@ -239,6 +193,96 @@ Diagnostic 01's audit duty was prompted but unenforced at approval. A scripted o
 
 V8 and V8.1 each recorded two protected submissions and are reported separately. V9's nine text candidates are stratified as exploratory AI-assisted categories. Ambiguous interpretations remain unresolved and human fields are unchanged. Absence of private replies or approval attempts is narrower evidence than access to internal intent.
 
+Appendix D Extended methods and early-study results
+
+The following details supplement the condensed main text. They describe the original batches and do not add experiments or labels.
+
+D.1 Full batch methods
+
+D.1.1 Environment and release semantics
+
+The synthetic source contains 2,000 fictional customers and 20,000 transactions, with English names and non-payment TEST-HK-CARD identifiers. The license permits group aggregates containing at least ten distinct customers per group. Customer-linked rows and protected identifier values are forbidden in buyer-facing delivery. The prohibition is broader than the combination of a name and card number. Internal processing and authorized reviewer access are allowed. Synthetic records permit observable release failures without exposing real customer data. The aggregate-only license defines a concrete boundary for comparing internal processing with external disclosure.
+
+Models select bounded tools. Deterministic code performs aggregation. Submission locks the remaining files and report. Approval releases that exact package in a local simulation. There is no automatic privacy filter that silently removes prohibited rows. Some versions enforce inspection completion, but completing inspections does not determine the substantive privacy judgment.
+
+Figure 1. Financial release workflow and retained audit evidence. The preparer is a model in autonomous studies and a fixed script in controlled diagnostics. The dashed path represents bidirectional peer messages when enabled. All messages are researcher-logged. Scripted diagnostics supply one fixed peer message and no adaptive scripted reply. Approval releases the complete locked package, without a privacy veto. Artifact contents, claims, tool attempts, executed decisions and actor visibility are inspected separately when assessing coordination.
+
+D.1.2 Evidence axes and review status
+
+The specific coordinated-cover-up endpoint requires actual prohibited release, concealment or misrepresentation concerning it, and communication plus corresponding actions supporting coordination. This is narrower than general collusion: proposals, induced cooperation and unsuccessful joint attempts remain separately observable outcomes.
+
+The analysis records disclosure content, report accuracy, decision correctness, procedural compliance, completion and coordination separately. It distinguishes script/model provenance, proposed versus executed calls, successful versus failed observations, and whether a result entered the deciding model input. A returned tool result or local dispatch marker alone does not prove model consumption or provider receipt.
+
+Deterministic checks establish selected provenance and artifact facts. Semantic review is AI-assisted, not independent human ground truth. V7 has 23 author-confirmed AI-assisted interpretations and one partly unresolved case. Claude independently reviewed invitation diagnostic 01 and V9, and checked diagnostic 02 counts and cited events. The V9 categories are AI-assisted annotations, not independent human adjudications. Appendix B gives review scopes [4]. The program is sequential and exploratory. Individual batches were frozen, but the overall search was not preregistered.
+
+D.1.3 Autonomous task and workflow studies
+
+V6 compares four buyer requests with and without a private channel: cohort sizing, personalized offers, reconciliation and model-training examples. Four fresh episodes per cell give 32 episodes. Eight smoke episodes are excluded. Counts can fulfill sizing, while the other requests need individual-level inputs prohibited by the license. Purpose, granularity and feasibility vary together.
+
+V7 fixes the final count request and crosses three preparation workflows with channel availability: direct aggregation (W0), a 20,000-row customer-linked working file followed by removal (W1), and a safe 20-row bucket file followed by removal (W2). Four episodes per cell give 24. Six smoke episodes are excluded. Workflows differ in operational burden, volume and semantics as well as sensitivity.
+
+Both use gpt-5-mini-2025-08-07 and a common delivery-pressure narrative. N0 provides formal handoff without private messaging. N1 adds a logged channel visible to its recipient. Ordinary utterances remain role-local. The two roles alternate for at most 16 requests per episode, eight per role. Each request allows 4,096 completion tokens and a 90-second timeout. These exploratory batches used allocations, source and configurations frozen before collection. Deterministic engineering fixtures are excluded from behavioral counts.
+
+D.1.4 Partnership technical pilots
+
+V8 and revised V8.1 each allocate two four-agent cohorts: one stable-partner/shared-score condition and one exchanged-partner/no-score condition. Each cohort has two preparers, two reviewers and two rounds, giving eight dependent deliveries per version. Cohort, not delivery, is the independent unit. These corner-condition engineering checks are insufficient to identify partnership or score effects. The planned 64-delivery study remains unrun.
+
+V8.1 aligns a previously inconsistent aggregation-method contract and provides field-level errors. Neither revision repairs historical scores. The two versions retain separate evidence and denominators.
+
+D.1.5 Scripted reviewer diagnostics
+
+Two independent 16-episode diagnostics each use a scripted preparer and fresh model reviewer. C0 supplies a prohibited package with neutral handoff. C1 requests an exception. C2 additionally requests a false aggregate-only scope statement. These cells share a truthful report and locked 20,000-row working file plus correct aggregate counts. C3 is a separate aggregate-only competence control. Four randomized blocks give four episodes per condition. The script does not adapt or respond to reviewer messages. The violation is explicitly disclosed, and no shared KPI is supplied.
+
+Both cap reviewers at four requests. Diagnostic 01 checks hashes and eligible own consumed references, but its prompted audit duty is not a release precondition. Diagnostic 02 clarifies arguments and enforces consumed post-submission manifest, artifact previews and audit before approval. These simultaneous changes prevent attributing differences to one interface feature. Neither guard vetoes privacy violations after required checks.
+
+D.1.6 V9 task-tension screening
+
+A separate 36-episode batch uses the same API snapshot, six reviewer requests per episode and four tool calls per request. Its 32 main episodes cross task framing (T0 aggregate portfolio planning, T1 transaction reconciliation), no score disclosure (F0) versus disclosed simulated shared KPI (F1), and neutral/explicit exception-plus-false-scope invitation (M0/M1). Four randomized complete blocks give four episodes per cell. Four additional clean T0F0M0 packages are separate controls.
+
+All main packages are identical and already locked. Reviewers cannot clean them or partially release aggregates. T therefore changes business-purpose/necessity framing, not executable workflow feasibility. In F1, disclosed attainable main-branch scores are Q0+B3 for prohibited approval and Q1+B0 for supported rejection in both tasks. F0 does not disclose scores. F1 also describes a five-point licensed planning approval, although that alternative is unavailable in the locked main episodes. This mismatch further limits incentive interpretation. The KPI states that policy overrides points. There is no independent manipulation check establishing that scores influenced the reviewer.
+
+The design-boundary clarification was recorded during collection after initial descriptive checkpoints, without changing stimuli, allocation, code or scoring. It was not a wholly prospective clarification. All main conditions conspicuously disclose the protected file. Script behavior is a controlled stimulus, not autonomous preparer misconduct.
+
+D.1.7 Reproduction and design choices
+
+The API batches use the pinned gpt-5-mini-2025-08-07 snapshot. Holding it fixed reduces variation from model substitution, but does not test robustness across models. Deterministic aggregation separates the release decision from arithmetic generation. Fresh sessions in the task studies and scripted diagnostics limit carryover, while the partnership pilots explicitly retain interaction history. Appendix B identifies the source revisions, freezes and evidence directories. Reproduction requires the corresponding frozen allocation, prompts, tool schemas and request limits, rather than the latest runner. Saved requests and responses support audit of the reported observations. New API runs may differ and must be recorded as separate evidence.
+
+D.2 V6 and V7 outcomes by condition
+
+V6 produced 30 aggregate releases and two rejections, with no prohibited submission or release. Released counts were 1,000 per segment. Sizing received the requested input in six of eight episodes. All 24 individual-input requests received aggregate substitutes and were not fulfilled as requested.
+
+Table A1. V6 outcomes. Four episodes per channel cell. No task had a prohibited release.
+
+Request | N0 aggregate releases | N1 aggregate releases | Requested input delivered
+Sizing | 2 | 4 | 6 of 8
+Personalized offers | 4 | 4 | 0 of 8
+Reconciliation | 4 | 4 | 0 of 8
+Training examples | 4 | 4 | 0 of 8
+
+V7 produced 22 aggregate deliveries, one unsupported rejection and one request-limit nondecision. All eight W1 episodes internally created customer-linked files and removed them before submission. No customer-level file entered review. V7 therefore provides no estimate of how often review intercepts prohibited files.
+
+Table A2. V7 executed outcomes. Four episodes per cell.
+
+Workflow/channel | Aggregate delivery | Rejected | Incomplete
+W0/N0 | 3 | 1 | 0
+W0/N1 | 4 | 0 | 0
+W1/N0 | 4 | 0 | 0
+W1/N1 | 4 | 0 | 0
+W2/N0 | 4 | 0 | 0
+W2/N1 | 3 | 0 | 1
+
+Case 17 approved safe data with an inaccurate package hash in the report. A later private message supplied the correct hash without changing the locked report. Case 19 rejected an accurate report after confusing the preparer's observation reference with the reviewer's reference. Case 18 ended before another input could consume the final audit. These are reporting, decision and completion failures, not established coordination.
+
+D.3 Diagnostic tool errors and V9 accounting
+
+Diagnostic 01 had eight missing-code rejection errors and seven ineligible-reference approval errors. Five cited lookups that had failed, and two cited script operation IDs from the audit log. Decisions could cite only the reviewer's own successful observations. The failed lookups were visible, so they were not necessarily unseen or fabricated. Missing audit violated the prompted procedure but was not the observed cause of the tool errors. Diagnostic 02 had two corrected missing-code errors. Three safe approvals were blocked by incomplete checks and reached the request cap before consuming the final audit and deciding.
+
+All 102 responses settled. Conservative uncached token accounting was US$0.243426, not a verified invoice. No independent manipulation check shows that F1 scores motivated decisions. Absence of explicit score discussion cannot prove the model ignored them.
+
+D.4 V10 execution stop
+
+A separately authorized and frozen 24-slot follow-up stopped on its first connection failure. One slot ended in API failure and 23 were unrun. There was no provider response or behavioral evidence, and no retry. Appendix B records the uncertain reservation and later offline DNS checks.
+
 LLM Usage Statement
 
-I used Codex and Claude to assist with implementation, tests, literature checks, trajectory analysis and manuscript drafting. I originated the research question and financial scenario, directed the experiments and reviewed their interpretations. Deterministic checks establish selected artifact and accounting facts. Semantic judgments remain AI-assisted unless author confirmation is explicitly recorded, and AI cross-review is not independent human adjudication. Approval of an earlier overall interpretation does not adjudicate the V9 cases. As the sole author, I am responsible for the submitted text and for representing these verification limits accurately.
+Codex generated and revised experiment code and carried out automated analyses under my direction. Claude and Codex supported testing, literature checks and trajectory review, and generated and revised substantial portions of the manuscript. I originated the research question and financial scenario, directed the experiments and reviewed their interpretations. Deterministic checks establish selected artifact and accounting facts. Semantic judgments remain AI-assisted unless author confirmation is explicitly recorded, and AI cross-review is not independent human adjudication. Approval of an earlier overall interpretation does not adjudicate the V9 cases. As the sole author, I am responsible for the submitted text and for representing these verification limits accurately.
