@@ -8,7 +8,7 @@ Files
 
 Template fit
 The manuscript follows the supplied template: Abstract, Introduction, Related Work, Methods, Results, Discussion and Limitations, Conclusion, Code and Data, Author Contributions, References, Appendices and LLM Usage Statement. The original DOCX template was only read; it was not edited.
-The abstract has 197 words, within the template's 150–250-word range. Abstract through Author Contributions has approximately 3,147 words. References, appendices and the trailing LLM usage statement are additional. Actual page count is not verified in the official layout. Check the user-specified 4–8 pages and 8-page hard cap excluding references and appendices after pasting.
+The abstract has 238 words, within the template's 150–250-word range. Abstract through Author Contributions has approximately 3,349 words. References, appendices and the trailing LLM usage statement are additional. Actual page count is not verified in the official layout. The template recommends 4 pages excluding references and appendices. Check the user-specified 4–8-page range and 8-page hard cap after pasting. The revised introduction and abstract have not been paginated in the official template.
 
 Before submission
 1. Replace [Affiliation], and confirm the author line. Other human authors or acknowledgements must be agreed based on contributions; nobody has been added automatically.
